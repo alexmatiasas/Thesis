@@ -1,0 +1,12 @@
+@Article{Wilczek1982,
+  author  = {Frank Wilczek},
+  journal = {Annual Review of Nuclear and Particle Science},
+  title   = {QUANTUM CHROMODYNAMICS: The Modern Theory of the Strong Interaction},
+  year    = {1982},
+  note    = {\href{https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141}{https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141}},
+  number  = {32},
+  pages   = {177-209},
+  url     = {https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141},
+}
+
+@Comment{jabref-meta: databaseType:bibtex;}
