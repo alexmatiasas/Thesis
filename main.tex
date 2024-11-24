@@ -1,90 +1,11 @@
-\documentclass[12pt, a4paper, twoside, openright, final,]{book}
-\usepackage[english, spanish]{babel}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-\usepackage[Conny]{fncychap}
-%\usepackage{amsmath}
-\usepackage{eqnarray,amsmath, nccmath}
-%\usepackage{geometry}
-
-\usepackage[LGR,T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{textalpha}
-
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{nicefrac, xfrac}
-\usepackage{graphicx}
-\usepackage{lmodern}
-\usepackage{physics}
-\usepackage{blindtext, fancyhdr}
-\usepackage{url}
-\usepackage{mathrsfs}
-%\usepackage{cite}
-\decimalpoint
-\usepackage[toc, acronym]{glossaries}
-\usepackage{xcolor}
-\usepackage[sort&compress,numbers]{natbib}
-\usepackage{hyperref}
-\usepackage[nottoc]{tocbibind}
-\usepackage{slashed}
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
-\definecolor{myblue}{RGB}{12,12,224}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=myblue,
-    citecolor=myblue,
-    filecolor=myblue,      
-    urlcolor=myblue,
-    pdftitle={Mi tesis},
-    pdfauthor={Manuel Alejandro Matías Astorga}
-    pdfpagemode=FullScreen,
-    }
-\urlstyle{same}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{wrapfig}
-\author{Manuel Alejandro Matías Astorga}
-\title{Thesis}
-
-\makeglossaries
-
-\newacronym{bg}{BG}{Boltzmann - Gibbs}
-\newacronym{be}{BE}{Bose - Einstein}
-\newacronym{fd}{FD}{Fermi - Dirac}
-\newacronym{qcd}{QCD}{Quantum Chromodynamics}
-\newacronym{qed}{QED}{Quantum Electrodynamics}
-\newacronym{mit}{MIT}{Massachusetts Institute of Technology}
-\newacronym{slac}{SLAC}{Stanford Linear Accelerator Center}
-\newacronym{gff}{GFF}{Gravitational form factors}
-\newacronym{bm}{BM}{Bag Model}
-\newacronym{lqcd}{LQCD}{Lattice QCD}
-\newacronym{t-mitbm}{T-MIT bag model}{Tsallis-MIT Bag Model}
-\newacronym{dvcs}{DVCS}{Deep Virtual Compton Scattering}
-\newacronym{gpd}{GPD}{Generalized Parton Distributions}
-\newacronym{cff}{CFFs}{Compton Form Factors}
-
-\newenvironment{abstract}
-{\null\vfill 
-\begin{center}
-\bfseries\abstractname 
-\end{center}
-}
-{\vfill \null}
-
-\makeindex
-
-\numberwithin{equation}{chapter}
-
+\input{preamble}
+\input{macros}
 
 \begin{document}
-
 \maketitle
-
 \frontmatter
-
 \chapter*{Abstract}
 \addcontentsline{toc}{chapter}{Abstract}
-
-
 \selectlanguage{spanish}
 \begin{abstract}
 Este es el resumen en español 
@@ -94,17 +15,11 @@ Este es el resumen en español
 This is the abstract
 \end{abstract}
 
-
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
-
 \begin{flushright}
 CONAHCYT, CINVESTAV, Dr Gerardo H. C.
 \end{flushright}
-
-
-
-
 
 \tableofcontents
 \listoffigures
@@ -126,9 +41,7 @@ CONAHCYT, CINVESTAV, Dr Gerardo H. C.
 \include{Chapters/05-PhysicalMeaningQ}
 \include{Chapters/06-TotalPandGluons}
 \include{Chapters/08-ResultsAndConclusions}
-%
 \include{Chapters/100000-Notas}
-%
 \include{Chapters/07-NotasNewExtendedModel}
 
 \appendix

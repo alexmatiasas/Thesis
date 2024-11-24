@@ -1,0 +1,350 @@
+\begin{thebibliography}{34}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Artru and Mennessier(1974)]{Artru1974}
+X.~Artru and G.~Mennessier.
+\newblock String model and multiproduction.
+\newblock \emph{Nuclear Physics B}, 70\penalty0 (1):\penalty0 93--115, February
+  1974.
+\newblock ISSN 0550-3213.
+\newblock \doi{https://doi.org/10.1016/0550-3213(74)90360-5}.
+\newblock URL \url{https://doi.org/10.1016/0550-3213(74)90360-5}.
+\newblock \href{https://doi.org/10.1016/0550-3213(74)90360-5}{[Elsevier]}.
+
+\bibitem[Andersson et~al.(1983)Andersson, Gustafson, and
+  Söderberg]{Andersson_1983}
+B.~Andersson, G.~Gustafson, and B.~Söderberg.
+\newblock A general model for jet fragmentation.
+\newblock \emph{Zeitschrift for Physik C Particles and Fields}, 20\penalty0
+  (4):\penalty0 317--329, December 1983.
+\newblock ISSN 1434-6052.
+\newblock \doi{https://doi.org/10.1007/BF01407824}.
+\newblock URL \url{https://doi.org/10.1007/BF01407824}.
+\newblock \href{https://doi.org/10.1007/BF01407824}{[Springer]}.
+
+\bibitem[Bogolioubov(1968)]{AIHPA_1968__8_2_163_0}
+P.~N. Bogolioubov.
+\newblock Sur un mod\`ele \`a quarks quasi-ind\'ependants.
+\newblock \emph{Annales de l'institut Henri Poincar\'e. Section A, Physique
+  Th\'eorique}, 8\penalty0 (2):\penalty0 163--189, 1968.
+\newblock URL \url{http://www.numdam.org/item/AIHPA_1968__8_2_163_0/}.
+\newblock \href{http://www.numdam.org/item/AIHPA_1968__8_2_163_0/}{[Numdam]}.
+
+\bibitem[DeTar and Donoghue(1983)]{DeTar_1983}
+C~E DeTar and J~F Donoghue.
+\newblock Bag models of hadrons.
+\newblock \emph{Annual Review of Nuclear and Particle Science}, 33\penalty0
+  (1):\penalty0 235--264, dec 1983.
+\newblock \doi{https://doi.org/10.1146/annurev.ns.33.120183.001315}.
+\newblock
+  \href{https://www.annualreviews.org/content/journals/10.1146/annurev.ns.33.120183.001315}{[Annual
+  Reviews]}.
+
+\bibitem[Hwa and Zahir(1981)]{Hwa_1981}
+Rudolph~C. Hwa and M.~Sajjad Zahir.
+\newblock Parton and valon distributions in the nucleon.
+\newblock \emph{Physical Review D}, 23\penalty0 (11):\penalty0 2539--2553, June
+  1981.
+\newblock ISSN 0556-2821.
+\newblock \doi{https://doi.org/10.1103/PhysRevD.23.2539}.
+\newblock
+  \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.23.2539}{[APS]}.
+
+\bibitem[Iritani et~al.(2019)Iritani, Aoki, Doi, Etminan, Gongyo, Hatsuda,
+  Ikeda, Inoue, Ishii, Miyamoto, and Sasaki]{Iritani_2019}
+Takumi Iritani, Sinya Aoki, Takumi Doi, Faisal Etminan, Shinya Gongyo, Tetsuo
+  Hatsuda, Yoichi Ikeda, Takashi Inoue, Noriyoshi Ishii, Takaya Miyamoto, and
+  Kenji Sasaki.
+\newblock NΩ dibaryon from lattice qcd near the physical point.
+\newblock \emph{Physics Letters B}, 792:\penalty0 284--289, May 2019.
+\newblock ISSN 0370-2693.
+\newblock \doi{https://doi.org/10.1016/j.physletb.2019.03.050}.
+\newblock
+  \href{https://www.sciencedirect.com/science/article/pii/S0370269319302199?via%3Dihub}{[Elsevier]}.
+
+\bibitem[Hatsuda et~al.(2017)Hatsuda, Morita, Ohnishi, and
+  Sasaki]{Hatsuda_2017}
+Tetsuo Hatsuda, Kenji Morita, Akira Ohnishi, and Kenji Sasaki.
+\newblock p Ξ${}^{-}$ correlation in relativistic heavy ion collisions with
+  nucleon-hyperon interaction from lattice qcd.
+\newblock \emph{Nuclear Physics A}, 967:\penalty0 856--859, November 2017.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/j.nuclphysa.2017.04.041}.
+\newblock
+  \href{https://www.sciencedirect.com/science/article/pii/S0375947417301124?via%3Dihub}{[Elsevier]}.
+
+\bibitem[Collaboration(2020)]{Collaboration2020}
+ALICE Collaboration.
+\newblock Unveiling the strong interaction among hadrons at the lhc.
+\newblock \emph{Nature}, 588\penalty0 (7837):\penalty0 232--238, December 2020.
+\newblock ISSN 1476-4687.
+\newblock \doi{https://doi.org/10.1038/s41586-020-3001-6}.
+\newblock
+  \href{https://www.nature.com/articles/s41586-020-3001-6#citeas}{[Nature]}.
+
+\bibitem[Collaboration(2021)]{Collaboration2021}
+ALICE Collaboration.
+\newblock Experimental evidence for an attractive p-φ interaction.
+\newblock \emph{Phys. Rev. Lett.}, 127:\penalty0 172301, Oct 2021.
+\newblock \doi{10.1103/PhysRevLett.127.172301}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.127.172301}.
+\newblock
+  \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.127.172301}{[APS]}.
+
+\bibitem[Chodos et~al.(1974{\natexlab{a}})Chodos, Jaffe, Johnson, Thorn, and
+  Weisskopf]{Chodos_1974}
+A.~Chodos, R.~L. Jaffe, K.~Johnson, C.~B. Thorn, and V.~F. Weisskopf.
+\newblock New extended model of hadrons.
+\newblock \emph{Physical Review D}, 9\penalty0 (12):\penalty0 3471--3495, jun
+  1974{\natexlab{a}}.
+\newblock \doi{https://doi.org/10.1103/PhysRevD.9.3471}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevD.9.3471}.
+\newblock
+  \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.9.3471}{[APS]}.
+
+\bibitem[Chodos et~al.(1974{\natexlab{b}})Chodos, Jaffe, Johnson, and
+  Thorn]{Chodos1974a}
+A.~Chodos, R.~L. Jaffe, K.~Johnson, and C.~B. Thorn.
+\newblock Baryon structure in the bag theory.
+\newblock \emph{Physical Review D}, 10\penalty0 (8):\penalty0 2599--2604, oct
+  1974{\natexlab{b}}.
+\newblock \doi{doi:10.1103/physrevd.10.2599}.
+\newblock
+  \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.10.2599}{[APS]}.
+
+\bibitem[Barboza~Mendoza and Herrera~Corral(2019)]{Barboza_Mendoza_2019}
+Carolina Barboza~Mendoza and G.~Herrera~Corral.
+\newblock Quark matter description in a tsallis entropy approach.
+\newblock \emph{The European Physical Journal A}, 55\penalty0 (9), September
+  2019.
+\newblock ISSN 1434-601X.
+\newblock \doi{https://doi.org/10.1140/epja/i2019-12834-y}.
+\newblock
+  \href{https://link.springer.com/article/10.1140/epja/i2019-12834-y}{[Springer]}.
+
+\bibitem[Tsallis(1988)]{Tsallis1988}
+Constantino Tsallis.
+\newblock Possible generalization of boltzmann-gibbs statistics.
+\newblock \emph{Journal of Statistical Physics}, 52\penalty0 (1-2):\penalty0
+  479--487, jul 1988.
+\newblock \doi{https://doi.org/10.1007/BF01016429}.
+\newblock URL \url{https://doi.org/10.1007/BF01016429}.
+\newblock
+  \href{https://link.springer.com/article/10.1007/BF01016429}{[Springer]}.
+
+\bibitem[Beck and Cohen(2003)]{Beck_2003}
+C.~Beck and E.G.D. Cohen.
+\newblock Superstatistics.
+\newblock \emph{Physica A: Statistical Mechanics and its Applications},
+  322:\penalty0 267--275, May 2003.
+\newblock ISSN 0378-4371.
+\newblock \doi{https://doi.org/10.1016/S0378-4371(03)00019-0}.
+\newblock URL \url{https://doi.org/10.1016/S0378-4371(03)00019-0}.
+\newblock \href{https://doi.org/10.1016/S0378-4371(03)00019-0}{[Elsevier]}.
+
+\bibitem[Tsallis(2009{\natexlab{a}})]{Tsallis2009}
+Constantino Tsallis.
+\newblock \emph{Introduction to Nonextensive Statistical Mechanics: Approaching
+  a Complex World}.
+\newblock Springer, 2009{\natexlab{a}}.
+\newblock \doi{https://doi.org/10.1007/978-0-387-85359-8}.
+\newblock URL \url{https://doi.org/10.1007/978-0-387-85359-8}.
+\newblock
+  \href{https://link.springer.com/book/10.1007/978-0-387-85359-8}{[Springer]}.
+
+\bibitem[Tsallis and Arenas(2014)]{Tsallis_2014}
+Constantino Tsallis and Zochil~Gonzalez Arenas.
+\newblock Nonextensive statistical mechanics and high energy physics.
+\newblock \emph{EPJ Web of Conferences}, 71:\penalty0 00132, 2014.
+\newblock ISSN 2100-014X.
+\newblock \doi{https://doi.org/10.1051/epjconf/20147100132}.
+\newblock
+  \href{https://www.epj-conferences.org/articles/epjconf/abs/2014/08/epjconf_icnfp2013_00132/epjconf_icnfp2013_00132.html}{[EPJ]}.
+
+\bibitem[Tsallis(2009{\natexlab{b}})]{Tsallis_2009}
+C.~Tsallis.
+\newblock Nonadditive entropy: The concept and its use.
+\newblock \emph{The European Physical Journal A}, 40\penalty0 (3), May
+  2009{\natexlab{b}}.
+\newblock ISSN 1434-601X.
+\newblock \doi{https://doi.org/10.1140/epja/i2009-10799-0}.
+\newblock URL \url{https://doi.org/10.1140/epja/i2009-10799-0}.
+\newblock
+  \href{https://link.springer.com/article/10.1140/epja/i2009-10799-0l}{[Springer]}.
+
+\bibitem[Bediaga et~al.(2000)Bediaga, Curado, and de~Miranda]{Bediaga_2000}
+I.~Bediaga, E.M.F. Curado, and J.M. de~Miranda.
+\newblock A nonextensive thermodynamical equilibrium approach in e${}^{+}$ e
+  ${}^{-}\rightarrow$ hadrons.
+\newblock \emph{Physica A: Statistical Mechanics and its Applications},
+  286\penalty0 (1–2):\penalty0 156--163, October 2000.
+\newblock ISSN 0378-4371.
+\newblock \doi{https://doi.org/10.1016/S0378-4371(00)00368-X}.
+\newblock URL \url{https://doi.org/10.1016/S0378-4371(00)00368-X}.
+\newblock
+  \href{https://www.sciencedirect.com/science/article/abs/pii/S037843710000368X?via%3Dihub}{[Elsevier]}.
+
+\bibitem[Collaboration(1984)]{Collaboration1984}
+TASSO Collaboration.
+\newblock Jet production and fragmentation in e${}^{+}$ e ${}^{-}$ annihilation
+  at 12 to 43 gev.
+\newblock \emph{Zeitschrift for Physik C Particles and Fields}, 22\penalty0
+  (4):\penalty0 307--340, December 1984.
+\newblock ISSN 1434-6052.
+\newblock \doi{https://doi.org/10.1007/BF01547419}.
+\newblock
+  \href{https://link.springer.com/article/10.1007/BF01547419}{[Springer]}.
+
+\bibitem[Collaboration(2010)]{PhysRevLett.105.022002}
+CMS Collaboration.
+\newblock Transverse-momentum and pseudorapidity distributions of charged
+  hadrons in $pp$ collisions at $\sqrt{s}=7\text{ }\text{ }\mathrm{TeV}$.
+\newblock \emph{Phys. Rev. Lett.}, 105:\penalty0 022002, Jul 2010.
+\newblock \doi{10.1103/PhysRevLett.105.022002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.105.022002}.
+\newblock
+  \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.105.022002}{[APS]}.
+
+\bibitem[Marques et~al.(2015)Marques, Cleymans, and Deppman]{Marques_2015}
+L.~Marques, J.~Cleymans, and A.~Deppman.
+\newblock Description of high-energyppcollisions using tsallis thermodynamics:
+  Transverse momentum and rapidity distributions.
+\newblock \emph{Physical Review D}, 91\penalty0 (5):\penalty0 054025, March
+  2015.
+\newblock ISSN 1550-2368.
+\newblock \doi{https://doi.org/10.1103/PhysRevD.91.054025}.
+\newblock URL \url{https://doi.org/10.1103/PhysRevD.91.054025}.
+\newblock
+  \href{https://journals.aps.org/prd/abstract/10.1103/PhysRevD.91.054025}{[APS]}.
+
+\bibitem[Bhattacharyya et~al.(2018)Bhattacharyya, Cleymans, Marques, Mogliacci,
+  and Paradza]{Bhattacharyya_2018}
+T~Bhattacharyya, J~Cleymans, L~Marques, S~Mogliacci, and M~W Paradza.
+\newblock On the precise determination of the tsallis parameters in
+  proton–proton collisions at lhc energies.
+\newblock \emph{Journal of Physics G: Nuclear and Particle Physics},
+  45\penalty0 (5):\penalty0 055001, March 2018.
+\newblock ISSN 1361-6471.
+\newblock \doi{10.1088/1361-6471/aaaea0}.
+\newblock
+  \href{https://iopscience.iop.org/article/10.1088/1361-6471/aaaea0}{[IOPScience]}.
+
+\bibitem[Khuntia et~al.(2017)Khuntia, Tripathy, Sahoo, and
+  Cleymans]{Khuntia_2017}
+Arvind Khuntia, Sushanta Tripathy, Raghunath Sahoo, and Jean Cleymans.
+\newblock Multiplicity dependence of non-extensive parameters for strange and
+  multi-strange particles in proton-proton collisions at $\sqrt{s} = 7$ s = 7
+  tev at the lhc.
+\newblock \emph{The European Physical Journal A}, 53\penalty0 (5), May 2017.
+\newblock ISSN 1434-601X.
+\newblock \doi{https://doi.org/10.1140/epja/i2017-12291-8}.
+\newblock URL \url{https://doi.org/10.1140/epja/i2017-12291-8}.
+\newblock
+  \href{https://link.springer.com/article/10.1140/epja/i2017-12291-8}{[Springer]}.
+
+\bibitem[Saraswat et~al.(2018)Saraswat, Shukla, and Singh]{Saraswat_2018}
+Kapil Saraswat, Prashant Shukla, and Venktesh Singh.
+\newblock Transverse momentum spectra of hadrons in high energy pp and heavy
+  ion collisions.
+\newblock \emph{Journal of Physics Communications}, 2\penalty0 (3):\penalty0
+  035003, March 2018.
+\newblock ISSN 2399-6528.
+\newblock \doi{10.1088/2399-6528/aab00f}.
+\newblock
+  \href{https://iopscience.iop.org/article/10.1088/2399-6528/aab00f}{[IOPScience]}.
+
+\bibitem[Saraswat et~al.(2017)Saraswat, Shukla, Kumar, and
+  Singh]{Saraswat_2017}
+Kapil Saraswat, Prashant Shukla, Vineet Kumar, and Venktesh Singh.
+\newblock Strange hadron production in pp, ppb and pbpb collisions at lhc
+  energies.
+\newblock \emph{The European Physical Journal A}, 53\penalty0 (5), May 2017.
+\newblock ISSN 1434-601X.
+\newblock \doi{https://doi.org/10.1140/epja/i2017-12276-7}.
+\newblock URL \url{https://doi.org/10.1140/epja/i2017-12276-7}.
+\newblock
+  \href{https://link.springer.com/article/10.1140/epja/i2017-12276-7}{[Springer]}.
+
+\bibitem[Burkert et~al.(2018)Burkert, Elouadrhiri, and Girod]{Burkert_2018}
+V.~D. Burkert, L.~Elouadrhiri, and F.~X. Girod.
+\newblock The pressure distribution inside the proton.
+\newblock \emph{Nature}, 557\penalty0 (7705):\penalty0 396--399, May 2018.
+\newblock ISSN 1476-4687.
+\newblock \doi{https://doi.org/10.1038/s41586-018-0060-z}.
+\newblock URL \url{https://doi.org/10.1038/s41586-018-0060-z}.
+\newblock \href{https://www.nature.com/articles/s41586-018-0060-z}{[Nature]}.
+
+\bibitem[Collaboration(2008)]{PhysRevLett.100.162002}
+CLAS Collaboration.
+\newblock Measurement of deeply virtual compton scattering beam-spin
+  asymmetries.
+\newblock \emph{Phys. Rev. Lett.}, 100:\penalty0 162002, Apr 2008.
+\newblock \doi{10.1103/PhysRevLett.100.162002}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.100.162002}.
+\newblock
+  \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.100.162002}{[APS]}.
+
+\bibitem[Collaboration(2015)]{Collaboration2015}
+CLAS Collaboration.
+\newblock Cross sections for the exclusive photon electroproduction on the
+  proton and generalized parton distributions.
+\newblock \emph{Phys. Rev. Lett.}, 115:\penalty0 212003, Nov 2015.
+\newblock \doi{10.1103/PhysRevLett.115.212003}.
+\newblock URL \url{https://link.aps.org/doi/10.1103/PhysRevLett.115.212003}.
+\newblock
+  \href{https://journals.aps.org/prl/abstract/10.1103/PhysRevLett.115.212003}{[APS]}.
+
+\bibitem[Mihaylov(2021)]{Mihaylov_2021}
+Dimitar~Lubomirov Mihaylov.
+\newblock First experimental test of hal qcd lattice calculations for the multi
+  strange hyperon - nucleon interaction with alice.
+\newblock \emph{Nuclear Physics A}, 1005:\penalty0 121760, January 2021.
+\newblock ISSN 0375-9474.
+\newblock \doi{https://doi.org/10.1016/j.nuclphysa.2020.121760}.
+\newblock URL \url{https://doi.org/10.1016/j.nuclphysa.2020.121760}.
+\newblock
+  \href{https://www.sciencedirect.com/science/article/abs/pii/S0375947420300701t}{[Elsevier]}.
+
+\bibitem[Wilczek(1982)]{Wilczek1982}
+Frank Wilczek.
+\newblock Quantum chromodynamics: The modern theory of the strong interaction.
+\newblock \emph{Annual Review of Nuclear and Particle Science}, \penalty0
+  (32):\penalty0 177--209, 1982.
+\newblock URL
+  \url{https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141}.
+\newblock
+  \href{https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141}{https://www.annualreviews.org/doi/pdf/10.1146/annurev.ns.32.120182.001141}.
+
+\bibitem[Johnson(1975)]{Johnson1975}
+K.~Johnson.
+\newblock The m.i.t bag model.
+\newblock \emph{ACTA PHYSICA POLONICA}, B6\penalty0 (6):\penalty0 1--28, 1975.
+\newblock URL
+  \url{https://www.actaphys.uj.edu.pl/fulltext?series=Reg&vol=6&page=865}.
+
+\bibitem[Han and Nambu(1965)]{Han_1965}
+M.~Y. Han and Y.~Nambu.
+\newblock Three-triplet model with double su(3) symmetry.
+\newblock \emph{Physical Review}, 139\penalty0 (4B):\penalty0 B1006--B1010, aug
+  1965.
+\newblock \doi{https://doi.org/10.1103/PhysRev.139.B1006}.
+
+\bibitem[Greiner et~al.(2001)Greiner, Neise, and Stöcker]{Greiner2001}
+Walter Greiner, Ludwig Neise, and Horst Stöcker.
+\newblock \emph{Thermodynamics and Statistical Mechanics (Classical Theoretical
+  Physics)}.
+\newblock Springer, 2001.
+\newblock ISBN 0-387-94299-8.
+
+\bibitem[DeGrand et~al.(1975)DeGrand, Jaffe, Johnson, and Kiskis]{DeGrand_1975}
+T.~DeGrand, R.~L. Jaffe, K.~Johnson, and J.~Kiskis.
+\newblock Masses and other parameters of the light hadrons.
+\newblock \emph{Physical Review D}, 12\penalty0 (7):\penalty0 2060--2076, oct
+  1975.
+\newblock \doi{https://doi.org/10.1103/PhysRevD.12.2060}.
+
+\end{thebibliography}
