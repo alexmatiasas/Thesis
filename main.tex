@@ -1,4 +1,4 @@
-\documentclass[12pt,a4paper,twoside,openright,final,]{book}
+\documentclass[12pt, a4paper, twoside, openright, final,]{book}
 \usepackage[english, spanish]{babel}
 %Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
 \usepackage[Conny]{fncychap}
@@ -21,10 +21,10 @@
 \usepackage{mathrsfs}
 %\usepackage{cite}
 \decimalpoint
-\usepackage{hyperref}
 \usepackage[toc, acronym]{glossaries}
 \usepackage{xcolor}
 \usepackage[sort&compress,numbers]{natbib}
+\usepackage{hyperref}
 \usepackage[nottoc]{tocbibind}
 \usepackage{slashed}
 \definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
@@ -119,17 +119,17 @@ CONAHCYT, CINVESTAV, Dr Gerardo H. C.
 \thispagestyle{empty}
 \mbox{}
 
-\include{Chapters/ch-Introduction}
-\include{Chapters/ch-BagModel}
-\include{Chapters/ch-TsallisStatistical}
-\include{Chapters/ch-ProtonStructureCh}
-\include{Chapters/ch-TotalPandGluons}
-\include{Chapters/ch-PhysicalMeaningQ}
-\include{Chapters/ch-ResultsAndConclusions}
+\include{Chapters/01-Introduction}
+\include{Chapters/02-TsallisStatistical}
+\include{Chapters/03-BagModel}
+\include{Chapters/04-ProtonStructureCh}
+\include{Chapters/05-PhysicalMeaningQ}
+\include{Chapters/06-TotalPandGluons}
+\include{Chapters/08-ResultsAndConclusions}
 %
-\include{Chapters/ch-Notas}
+\include{Chapters/100000-Notas}
 %
-\include{Chapters/ch-NotasNewExtendedModel}
+\include{Chapters/07-NotasNewExtendedModel}
 
 \appendix
 
@@ -142,7 +142,12 @@ CONAHCYT, CINVESTAV, Dr Gerardo H. C.
 \backmatter
 
 \renewcommand\bibname{Bibliografía}
-\bibliographystyle{unsrt}
-\bibliography{Bibliography/proton_pressure-ref,Bibliography/Bag_model,Bibliography/QCD,Bibliography/Statistical_Physics,Bibliography/Phenomenological_Description,Bibliography/LQCD}
+\bibliographystyle{unsrtnat}
+\bibliography{Bibliography/BibFiles/proton_pressure-ref,
+                Bibliography/BibFiles/Bag_model,
+                Bibliography/BibFiles/QCD,
+                Bibliography/BibFiles/Statistical_Physics,
+                Bibliography/BibFiles/Phenomenological_Description,
+                Bibliography/BibFiles/LQCD}
 
 \end{document}

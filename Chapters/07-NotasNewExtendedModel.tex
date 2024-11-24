@@ -1,0 +1,309 @@
+\chapter{Notas sobre New Extended Model Of Hadrons de A. Chodos}
+
+\section{Campos escalares}
+
+Aquí empiezan con el estudio cuantitativo de las propiedades de teorías de campos confinados a una bolsa con el caso de un campo escalar único.
+
+\subsection{Formulación del problema clásico}
+
+Empezamos con el Lagrangiano
+
+\begin{equation}
+\begin{array}{rl}
+L&= \int_{R} {\mathrm{d}}^{n-1} x (- \frac{1}{2} {\partial}_{\mu} {\phi} {\partial}^{\mu} {\phi} - B) \\
+& \equiv \int_{R} {\mathrm{d}}^{n - 1} x \mathscr{L}
+\end{array}
+\end{equation}
+
+(nuestra métrica es $- {g}^{00} = {g}^{ii} = 1$), donde $B$ es la constante de bolsa, que es, la densidad de energía asociada con el volumen $R$ al que los campos están confinados. La frontera de la región $R$ barre una superficie $S$ en espacio-tiempo. Las coordenadas ${X}^{\mu}$ de $S$ etiquetadas por $n-1$ parámetros ${\alpha}_{j}$,
+
+\begin{equation}
+{X}^{\mu} = {X}^{\mu}(\{ \alpha \})
+\end{equation}
+
+El vector unitario normal (${n}_{\mu}$) a esta superficie es definida para ser el vector unitario ortogonal a los $n-1$ vectores tangentes ${T}_{j}^{\mu}$:
+
+\begin{equation}
+{T}_{j}^{\mu} \equiv \frac{d}{d{\alpha}_{j}} {X}^{\mu} (\{ \alpha\}).
+\end{equation}
+
+Es útil expresar ${n}_{\mu}$ en términos de la normal (${m}_{\mu}$) a la superficie a tiempo constante ($t \equiv {x}^{0}$). Para hacer esto escogemos el parámetro ${\alpha}_{0} = t $ y reescribimos las ecuaciones anteriores como
+
+\begin{equation}
+\begin{array}{rl}
+{X}^{\mu}  &= (t, X(\{ \alpha \})), \quad i = 1, \dots, n-1 \\
+{T}_{j}^{\mu} & =\left\{
+\begin{array}{c}
+(1,\dot{X}^{i}(\{\alpha, t\})), \quad j=0\\
+\left(0, \dfrac{d}{d{\alpha}_{j}} {X}^{i} (\{ \alpha \}, t)\right), \quad j =1,\dots,n-2
+\end{array}
+\right.
+\end{array}
+\end{equation}
+
+${m}_{\mu}$ es entonces vector unitario puramente espacial [${m}_{\mu} = (0, {m}_{i})$] ortogonal a los $n - 2$ vectores tangentes ${T}_{j}^{\mu}$ ($j = 1, \dots, n - 2$):
+
+\[
+{m}_{\mu} {T}_{j}^{\mu} = 0, \quad j =1, \dots, n - 2
+\]
+
+\[
+{m}_{\mu} {m}^{\mu} = 1
+\]
+
+Entonces definir
+
+\begin{equation}
+{n}_{\mu} = \frac{-({m}_{\lambda} \dot{X}^{\lambda}) {\eta}_{\mu} + {m}_{\mu}}{[1 - ({m}_{\lambda} \dot{X}^{\lambda})^{2}]^{1/2}},
+\end{equation}
+
+donde ${\eta}_{\mu}$ es el vector tipo tiempo unitario:
+
+\[
+{\eta}_{\mu} \equiv (1, 0, \dots, 0)
+\]
+
+y $\dot{X}^{\lambda} \equiv {T}_{0}^{\lambda}$. Es fácil verificar que ${n}_{\mu} {T}_{j}^{\mu} = 0$ y ${n}_{\mu}{n}^{\mu}$. Para establecer una convención escogemos que ${m}_{\mu}$ sea normal interior a la superficie espacial.
+
+Con esta geometría preliminar en mente derivamos las ecuaciones de movimiento del sistema requiriendo que la acción $W \equiv \int_{{t}_{0}}^{{t}_{1}} dt \, L$ sea estacionario bajo variaciones del campo $\phi$ y de la frontera $S$ que se desvanece en ${t}_{0}$ y ${t}_{1}$. Estabilidad bajo variación en la frontera requiere que la densidad de Lagrange se desvanezca sobre $S$:
+
+\begin{equation}
+{\partial}_{\mu} {\phi} {\partial}^{\mu} {\phi} = - 2B \quad \mathrm{sobre} \quad S
+\end{equation}
+
+La variación de los campos generan la ecuación de Klein-Gordon dentro de la bolsa:
+
+\begin{equation}
+{\partial}_{\mu} {\partial}^{\mu} {\phi} = 0 \quad \mathrm{en} \, R
+\end{equation}
+
+y otra condición de frontera:
+
+\begin{equation}
+{n}_{\mu} {\partial}^{\mu} {\phi} = 0 \quad \mathrm{sobre} \, S
+\end{equation}
+
+Esta condición de frontera surge a partir de términos superficiales en las integraciones parciales que son realizadas para liberar la variación $\delta \phi$ de la derivada ${\partial}_{\mu}$
+
+\subsection{Invariancia de Poincaré del problema clásico}
+
+Las ecuaciones de movimiento son manifestamente invariante de Poincaré. Correspondiendo a esta invariancia tenemos un arreglo de momentos ${P}_{\mu}$ y generadores de rotación de Lorentz ${M}_{\mu \nu}$ que deberían ser independientes del tiempo. Estos pueden ser construidos por medio del teorema de Noether a partir del Lagrangiano. 
+
+Las corrientes conservadas localmente son idénticas a esas del campo de Klein Gordon libre excepto por términos involucrando la densidad de energía $B$:
+
+\begin{equation}
+{T}_{\mu \nu} \equiv {g}_{\mu \nu} \mathscr{L} + {\partial}_{\mu} {\phi} {\partial}_{\nu} {\phi},
+\end{equation}
+
+\begin{equation}
+{M}_{\mu \nu \lambda} = {x}_{\mu} {T}_{\nu \lambda} - {x}_{\nu} {T}_{\mu \lambda}
+\end{equation}
+
+con
+
+\[
+{\partial}^{\nu} {T}_{\mu \nu} = {\partial}^{\lambda} {M}_{\mu \nu \lambda} = 0
+\]
+
+Para mostrar la constancia de las cargas correspondientes considerar la integral de la divergencia de una corriente conservada sobre el "hipertubo mundial" de la bolsa:
+
+\begin{equation}
+0 = \int_{V} {d}^{n} x \, {\partial}_{\mu} \mathscr{J}^{\mu} \quad (\mathrm{donde} {\partial}_{\mu} \mathscr{J}^{\mu} = 0)
+\end{equation}
+
+$V$ es el volumen espacio temporal recorrido por la bolsa y está ligado por dos hipersuperficies de tipo espacial y luz ${R}_{1}$ y ${R}_{2}$ que pueden ser tomadas como superficies de tiempo constante.
+
+Integrando la ecuación anterior obtenemos
+
+\begin{equation}
+Q \equiv \int_{{R}_{1}} ds \, {n}_{\mu} \mathscr{J}^{\mu} = \int_{{R}_{2}} ds \, {n}_{\mu} \mathscr{J}^{\mu} - \int_{S} ds \, {n}_{\mu} \mathscr{J}^{\mu}
+\end{equation}
+
+donde $ds$ es el elemento de superficie sobre las superficies $(n-1)$ dimensionales ${R}_{1}$, ${R}_{2}$, y $S$. Para las corrientes conservadas de (3.9) y (3.10) es fácilmente mostrado que ${n}_{\mu} \mathscr{J}^{\mu } = 0$ sobre $S$ con el auxilio de la condición de frontera (3.8). Por lo tanto hay independencia temporal de las cargas convencionales. Para completez, anotamos las expresiones para ${P}_{\mu}$ y ${M}_{\mu \nu}$ definidas sobre superficies de tiempo constante:
+
+\begin{equation}
+{P}_{\mu} \equiv \int_{R} {d}^{n-1} x {T}_{\mu}^{\phantom{\mu} 0}
+\end{equation}
+
+\begin{equation}
+{M}_{\mu \nu} \equiv \int_{R} {d}^{n-1} x \, ({x}_{\mu} {T}_{\nu}^{0} - {x}_{\nu} {T}_{\mu}^{0}).
+\end{equation}
+
+Ya que la función primaria de las condiciones de frontera es garantizar la conservación de los generadores de Poincaré, podemos preguntar si existe un conjunto alternativo de condiciones de frontera, aparte de (3.6) y 3.9, que lograran esta meta.
+
+
+\subsection{Mecánica clásica en dos dimensiones}
+
+En una dimensión espacial y una temporal, las ecuaciones de movimiento del campo escalar confinado a una bolsa se simplifican considerablemente.
+
+Ya que el campo dentro de la bolsa es sin masa, es conveniente trabajar con variables de cono de luz:
+
+\[
+{x}^{+} \equiv \tau \equiv \frac{1}{\sqrt{2}}(t + z),
+\]
+
+\[
+{x}^{-} \equiv x \equiv \frac{1}{\sqrt{2}} (t -z)
+\]
+
+Usando variables de cono de luz, el tensor métrico es fuera de la diagonal ${g}^{+-} = {g}^{-+} = -1$, ${g}^{++} ={g}^{--} = 0$. Denotamos las derivadas con respecto a $\tau$ por puntos:
+
+\[
+{\partial}_{+} {\phi} (x, \tau) = \frac{\partial}{\partial \tau} {\phi} (x, \tau) = \dot{\phi} (x,\tau)
+\]
+
+y derivadas con respecto a $x$ por primas:
+
+\[
+{\partial}_{-} {\phi} (x, \tau) = \frac{\partial}{\partial x} \phi (x, \tau) = {\phi}' (x, \tau).
+\]
+
+\subsubsection{Solución al problema clásico}
+
+En dos dimensiones y en coordenadas de cono de luz, la ecuación de movimiento y las condiciones de frontera se reducen a
+
+\begin{equation}
+\frac{{\partial}^{2}}{\partial x \partial \tau} {\phi} (x, \tau) = 0, \; \mathrm{en} \; R
+\end{equation}
+
+\begin{equation}
+\dot{\phi} ({x}_{i} (\tau), \tau) {\phi}' ({x}_{i}(\tau), \tau) = - B, \quad i =0,1
+\end{equation}
+
+\begin{equation}
+{\phi}({x}_{i}(\tau), \tau) = 0,
+\end{equation}
+
+donde ${x}_{i} (\tau)$ ($i = 0, 1$) son los dos puntos que encierran la bolsa. 
+
+Para resolver la ecuación de onda, podemos proponer una solución de la forma
+
+\begin{equation}
+{\phi}(x, \tau) = {f}(\tau) + g(x).
+\end{equation}
+
+Las condiciones de frontera pueden ser reescritas en términos de ${f}(\tau)$ y ${g}(x)$:
+
+\begin{equation}
+\dot{f} (\tau) {g}' ({x}_{i}(\tau)) = - B, \quad i=0, 1
+\end{equation}
+
+\begin{equation}
+\dot{f}(\tau) + \dot{x}_{i} (\tau) {g}' ({x}_{i} (\tau)) = 0,
+\end{equation}
+
+donde hemos diferenciado (3.15c) para obtener (3.17b). Las constantes del movimiento están dadas por (3.13):
+
+\begin{equation}
+{P}^{-} \equiv H = B ({x}_{1} (\tau) - {x}_{0} (\tau)),
+\end{equation}
+
+\begin{equation}
+{P}^{+} \equiv P = \int_{{x}_{0}(\tau)}^{{x}_{1}(\tau)} dx \, [g'(x)]^{2},
+\end{equation}
+
+\begin{equation}
+{M}^{+-} \equiv M = H \tau - \int_{{x}_{0}(\tau)}^{{x}_{1}(\tau)} dx \, x [{g}' (x)]^{2}
+\end{equation}
+
+La independencia temporal de $H$, $P$, y $M$ puede ser verificada con la ayuda de las condiciones de frontera (3.17). Por ejemplo, una combinación ajustable de las ecuaciones (3.17) lleva a
+
+\[
+\dot{x}_{i}(\tau) = \frac{[\dot{f}(\tau)]^{2}}{B},
+\]
+
+tal que $\dot{x}_{i}(\tau)$ es independiente de $i$ y $\dot{H} = 0$.
+
+Para seguir encontraremos conveniente linealizar las condiciones de frontera. Esto puede ser hecho definiendo un nuevo parámetro espacial ${\sigma} = {\sigma}(x)$ de acuerdo a la ecuación diferencial
+
+\begin{equation}
+\frac{d \sigma}{d x} = \frac{1}{p} [g'(x)]^{2}
+\end{equation}
+
+y condición inicial $\sigma ( {x}_{0}(0)) = 0$, donde $p$ es una constante que será especificada después.
+Definimos un nuevo campo $\tilde{g} (\sigma)$ en términos de $g(x)$ por este cambio de variables independientes,
+
+\begin{equation}
+\tilde{g} (\sigma) \equiv {g} (x(\sigma))
+\end{equation}
+
+$x(\sigma)$ será determinado a partir del inverso de
+
+\begin{equation}
+\frac{dx}{d\sigma} = \frac{1}{p} [\tilde{g}'(\sigma)],
+\end{equation}
+
+donde $\tilde{g}' (\sigma) \equiv (\frac{d}{d\sigma}) \tilde{g} (\sigma)$. Las fronteras de la bolsa son ${\sigma}_{i} (\tau) \equiv \sigma ({x}_{i} (\tau))$. Cuando es descrito en términos de $\sigma$, el movimiento de frontera será bastante más simple. Cuando transformamos a $\sigma$ como variable independiente (3.17) se vuelve
+
+\begin{equation}
+\dot{f}(\tau) = -\frac{B}{p} \tilde{g}'({\sigma}_{i}(\tau)),
+\end{equation}
+
+\begin{equation}
+\dot{f}(\tau) + \dot{\sigma}_{i} (\tau) \tilde{g}' ({\sigma}_{i} (\tau)) = 0
+\end{equation}
+
+tal que $\dot{\sigma}_{i} (\tau) = \frac{B}{p}$. Usando la condición inicial ${\sigma} ({x}_{0}(0)) = {\sigma}_{0} = 0$, ${\sigma}_{0}(\tau) = \frac{B \tau}{p}$, ${\sigma}_{1}(\tau) = (B \tau / p) + {\sigma}_{1}$, donde ${\sigma}_{1}$ es una constante de integración. Para especificar ${\sigma}_{1}$ y $p$ considerar el momento (3.18b) en conjunción con (3.19):
+
+\[
+P = p ({\sigma}_{1} (\tau) - {\sigma}_{0} (\tau)) = p {\sigma}_{1}
+\]
+
+Consecuentemente, si escogemos por conveniencia $p$ sea la constante $P$, entonces ${\sigma}_{1} = 1$ y
+
+\begin{equation}
+{\sigma}_{1} (\tau) = \frac{B \tau}{P} + 1
+\end{equation}
+
+\begin{equation}
+{\sigma}_{0} (\tau) = \frac{B \tau}{P}
+\end{equation}
+
+La solución es ahora inmediato 
+
+
+\section{Campos fermiónicos} 
+
+\subsection{Declaración de las condiciones de frontera}
+
+Supongamos que consideramos un solo campo de Dirac en la bolsa descrito por la acción
+
+\begin{equation}
+{W}_{1} = \int_{V} {d}^{4} x [\frac{1}{2} i (\bar{\psi} \overleftrightarrow{\slashed{\partial}} \psi) - ]
+\end{equation}
+
+
+
+
+\chapter{Notas sobre Masses and other parameters of the light hadrons DeGrand }
+
+Las masas y parámetros estáticos de hadrones ligeros 
+
+Los efectos  de la energía cinética de quark, energía de bolsa, masa de quark extraño, intercambio de gluon colorado a más bajo orden, y energía asociada con ciertas fluctuaciones cuánticas son incluidas. Estas son parametrizadas por cuatro constantes que tienen significancia fundamental y no cambiar de multiplete a multiplete. El ajuste al espectro es bueno.
+
+Momentos magnético, constantes de decaimiento débil, y el radio de carga son calculados. Donde comparación con experimento es posible.
+
+\section{Introducción}
+
+Durante la decada pasada, una teoría de quarks de estructura de hadron ha sido desarrollada que es exitosa en interpretar vastas cantidades de datos experimentales de unas pocas ideas simples extraordinariamente. Los ingredientes de esta teoría son como sigue:
+
+\begin{enumerate}
+\item Hadrones están compuestos de quarks. Los quarks vienen en varios "sabores", los tres de Gell - Mann y Zweig, aumentado quizá por nuevos quarks para nuevos grados de libertad hadrónicos tales como encanto, y 3 colores.
+\item Los quarks interactuan entre ellos mismos relativamente débilmente por el intercambio de un octeto de gluones acoplados colorados, sin masa en la manera de Yang Mills a sus índices de colores. 
+\item La interacción debe ser débil a cortas distancias para explicar escala en experimentos de dispersión de leptones; debe ser débil cerca de la transferencia de momento cero para tomar en cuenta para la falta de grandes renormalizaciones de modelo de quark sencillo estima de transiciones entre bariones ligeros.
+\item La simetría SU(3) generada por la permutación de índices de color es inquebrantable.
+\item Los quarks de diferentes sabores pueden tener diferentes masas para dar cuenta del desglose observado del SU(3) de Gell Mann y para las altas masas de estados compuestos de quarks encantados si eso es lo que son $J(3100)$ y $\psi(3700)$
+\end{enumerate}
+
+Finalmente, y esencialmente, quarks colorados y gluones colorados no son ellos mismos parte del espectro físico.
+
+Los grados de libertad de quark-gluon pueden similarmente caracterizar variables colectivas describiendo la "baja excitación" de materia hadrónica. La única manera que sabemos de proporcionar una descripción de esto consistente con invariancia de lorentz es introduciendo un nuevo término, $-{g}_{\mu \nu} {\theta}_{s} B$, en el tensor de energía momento de la teoría \cite{DeTar_1983, Chodos_1974, Han_1965, Greiner2001, DeGrand_1975}.
+
+\[
+{\gamma}^{0} = \left(
+\begin{array}{cc}
+{I}_{2} & 0\\
+0 & -{I}_{2}
+\end{array}
+\right)
+\]
