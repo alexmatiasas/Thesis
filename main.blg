@@ -1,0 +1,64 @@
+This is BibTeX, Version 0.99d (TeX Live 2024)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: Chapters/01-Introduction.aux
+A level-1 auxiliary file: Chapters/02-TsallisStatistical.aux
+A level-1 auxiliary file: Chapters/03-BagModel.aux
+A level-1 auxiliary file: Chapters/04-ProtonStructureCh.aux
+A level-1 auxiliary file: Chapters/05-PhysicalMeaningQ.aux
+A level-1 auxiliary file: Chapters/06-TotalPandGluons.aux
+A level-1 auxiliary file: Chapters/08-ResultsAndConclusions.aux
+A level-1 auxiliary file: Chapters/100000-Notas.aux
+A level-1 auxiliary file: Chapters/07-NotasNewExtendedModel.aux
+A level-1 auxiliary file: Chapters/Appendix-On_Collisions.aux
+The style file: unsrtnat.bst
+Database file #1: Bibliography/BibFiles/proton_pressure-ref.bib
+Database file #2: Bibliography/BibFiles/Bag_model.bib
+Database file #3: Bibliography/BibFiles/QCD.bib
+Database file #4: Bibliography/BibFiles/Statistical_Physics.bib
+Database file #5: Bibliography/BibFiles/Phenomenological_Description.bib
+Database file #6: Bibliography/BibFiles/LQCD.bib
+Warning--can't use both author and editor fields in Tsallis2009
+Warning--there's a number but no volume in Wilczek1982
+You've used 34 entries,
+            2481 wiz_defined-function locations,
+            901 strings with 14875 characters,
+and the built_in function-call counts, 14130 in all, are:
+= -- 1359
+> -- 592
+< -- 20
++ -- 242
+- -- 172
+* -- 1210
+:= -- 2324
+add.period$ -- 202
+call.type$ -- 34
+change.case$ -- 66
+chr.to.int$ -- 32
+cite$ -- 36
+duplicate$ -- 642
+empty$ -- 1230
+format.name$ -- 220
+if$ -- 2965
+int.to.chr$ -- 3
+int.to.str$ -- 35
+missing$ -- 36
+newline$ -- 278
+num.names$ -- 102
+pop$ -- 148
+preamble$ -- 1
+purify$ -- 34
+quote$ -- 0
+skip$ -- 334
+stack$ -- 0
+substring$ -- 718
+swap$ -- 101
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 232
+warning$ -- 2
+while$ -- 113
+width$ -- 0
+write$ -- 647
+(There were 2 warnings)
