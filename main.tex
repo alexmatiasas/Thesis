@@ -1,136 +1,125 @@
-\documentclass[12pt, a4paper, twoside, openright, final,]{book}
-\usepackage[english, spanish]{babel}
-%Options: Sonny, Lenny, Glenn, Conny, Rejne, Bjarne, Bjornstrup
-\usepackage[Conny]{fncychap}
-%\usepackage{amsmath}
-\usepackage{eqnarray,amsmath, nccmath}
-%\usepackage{geometry}
-
-% Pikachu:      ||||||||||||||||
-% Charizard:    |||||
-% Mewtwo:       ||||||||||||
-
-\usepackage[LGR,T1]{fontenc}
-\usepackage[utf8]{inputenc}
-\usepackage{textalpha}
-
-\usepackage{amsfonts}
-\usepackage{amssymb}
-\usepackage{nicefrac, xfrac}
-\usepackage{graphicx}
-\usepackage{lmodern}
-\usepackage{physics}
-\usepackage{blindtext, fancyhdr}
-\usepackage{url}
-\usepackage{mathrsfs}
-%\usepackage{cite}
-\decimalpoint
-\usepackage[toc, acronym]{glossaries}
-\usepackage{xcolor}
-\usepackage[sort&compress,numbers]{natbib}
-\usepackage{hyperref}
-\usepackage[nottoc]{tocbibind}
-\usepackage{slashed}
-\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
-\definecolor{myblue}{RGB}{12,12,224}
-\hypersetup{
-    colorlinks=true,
-    linkcolor=myblue,
-    citecolor=myblue,
-    filecolor=myblue,      
-    urlcolor=myblue,
-    pdftitle={Mi tesis},
-    pdfauthor={Manuel Alejandro Matías Astorga}
-    pdfpagemode=FullScreen,
-    }
-\urlstyle{same}
-\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
-\usepackage{wrapfig}
-\author{Manuel Alejandro Matías Astorga}
-\title{Thesis}
-
-\makeglossaries
-
-\newacronym{bg}{BG}{Boltzmann - Gibbs}
-\newacronym{be}{BE}{Bose - Einstein}
-\newacronym{fd}{FD}{Fermi - Dirac}
-\newacronym{qcd}{QCD}{Quantum Chromodynamics}
-\newacronym{qed}{QED}{Quantum Electrodynamics}
-\newacronym{mit}{MIT}{Massachusetts Institute of Technology}
-\newacronym{slac}{SLAC}{Stanford Linear Accelerator Center}
-\newacronym{gff}{GFF}{Gravitational form factors}
-\newacronym{bm}{BM}{Bag Model}
-\newacronym{lqcd}{LQCD}{Lattice QCD}
-\newacronym{t-mitbm}{T-MIT bag model}{Tsallis-MIT Bag Model}
-\newacronym{dvcs}{DVCS}{Deep Virtual Compton Scattering}
-\newacronym{gpd}{GPD}{Generalized Parton Distributions}
-\newacronym{cff}{CFFs}{Compton Form Factors}
-
-\newenvironment{abstract}
-{\null\vfill 
-\begin{center}
-\bfseries\abstractname 
-\end{center}
-}
-{\vfill \null}
-
-\makeindex
-
-\numberwithin{equation}{chapter}
-
+\documentclass[12pt, a4paper, twoside, openright, final]{book}
+% ! RECORDAR PONER EL TÍTULO DE LA TÉSIS ANTES DE IMPRIMIR EL ARCHIVO (EN PORTADA, Y EN FOOTNOTE GENERAL)
+% ================================================================================================================================
+% Preámbulo
+% ================================================================================================================================
+\usepackage{preamble}
+% ================================================================================================================================
+% Documento
+% ================================================================================================================================
 \begin{document}
-\maketitle
-\frontmatter
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Abstract}
-\selectlanguage{spanish}
-\begin{abstract}
-Este es el resumen en español 
-\end{abstract}
-\selectlanguage{english}
-\begin{abstract}
-This is the abstract
-\end{abstract}
+% ================================================================================================================================
+% Portada y Front Matter
+% ================================================================================================================================
+\input{titlepage.tex}
 
+\newpage
+\thispagestyle{empty}
+
+\frontmatter
+
+
+% Abstract en español e inglés
+\chapter*{Abstract}
+\addcontentsline{toc}{chapter}{Resumen}
+\label{ch: abstract}
+\abstractsection{spanish}{
+    \begin{flushright}
+        Resumen en español \Gls{maths}
+    \end{flushright}
+    }
+\abstractsection{english}{
+    \begin{flushright}
+        This is the abstract
+    \end{flushright}
+    }
+
+\newpage
+\thispagestyle{empty}
+
+% Agradecimientos
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
+\label{ch: Agradecimientos}
 \begin{flushright}
 CONAHCYT, CINVESTAV, Dr Gerardo H. C.
+
+Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1)%3A_Basic_Structure}{Josh Cassidy} por la plantilla de la portada de mi tésis.
 \end{flushright}
 
-\tableofcontents
+\newpage
+\thispagestyle{empty}
+
+% Índices
+\renewcommand{\contentsname}{Contenido}
+\tableofcontents % Podríamos usar \usepackage{tocloft} para personalizar el ToC
+\renewcommand{\listfigurename}{Lista de figuras}
 \listoffigures
+
+\newpage
+\thispagestyle{empty}
+\renewcommand{\listtablename}{Lista de Tablas}
 \listoftables
 
+\newpage
+\thispagestyle{empty}
+
+% ================================================================================================================================
+% Main Matter
+% ================================================================================================================================
 \mainmatter
 
-\newpage
-\thispagestyle{empty}
-\mbox{}
-\newpage
-\thispagestyle{empty}
-\mbox{}
+\renewcommand{\chaptername}{Capítulo}
 
+% Capítulos principales (modularizados)
 \include{Chapters/01-Introduction}
-\include{Chapters/02-TsallisStatistical}
 \include{Chapters/03-BagModel}
+\include{Chapters/02-TsallisStatistical}
 \include{Chapters/04-ProtonStructureCh}
 \include{Chapters/05-PhysicalMeaningQ}
 \include{Chapters/06-TotalPandGluons}
 \include{Chapters/08-ResultsAndConclusions}
-\include{Chapters/100000-Notas}
-\include{Chapters/07-NotasNewExtendedModel}
+%\include{Chapters/100000-Notas}
+%\include{Chapters/07-NotasNewExtendedModel}
 
+
+
+% ================================================================================================================================
+% Apéndices
+% ================================================================================================================================
 \appendix
-
+\renewcommand{\appendixname}{Apéndice}
 \include{Chapters/Appendix-On_Collisions}
+\include{Chapters/Appendix-On_Collisions}
+
 
 \clearpage
 
-\printglossary[title=Acrónimos, toctitle=Acrónimos, type=\acronymtype]
-
+% ================================================================================================================================
+% Back Matter
+% ================================================================================================================================
 \backmatter
 
+% Acrónimos
+\printglossary[
+    title=Acrónimos, 
+    toctitle=Acrónimos, 
+    type=\acronymtype
+]
+
+% List of terms
+\printglossary[
+    title=Glosario,
+    toctitle=List of terms
+]
+
+\nomenclature[A, 01]{$c$}{\href{https://physics.nist.gov/cgi-bin/cuu/Value?c}
+{Speed of light in a vacuum}\nomunit{\SI{299792458}{\meter\per\second}}}
+
+\nomenclature[B, 01]{\(h\)}{Planck constant}
+\printnomenclature
+
+% Bibliografía
 \renewcommand\bibname{Bibliografía}
 \bibliographystyle{unsrtnat}
 \bibliography{Bibliography/BibFiles/proton_pressure-ref,
@@ -141,3 +130,9 @@ CONAHCYT, CINVESTAV, Dr Gerardo H. C.
                 Bibliography/BibFiles/LQCD}
 
 \end{document}
+
+% run with
+% pdflatex main.tex
+% bibtex main.aux
+% pdflatex main.tex
+% pdflatex main.tex

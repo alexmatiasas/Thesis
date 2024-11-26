@@ -1,41 +1,33 @@
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{Abstract}{\es@scroman {i}}{chapter*.1}%
+\contentsline {chapter}{Resumen}{\es@scroman {i}}{chapter*.1}%
 \babel@toc {spanish}{}\relax 
 \babel@toc {english}{}\relax 
 \contentsline {chapter}{Agradecimientos}{\es@scroman {iii}}{chapter*.2}%
-\contentsline {chapter}{List of Figures}{\es@scroman {vii}}{chapter*.4}%
-\contentsline {chapter}{List of Tables}{\es@scroman {ix}}{chapter*.5}%
-\contentsline {chapter}{Introduction}{3}{chapter*.6}%
-\contentsline {chapter}{\numberline {1}Estadística de Tsallis}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introducción}{7}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Presión dentro del hadrón}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Presión de gluones, un gas ideal de Bose - Einstein ultrarelativista}{8}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Presión de quarks, un gas ideal de Fermi - Dirac ultrarrelativista}{11}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}El protón en el modelo de Tsallis}{17}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}La entropía en el modelo de Tsallis}{17}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}La presión en el modelo de Tsallis}{19}{subsection.1.3.2}%
-\contentsline {chapter}{\numberline {2}Modelo de bolsa}{21}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Modelo de bolsa}{21}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}¿Por qué un modelo de bolsa?}{21}{subsection.2.1.1}%
-\contentsline {section}{\numberline {2.2}La aproximación de la cavidad esférica}{22}{section.2.2}%
-\contentsline {chapter}{\numberline {3}Características de estructura del protón}{25}{chapter.3}%
-\contentsline {chapter}{\numberline {4}Significado físico del parámetro $q$ de Tsallis}{29}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Distribución de presión total y presión de gluones}{31}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Resultados y conclusiones}{33}{chapter.6}%
-\contentsline {chapter}{\numberline {7}NOTAS}{35}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Notas de DeGrand sobre masas y otros parámetros de hadrones ligeros}{35}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Notas sobre \emph {Baryon structure in the bag theory}}{36}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Cálculos}{36}{subsection.7.2.1}%
-\contentsline {chapter}{\numberline {8}Notas sobre New Extended Model Of Hadrons de A. Chodos}{41}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Campos escalares}{41}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Formulación del problema clásico}{41}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Invariancia de Poincaré del problema clásico}{42}{subsection.8.1.2}%
-\contentsline {subsection}{\numberline {8.1.3}Mecánica clásica en dos dimensiones}{43}{subsection.8.1.3}%
-\contentsline {subsubsection}{Solución al problema clásico}{43}{section*.9}%
-\contentsline {section}{\numberline {8.2}Campos fermiónicos}{45}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Declaración de las condiciones de frontera}{45}{subsection.8.2.1}%
-\contentsline {chapter}{\numberline {9}Notas sobre Masses and other parameters of the light hadrons DeGrand }{47}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Introducción}{47}{section.9.1}%
-\contentsline {chapter}{\numberline {A}Appendix On Collisions}{49}{appendix.Alph1}%
-\contentsline {section}{\numberline {A.1}On collisions}{49}{section.Alph1.1}%
-\contentsline {chapter}{Bibliografía}{51}{appendix*.10}%
+\contentsline {chapter}{Lista de figuras}{\es@scroman {vii}}{chapter*.4}%
+\contentsline {chapter}{Lista de Tablas}{\es@scroman {ix}}{chapter*.5}%
+\contentsline {chapter}{Introducción}{1}{chapter*.6}%
+\contentsline {chapter}{\numberline {1}Modelo de bolsa}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Modelo de bolsa}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}¿Por qué un modelo de bolsa?}{5}{subsection.1.1.1}%
+\contentsline {section}{\numberline {1.2}La aproximación de la cavidad esférica}{6}{section.1.2}%
+\contentsline {chapter}{\numberline {2}Estadística de Tsallis}{9}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Introducción}{9}{section.2.1}%
+\contentsline {section}{\numberline {2.2}Presión dentro del hadrón}{9}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Presión de gluones, un gas ideal de Bose - Einstein ultrarelativista}{10}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Presión de quarks, un gas ideal de Fermi - Dirac ultrarrelativista}{13}{subsection.2.2.2}%
+\contentsline {section}{\numberline {2.3}El protón en el modelo de Tsallis}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}La entropía en el modelo de Tsallis}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}La presión en el modelo de Tsallis}{21}{subsection.2.3.2}%
+\contentsline {chapter}{\numberline {3}Características de estructura del protón}{23}{chapter.3}%
+\contentsline {chapter}{\numberline {4}Significado físico del parámetro q de Tsallis}{27}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Distribución de presión total y presión de gluones}{29}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Resultados y conclusiones}{31}{chapter.6}%
+\contentsline {chapter}{\numberline {B}Appendix On Collisions}{35}{appendix.Alph2}%
+\contentsline {chapter}{Appendix: On Collisions}{35}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}On collisions}{35}{section.Alph2.1}%
+\contentsline {chapter}{\numberline {B}Appendix On Collisions}{35}{appendix.Alph2}%
+\contentsline {chapter}{Appendix: On Collisions}{35}{appendix.Alph2}%
+\contentsline {section}{\numberline {B.1}On collisions}{35}{section.Alph2.1}%
+\contentsline {chapter}{Acrónimos}{37}{section*.8}%
+\contentsline {chapter}{List of terms}{39}{section*.10}%
+\contentsline {chapter}{Bibliografía}{41}{appendix*.12}%

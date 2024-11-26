@@ -1,4 +1,4 @@
-\begin{thebibliography}{34}
+\begin{thebibliography}{31}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -325,26 +325,5 @@ K.~Johnson.
 \newblock \emph{ACTA PHYSICA POLONICA}, B6\penalty0 (6):\penalty0 1--28, 1975.
 \newblock URL
   \url{https://www.actaphys.uj.edu.pl/fulltext?series=Reg&vol=6&page=865}.
-
-\bibitem[Han and Nambu(1965)]{Han_1965}
-M.~Y. Han and Y.~Nambu.
-\newblock Three-triplet model with double su(3) symmetry.
-\newblock \emph{Physical Review}, 139\penalty0 (4B):\penalty0 B1006--B1010, aug
-  1965.
-\newblock \doi{https://doi.org/10.1103/PhysRev.139.B1006}.
-
-\bibitem[Greiner et~al.(2001)Greiner, Neise, and Stöcker]{Greiner2001}
-Walter Greiner, Ludwig Neise, and Horst Stöcker.
-\newblock \emph{Thermodynamics and Statistical Mechanics (Classical Theoretical
-  Physics)}.
-\newblock Springer, 2001.
-\newblock ISBN 0-387-94299-8.
-
-\bibitem[DeGrand et~al.(1975)DeGrand, Jaffe, Johnson, and Kiskis]{DeGrand_1975}
-T.~DeGrand, R.~L. Jaffe, K.~Johnson, and J.~Kiskis.
-\newblock Masses and other parameters of the light hadrons.
-\newblock \emph{Physical Review D}, 12\penalty0 (7):\penalty0 2060--2076, oct
-  1975.
-\newblock \doi{https://doi.org/10.1103/PhysRevD.12.2060}.
 
 \end{thebibliography}

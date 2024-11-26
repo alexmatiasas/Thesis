@@ -1,0 +1,162 @@
+\ProvidesPackage{preamble}
+% ================================================================================================================================
+% Paquetes básicos
+% ================================================================================================================================
+\usepackage[english, spanish]{babel} % Idiomas
+\usepackage[utf8]{inputenc}          % Codificación
+\usepackage[LGR,T1]{fontenc}         % Soporte de fuentes
+\usepackage{textalpha}               % Soporte de caracteres adicionales
+
+% Paquetes matemáticos y científicos
+\usepackage{eqnarray, amsmath, nccmath} % Ecuaciones
+\usepackage{amsfonts, amssymb}          % Fuentes y símbolos
+\usepackage{physics}                    % Comandos físicos
+\usepackage{siunitx}
+
+% Fuentes y estilos
+\usepackage{newtxtext,newtxmath}          % Fuente moderna
+\usepackage{xcolor}           % Colores
+\usepackage{graphicx}         % Imágenes
+\usepackage{url}              % Manejo de URLs
+\usepackage{blindtext}        % Texto de ejemplo
+\usepackage{fancyhdr} % Estilos de encabezado/pie
+\usepackage{fourier-orns}     % Para líneas estilizadas con logos u ornamento
+\usepackage{mathrsfs}         % Fuente caligráfica
+\usepackage{nicefrac, xfrac}  % Fracciones
+\usepackage{slashed}          % Notación slash (Dirac)
+\usepackage{etoolbox}         % Crea macros
+% \usepackage{fontawesome}      % Font icons
+
+% Documentos y referencias
+\usepackage[sort&compress,numbers]{natbib} % Citas bibliográficas
+\usepackage[nottoc]{tocbibind}            % Índices
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry} % Márgenes
+\usepackage{wrapfig}                      % Imágenes flotantes
+
+% Opciones de capítulos
+\usepackage[Rejne]{fncychap} % Estilos de capítulos
+
+% Hipervínculos, glosarios y nomenclatura
+\usepackage[hidelinks]{hyperref}                     % Hipervínculos
+\usepackage[toc, acronym]{glossaries} % Glosarios y acrónimos
+\usepackage[nocfg]{nomencl}
+
+% ================================================================================================================================
+% Configuración específica
+% ================================================================================================================================
+
+% Definiciones de colores
+\definecolor{airforceblue}{rgb}{0.36, 0.54, 0.66}
+\definecolor{myblue}{RGB}{12,12,224}
+
+\graphicspath{ {Images/} }
+
+% Configuración de hipervínculos
+\hypersetup{
+    colorlinks=true,
+    linkcolor=myblue,
+    citecolor=myblue,
+    filecolor=myblue,      
+    urlcolor=myblue,
+    pdftitle={My Thesis},
+    pdfauthor={Manuel Alejandro Matías Astorga},
+    pdfpagemode=FullScreen,
+}
+\urlstyle{same}
+
+
+% ================================================================================================================================
+% Comandos y definiciones personalizadas
+% ================================================================================================================================
+
+% Glosarios
+
+\makeglossaries
+
+\newglossaryentry{maths}
+{
+    name=mathematics,
+    description={Mathematics is what mathematicians do}
+}
+
+% Acrónimos
+
+% \input{acronyms}
+
+\newacronym{bg}{BG}{Boltzmann - Gibbs}
+\newacronym{be}{BE}{Bose - Einstein}
+\newacronym{fd}{FD}{Fermi - Dirac}
+\newacronym{qcd}{QCD}{Quantum Chromodynamics}
+\newacronym{qed}{QED}{Quantum Electrodynamics}
+\newacronym{mit}{MIT}{Massachusetts Institute of Technology}
+\newacronym{slac}{SLAC}{Stanford Linear Accelerator Center}
+\newacronym{gff}{GFF}{Gravitational form factors}
+\newacronym{bm}{BM}{Bag Model}
+\newacronym{lqcd}{LQCD}{Lattice QCD}
+\newacronym{t-mitbm}{T-MIT bag model}{Tsallis-MIT Bag Model}
+\newacronym{dvcs}{DVCS}{Deep Virtual Compton Scattering}
+\newacronym{gpd}{GPD}{Generalized Parton Distributions}
+\newacronym{cff}{CFFs}{Compton Form Factors}
+
+% Nomenclatura
+
+\makenomenclature
+
+% \renewcommand{\nomname}{List of Symbols} %changes the default title.
+% \renewcommand{\nompreamble}{The next list describes several symbols that will be later used within the body of the document} % inserts some text in between the title and the list symbols.
+
+
+
+% Abstract personalizado
+\newenvironment{abstract}
+{\null\vfill 
+\begin{center}
+\bfseries\abstractname 
+\end{center}
+}
+{\vfill \null}
+
+% Comando para el abstract
+\newcommand{\abstractsection}[2]{
+    \selectlanguage{#1}
+    \begin{abstract}
+        #2
+    \end{abstract}
+}
+
+% Comando para página en blanco sin estilo
+
+\newcommand{\blankpage}{
+    \newpage
+    \thispagestyle{empty}
+    \mbox{}
+}
+
+\renewcommand\nomgroup[1]{%
+  \item[\bfseries
+  \ifstrequal{#1}{A}{Physics Constants}{%
+  \ifstrequal{#1}{B}{Number Sets}{%
+  \ifstrequal{#1}{C}{Other Symbols}{}}}%
+]}
+
+%% This will add the units
+%----------------------------------------------
+\newcommand{\nomunit}[1]{%
+\renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+%----------------------------------------------
+
+% renombando headrule with ornament
+\renewcommand{\headrule}{%
+\vspace{-8pt}\hrulefill
+\raisebox{-2.1pt}{\quad\decofourleft\decotwo\decofourright\quad}\hrulefill}
+
+% Índices
+\makeindex
+\numberwithin{equation}{chapter}
+
+% ================================================================================================================================
+% Metadatos
+% ================================================================================================================================
+
+\author{Manuel Alejandro Matías Astorga}
+\title{Thesis}
