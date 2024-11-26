@@ -12,7 +12,7 @@
 \contentsline {section}{\numberline {1.2}La aproximación de la cavidad esférica}{6}{section.1.2}%
 \contentsline {chapter}{\numberline {2}Estadística de Tsallis}{9}{chapter.2}%
 \contentsline {section}{\numberline {2.1}Introducción}{9}{section.2.1}%
-\contentsline {section}{\numberline {2.2}Presión dentro del hadrón}{9}{section.2.2}%
+\contentsline {section}{\numberline {2.2}Presión dentro del hadrón}{10}{section.2.2}%
 \contentsline {subsection}{\numberline {2.2.1}Presión de gluones, un gas ideal de Bose - Einstein ultrarelativista}{10}{subsection.2.2.1}%
 \contentsline {subsection}{\numberline {2.2.2}Presión de quarks, un gas ideal de Fermi - Dirac ultrarrelativista}{13}{subsection.2.2.2}%
 \contentsline {section}{\numberline {2.3}El protón en el modelo de Tsallis}{20}{section.2.3}%
@@ -29,5 +29,6 @@
 \contentsline {chapter}{Appendix: On Collisions}{35}{appendix.Alph2}%
 \contentsline {section}{\numberline {B.1}On collisions}{35}{section.Alph2.1}%
 \contentsline {chapter}{Acrónimos}{37}{section*.8}%
-\contentsline {chapter}{List of terms}{39}{section*.10}%
-\contentsline {chapter}{Bibliografía}{41}{appendix*.12}%
+\contentsline {chapter}{Glosario}{39}{section*.10}%
+\contentsline {chapter}{\nonumberline Nomenclatura}{41}{appendix*.12}%
+\contentsline {chapter}{Bibliografía}{43}{appendix*.13}%

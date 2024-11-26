@@ -25,6 +25,7 @@
 \usepackage{nicefrac, xfrac}  % Fracciones
 \usepackage{slashed}          % Notación slash (Dirac)
 \usepackage{etoolbox}         % Crea macros
+\usepackage{listings}         % Listing for environments of coding
 % \usepackage{fontawesome}      % Font icons
 
 % Documentos y referencias
@@ -39,7 +40,7 @@
 % Hipervínculos, glosarios y nomenclatura
 \usepackage[hidelinks]{hyperref}                     % Hipervínculos
 \usepackage[toc, acronym]{glossaries} % Glosarios y acrónimos
-\usepackage[nocfg]{nomencl}
+\usepackage[intoc, spanish]{nomencl}
 
 % ================================================================================================================================
 % Configuración específica
@@ -72,38 +73,33 @@
 % Glosarios
 
 \makeglossaries
-
-\newglossaryentry{maths}
-{
-    name=mathematics,
-    description={Mathematics is what mathematicians do}
-}
+\input{glossary}
 
 % Acrónimos
 
-% \input{acronyms}
+\input{acronyms}
 
-\newacronym{bg}{BG}{Boltzmann - Gibbs}
-\newacronym{be}{BE}{Bose - Einstein}
-\newacronym{fd}{FD}{Fermi - Dirac}
-\newacronym{qcd}{QCD}{Quantum Chromodynamics}
-\newacronym{qed}{QED}{Quantum Electrodynamics}
-\newacronym{mit}{MIT}{Massachusetts Institute of Technology}
-\newacronym{slac}{SLAC}{Stanford Linear Accelerator Center}
-\newacronym{gff}{GFF}{Gravitational form factors}
-\newacronym{bm}{BM}{Bag Model}
-\newacronym{lqcd}{LQCD}{Lattice QCD}
-\newacronym{t-mitbm}{T-MIT bag model}{Tsallis-MIT Bag Model}
-\newacronym{dvcs}{DVCS}{Deep Virtual Compton Scattering}
-\newacronym{gpd}{GPD}{Generalized Parton Distributions}
-\newacronym{cff}{CFFs}{Compton Form Factors}
+% \newacronym{bg}{BG}{Boltzmann - Gibbs}
+% \newacronym{be}{BE}{Bose - Einstein}
+% \newacronym{fd}{FD}{Fermi - Dirac}
+% \newacronym{qcd}{QCD}{Quantum Chromodynamics}
+% \newacronym{qed}{QED}{Quantum Electrodynamics}
+% \newacronym{mit}{MIT}{Massachusetts Institute of Technology}
+% \newacronym{slac}{SLAC}{Stanford Linear Accelerator Center}
+% \newacronym{gff}{GFF}{Gravitational form factors}
+% \newacronym{bm}{BM}{Bag Model}
+% \newacronym{lqcd}{LQCD}{Lattice QCD}
+% \newacronym{t-mitbm}{T-MIT bag model}{Tsallis-MIT Bag Model}
+% \newacronym{dvcs}{DVCS}{Deep Virtual Compton Scattering}
+% \newacronym{gpd}{GPD}{Generalized Parton Distributions}
+% \newacronym{cff}{CFFs}{Compton Form Factors}
 
 % Nomenclatura
 
 \makenomenclature
 
-% \renewcommand{\nomname}{List of Symbols} %changes the default title.
-% \renewcommand{\nompreamble}{The next list describes several symbols that will be later used within the body of the document} % inserts some text in between the title and the list symbols.
+\renewcommand{\nomname}{Nomenclatura} %changes the default title.
+\renewcommand{\nompreamble}{The next list describes several symbols that will be later used within the body of the document} % inserts some text in between the title and the list symbols.
 
 
 

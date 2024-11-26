@@ -25,7 +25,7 @@
 \label{ch: abstract}
 \abstractsection{spanish}{
     \begin{flushright}
-        Resumen en español \Gls{maths}
+        Resumen en español
     \end{flushright}
     }
 \abstractsection{english}{
@@ -100,6 +100,8 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 % ================================================================================================================================
 \backmatter
 
+% Agregar un preámbulo antes de la lista de acrónimos
+
 % Acrónimos
 \printglossary[
     title=Acrónimos, 
@@ -110,13 +112,10 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 % List of terms
 \printglossary[
     title=Glosario,
-    toctitle=List of terms
+    toctitle=Glosario
 ]
 
-\nomenclature[A, 01]{$c$}{\href{https://physics.nist.gov/cgi-bin/cuu/Value?c}
-{Speed of light in a vacuum}\nomunit{\SI{299792458}{\meter\per\second}}}
-
-\nomenclature[B, 01]{\(h\)}{Planck constant}
+\input{nomencl}
 \printnomenclature
 
 % Bibliografía

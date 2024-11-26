@@ -1,2 +1,7 @@
-\nomenclatureentry{A, 01$c$@[{$c$}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?c} {Speed of light in a vacuum}\nomunit{\SI{299792458}{\meter\per\second}}\nomeqref {B.1}|nompageref}{39}
-\nomenclatureentry{B, 01\(h\)@[{\(h\)}]\begingroup Planck constant\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{A, 02\(c\)@[{\(c\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?c}{Speed of light in a vacuum}\nomunit{\SI{299792458}{\meter\per\second}}\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{A, 03\(h\)@[{\(h\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?h}{Planck constant}\nomunit{\SI[group-digits=false]{6.62607015e-34}{\joule\per\hertz}}\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{A, 01\(G\)@[{\(G\)}]\begingroup \href{https://physics.nist.gov/cgi-bin/cuu/Value?bg}{Gravitational constant} \nomunit{\SI[group-digits=false]{6.67430e-11}{\meter\cubed\per\kilogram\per\second\squared}}\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{B, 03\(\mathbb{R}\)@[{\(\mathbb{R}\)}]\begingroup Real numbers\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{B, 02\(\mathbb{C}\)@[{\(\mathbb{C}\)}]\begingroup Complex numbers\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{B, 01\(\mathbb{H}\)@[{\(\mathbb{H}\)}]\begingroup Quaternions\nomeqref {B.1}|nompageref}{39}
+\nomenclatureentry{C\(V\)@[{\(V\)}]\begingroup Constant volume\nomeqref {B.1}|nompageref}{39}

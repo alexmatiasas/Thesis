@@ -2,5 +2,9 @@
 \begin{theglossary}\glossaryheader
 \glsgroupheading{M}\relax \glsresetentrylist %
 \glossentry{maths}{\glossaryentrynumbers{\relax 
-		\setentrycounter[]{page}\glslocationcstoencap{glsnumberformat}{es@scroman}{i}}}%
+		\setentrycounter[]{page}\glsnumberformat{1}\delimN 
+		\setentrycounter[]{page}\glsnumberformat{9}}}\glsgroupskip
+\glsgroupheading{T}\relax \glsresetentrylist %
+\glossentry{tsallis}{\glossaryentrynumbers{\relax 
+		\setentrycounter[]{page}\glsnumberformat{9}}}%
 \end{theglossary}\glossarypostamble
