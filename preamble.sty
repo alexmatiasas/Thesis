@@ -11,7 +11,7 @@
 \usepackage{eqnarray, amsmath, nccmath} % Ecuaciones
 \usepackage{amsfonts, amssymb}          % Fuentes y símbolos
 \usepackage{physics}                    % Comandos físicos
-\usepackage{siunitx}
+\usepackage{siunitx}                    % Comandos para unidades más prácticos.
 
 % Fuentes y estilos
 \usepackage{newtxtext,newtxmath}          % Fuente moderna
@@ -26,6 +26,7 @@
 \usepackage{slashed}          % Notación slash (Dirac)
 \usepackage{etoolbox}         % Crea macros
 \usepackage{listings}         % Listing for environments of coding
+\usepackage[labelfont=bf, font=small, labelsep=colon]{caption}
 % \usepackage{fontawesome}      % Font icons
 
 % Documentos y referencias
@@ -145,6 +146,34 @@
 \renewcommand{\headrule}{%
 \vspace{-8pt}\hrulefill
 \raisebox{-2.1pt}{\quad\decofourleft\decotwo\decofourright\quad}\hrulefill}
+
+% Declaring a new macro for units
+
+
+% Definition of a listing environment for Python
+
+% % Configuración de Python
+\lstdefinestyle{pythonstyle}{
+    language=Python,                 % Define el lenguaje
+    basicstyle=\ttfamily\small,      % Estilo de fuente
+    keywordstyle=\color{blue},       % Palabras clave
+    stringstyle=\color{green!70!black}, % Cadenas
+    commentstyle=\color{gray},       % Comentarios
+    numbers=left,                    % Numeración a la izquierda
+    numberstyle=\tiny,               % Tamaño de números
+    stepnumber=1,                    % Cada línea numerada
+    numbersep=5pt,                   % Separación de números
+    showstringspaces=false,          % No muestra espacios en cadenas
+    frame=single,                      % Marco alrededor del código
+    frameround=tttt,
+    rulecolor=\color{black},         % Color del marco
+    breaklines=true,                 % Líneas largas se parten
+    tabsize=4,                       % Tamaño del tabulador
+    captionpos=b                     % Posición del título (b=abajo)
+}
+
+% % Comando para usar el estilo
+\lstset{style=pythonstyle}
 
 % Índices
 \makeindex

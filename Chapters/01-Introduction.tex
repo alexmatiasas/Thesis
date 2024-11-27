@@ -10,10 +10,20 @@
 \fancyfoot[RO]{\nouppercase{\emph{Thesis title} \hfill \thepage}}
 % =====================================================================
 
+% 12 345.678 90                     \num{12345,67890} \\
+% 0.3 ×1045                         \num{.3e45} \\
+% 1 ±2i                             \complexnum{1+-2i}
+% 1.654 ×2.34 ×3.430                \numproduct{1.654 x 2.34 x 3.430}
+% kg m s−1                          \unit{kg.m.s^{-1}}
+% kg m s−1                          \unit{\kilogram\metre\per\second} 
+% kg m/s                            \unit[per-mode = symbol]{\kilogram\metre\per\second}
+% kg m/(A s)                        \unit[per-mode = symbol]{\kilogram\metre\per\ampere\per\second}
+% 
 
 De acuerdo con el modelo de \acrfull{qcd} las partículas hadrónicas están formadas de quarks los cuales se encuentran confinados dentro de la dichos hadrones \Gls{maths}.
 
-xd
+% Renombrando las figuras
+\renewcommand{\figurename}{Fig.}
 
 \begin{wrapfigure}{r}{0.45\textwidth}
 \centering
@@ -31,7 +41,10 @@ Con el fin de explorar la física de materia quark, se han desarrollado varias t
 
 Cálculos de \acrshort{lqcd} proporcionan resultados confiables de estructuras hadrónicas que contienen quarks pesados y ha sido recientemente usadas como cálculos de estado de arte por la colaboración HAL-QCD \cite{Iritani_2019,Hatsuda_2017}. La descripción obtenida por HAL QCD de los estados finales de interacciones fuertes entre sistemas protón-neutrón y protón hiperones fue comparado a los resultados experimentales publicados por la colaboración ALICE \cite{Collaboration2020, Collaboration2021}
 
-\acrshort{lqcd} consiste en una técnica numérica que lleva a cabo gran cantidad de cálculos en una red espacio - temporal Euclídea muy grande (los parámetros de red $a$ son del orden de $\mathit{fm}$ o como se menciona en [INTRO A LQCD], en un rango de $2 \, \mathit{GeV} \leq {a}^{-1} \leq 5 \, GeV$), figura \ref{fig: LQCD}. Debido a que ocupa redes con millones de nodos, la dificultad de este tipo de modelos recae en la cantidad de cálculos necesarios para resolver dichos modelos. 
+\qty{10}{cm}
+\num{1.2304} \unit{\candela}
+
+\acrshort{lqcd} consiste en una técnica numérica que lleva a cabo gran cantidad de cálculos en una red espacio - temporal Euclídea muy grande (los parámetros de red $a$ son del orden de $\mathit{\unit{\femto\meter}}$ o como se menciona en [INTRO A LQCD], en un rango de $2 \, \unit{GeV} \leq {a}^{-1} \leq 5 \, \unit{GeV}$), Fig.~\ref{fig: LQCD}. Debido a que ocupa redes con millones de nodos, la dificultad de este tipo de modelos recae en la cantidad de cálculos necesarios para resolver dichos modelos. 
 Partiendo de esto, se tiene un nuevo problema: \emph{el problema del signo} [más referencias], el cual surge en simulaciones Monte Carlo como las que se ocupan para resolver \acrshort{lqcd}, esto consiste en que el peso de las configuraciones de simulaciones cuánticas Monte Carlo se vuelven negativas o incluso complejas, y por lo tanto, no pueden ser interpretadas como proabilidades clásicas[Sign problem in QMC simulation]. 
 
 NOTA: Hablar acerca del operador de Dirac no hermitiano
@@ -54,13 +67,15 @@ Hemos propuesto un modelo que se basa en el modelo de bolsa (\acrshort{bm}) del 
 
 De esta manera, en nuestro modelo consideramos una simplificación de todos los cálculos que se ocupan en \acrshort{qcd}, con el fin de reducir esas interacciones a la contribución de una presión de bolsa $B$.
 
+Como en el código de \ref{code:python_example}
+
 Por otro lado, consideramos la estadística no extensiva de Tsallis ya que proporciona el modelo necesario para representar al plasma de quarks y gluones (visto como gases de Fermi y Dirac por simplificación) con un parámetro que considera la interacción entre los quarks y los gluones. Este modelo se ha escogido por sus varias aplicaciones en otras áreas de investigación [más referencias] y que se ajusta muy bien a este modelo por tratarse de partículas que interaccionan y con ello simplifican la no linearidad propia de esto [más referencias]. Cabe mencionar, que en este marco se pueden considerar gases con potencial químico, $\mu$, no nulo lo cual es una ventaja a la hora de estudiar los diversos escenarios en los que los hadrones se encuentran.
 
 %Here, we propose a phenomenological description based on the MIT bag model [10,11] and a non-extensive statistical approach. This could be referred to as the T-MIT bag model to abbreviate the merger of Tsallis non-extensive statistics and the MIT Bag Model [12].
 
 Aquí proponemos una descripción fenomenológica basada en el modelo de bolsa del MIT \cite{Chodos_1974,Chodos1974a} y una aproximación estadística no extensiva. Esta podría ser referida como \acrshort{t-mitbm} para abreviar la unión de la estadística no extensiva de Tsallis y el \acrshort{mit} \acrshort{bm} \cite{Barboza_Mendoza_2019}
 
-De esta manera, el modelo \acrshort{t-mitbm} es un modelo que introduce un potencial químico, $\mu$, distinto de cero para estudiar el modelo hadrónico un poco más extendido. Hemos comparado estos resultados con los obtenidos en [Nature], donde se ha obtenido la distribución de presión de quarks dentro del protón usando \acrfull{dvcs}, lo cual consiste en dispersar fotones virtuales de altas energías radiadas por electrones y la emisión subsecuente de un protón real. El fotón en el estado final permite la estimación de transferencia de momento al protón, que permanece intacto. El análisis recae en métodos desarrollados para extraer información a partir de \acrfull{gpd} y \acrfull{cff}. Así se obtuvo una presión repulsiva de los quarks cerca del centro del protón y una presión de atadura a distancias por encima de $0.6 \, \mathit{fm}$ del centro. Sin embargo, hay que recordar que esto solo corresponde a los quarks, la presión debido a los gluones no se considera.
+De esta manera, el modelo \acrshort{t-mitbm} es un modelo que introduce un potencial químico, $\mu$, distinto de cero para estudiar el modelo hadrónico un poco más extendido. Hemos comparado estos resultados con los obtenidos en [Nature], donde se ha obtenido la distribución de presión de quarks dentro del protón usando \acrfull{dvcs}, lo cual consiste en dispersar fotones virtuales de altas energías radiadas por electrones y la emisión subsecuente de un protón real. El fotón en el estado final permite la estimación de transferencia de momento al protón, que permanece intacto. El análisis recae en métodos desarrollados para extraer información a partir de \acrfull{gpd} y \acrfull{cff}. Así se obtuvo una presión repulsiva de los quarks cerca del centro del protón y una presión de atadura a distancias por encima de $0.6 \, \mathit{\unit{\femto\meter}}$ del centro. Sin embargo, hay que recordar que esto solo corresponde a los quarks, la presión debido a los gluones no se considera.
 
 NOTA: Agregar referecnias respecto a resultados experimentales acerca de la presión dentro del protón y la estructura del hadron.
 

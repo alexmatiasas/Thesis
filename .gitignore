@@ -16,10 +16,17 @@
 *.acr
 *.acn
 *.dvi
-*.syntecx.gz
+*.synctex.gz
 *.ps
 *.ind
 *.ilg
 *.fls
 *.fdb_latexmk
 *.blg
+*.pdf
+*.nls
+./Outputs/*.
+./Chapters/*.aux
+./Chapters/AuxiliaryFiles/*.
+# ./Images/*.jpg
+# ./Images/*.png

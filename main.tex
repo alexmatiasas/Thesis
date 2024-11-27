@@ -1,5 +1,6 @@
 \documentclass[12pt, a4paper, twoside, openright, final]{book}
 % ! RECORDAR PONER EL TÍTULO DE LA TÉSIS ANTES DE IMPRIMIR EL ARCHIVO (EN PORTADA, Y EN FOOTNOTE GENERAL)
+% * sudo tlmgr install <package>
 % ================================================================================================================================
 % Preámbulo
 % ================================================================================================================================
@@ -69,9 +70,7 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 % ================================================================================================================================
 \mainmatter
 
-\renewcommand{\chaptername}{Capítulo}
 
-% Capítulos principales (modularizados)
 \include{Chapters/01-Introduction}
 \include{Chapters/03-BagModel}
 \include{Chapters/02-TsallisStatistical}
@@ -90,7 +89,7 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 \appendix
 \renewcommand{\appendixname}{Apéndice}
 \include{Chapters/Appendix-On_Collisions}
-\include{Chapters/Appendix-On_Collisions}
+% \include{Chapters/Appendix-On_Collisions}
 
 
 \clearpage
