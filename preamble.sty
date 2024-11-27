@@ -12,6 +12,8 @@
 \usepackage{amsfonts, amssymb}          % Fuentes y símbolos
 \usepackage{physics}                    % Comandos físicos
 \usepackage{siunitx}                    % Comandos para unidades más prácticos.
+% Para que no haya conflicto con qty
+\AtBeginDocument{\RenewCommandCopy\qty\SI}
 
 % Fuentes y estilos
 \usepackage{newtxtext,newtxmath}          % Fuente moderna
