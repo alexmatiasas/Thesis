@@ -24,7 +24,7 @@
 *.fdb_latexmk
 *.blg
 # *.pdf
-.DS_Store
+*.DS_Store
 *.nls
 ./Outputs/*.
 ./Chapters/*.aux
