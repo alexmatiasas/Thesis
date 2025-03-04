@@ -172,6 +172,9 @@
     breaklines=true,                 % Líneas largas se parten
     tabsize=4,                       % Tamaño del tabulador
     captionpos=b                     % Posición del título (b=abajo)
+    literate={*}{{\char42}}1
+        {-}{{\char45}}1
+        {""""}{{\texttt{""""}}}3 % Manejo de comillas triples
 }
 
 % % Comando para usar el estilo

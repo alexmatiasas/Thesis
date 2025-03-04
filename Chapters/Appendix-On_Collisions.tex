@@ -9,47 +9,46 @@
 
 \section{Python code}
 
-% \begin{lstlisting}[language=Python, caption=Python example]
-% # Esto es un comentario
-% def suma(a, b):
-%     """Función que suma dos números"""
-%     return a + b
 
-% print(suma(3, 5))
-% \end{lstlisting}
 
 % Renombrando las figuras
 \renewcommand{\lstlistingname}{Fragmento de código}
 
 \begin{lstlisting}[language=Python, caption=Python example, label=code:python_example]
+    # Scripts/pressure.py
     import numpy as np
-        
-    print("hello world!")
-    def incmatrix(genl1,genl2):
-        m = len(genl1)
-        n = len(genl2)
-        M = None #to become the incidence matrix
-        VT = np.zeros((n*m,1), int)  #dummy variable
-        
-        #compute the bitwise xor matrix
-        M1 = bitxormatrix(genl1)
-        M2 = np.triu(bitxormatrix(genl2),1) 
+    from sympy import Symbol, Function, symbols, Pow, Integral, sin, pi, oo, lambdify
+
+    class PressureDistribution:
+        def __init__(self, r_min=0., r_max=2.4, n_samples=200, units="GeV/fm^3"):
+            self.r_min = r_min
+            self.r_max = r_max
+            self.r = np.linspace(r_min, r_max, n_samples)
+            self.n_samples = n_samples
+            self.units = units
+
+        def p_distr_tex(self):
+            P = self.p_distr_exp()
+            return latex(P)
+
+    class QuarksPressureDistribution(PressureDistribution):
+        def __init__(self, *args, **kwargs):
+            super().__init__(*args, **kwargs)
+            self.units = '\\times 10^{-2} GeV/fm^3'
     
-        for i in range(m-1):
-            for j in range(i+1, m):
-                [r,c] = np.where(M2 == M1[i,j])
-                for k in range(len(r)):
-                    VT[(i)*n + r[k]] = 1;
-                    VT[(i)*n + c[k]] = 1;
-                    VT[(j)*n + r[k]] = 1;
-                    VT[(j)*n + c[k]] = 1;
-                    
-                    if M is None:
-                        M = np.copy(VT)
-                    else:
-                        M = np.concatenate((M, VT), 1)
-                    
-                    VT = np.zeros((n*m,1), int)
-        
-        return M
+        def p_distr_exp(self):
+            d_1 = Function('d_1')
+            t, M, alpha, k_p = symbols('t M alpha k_p', real=True)
+            x = Symbol('x', real=True)
+            r = Symbol('r', real=True)
+            d_1 = Lambda(t, d_1(0) * (1 - (t / Pow(M, 2))) ** -alpha)
+            P = Integral(-d_1(-x**2) * x**3 * sin(r * x) / (pi**2 * k_p * r), (x, 0, oo)) \
+                .subs({alpha: 3, k_p: 0.55, M: 5, d_1(0): -2.04}) \
+                .doit().subs({arg(r): 0}).simplify().factor()
+            return P
+    
+        def p_distr(self):
+            r = Symbol('r', real=True)
+            P = lambdify(r, self.p_distr_exp(), 'numpy')
+            return P(self.r) 
 \end{lstlisting}
