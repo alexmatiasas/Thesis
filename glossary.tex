@@ -16,5 +16,35 @@
 \newglossaryentry{tsallis}
 {
     name=Tsallis,
-    description={(Estadística o entropía de Tsallis) Generalización de la entropía estándar de Boltzmann}
+    description={
+        La estadística de Tsallis, propuesta por Constantino Tsallis en 1988, es una generalización de la entropía de Boltzmann-Gibbs que se utiliza para describir sistemas con propiedades no extensivas, es decir, sistemas donde las interacciones entre partículas no son aditivas. La entropía de Tsallis se define como:
+        \[
+            S_q = \frac{1}{q-1} \left( 1 - \sum_{i=1}^W p_i^q \right),
+        \]
+        donde \( q \) es el parámetro de no extensividad, \( p_i \) es la probabilidad del estado \( i \), y \( W \) es el número total de estados posibles. Para \( q \to 1 \), la entropía de Tsallis se reduce a la entropía de Boltzmann-Gibbs:
+        \[
+            S_1 = -\sum_{i=1}^W p_i \ln p_i.
+        \]
+        La estadística de Tsallis ha encontrado aplicaciones en una amplia variedad de campos, incluyendo física de altas energías, sistemas complejos, y física de plasmas, entre otros}
+}
+
+\newglossaryentry{gamma_matrices}
+{
+    name=Matrices Gamma,
+    description={Las matrices gamma (\( \gamma^\mu \)) son un conjunto de matrices que cumplen con las relaciones de anticonmutación del álgebra de Clifford:
+    \[
+        \{ \gamma^\mu, \gamma^\nu \} = 2 g^{\mu \nu} I,
+    \]
+    donde \( \{ \gamma^\mu, \gamma^\nu \} = \gamma^\mu \gamma^\nu + \gamma^\nu \gamma^\mu \) es el anticonmutador, \( g^{\mu \nu} \) es el tensor métrico de Minkowski, e \( I \) es la matriz identidad. En la representación de Dirac, las matrices gamma tienen la forma:
+    \[
+        \gamma^0 = \begin{pmatrix}
+            I & 0 \\
+            0 & -I
+        \end{pmatrix}, \quad
+        \gamma^i = \begin{pmatrix}
+            0 & \sigma^i \\
+            -\sigma^i & 0
+        \end{pmatrix},
+    \]
+    donde \( \sigma^i \) son las matrices de Pauli. Estas matrices son fundamentales en la formulación de la ecuación de Dirac, que describe partículas fermiónicas como los quarks y los electrones}
 }

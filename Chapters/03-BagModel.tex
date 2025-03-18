@@ -237,51 +237,62 @@ Aunque inicialmente se esperaba que la espectroscopía, la estructura y las inte
 
 Además, algunas variantes del modelo de bolsa, como el modelo de bolsa quiral híbrido, intentan incorporar la simetría quiral, una característica de la \acrshort{qcd} que no está presente en los modelos de bolsa tradicionales.% \cite{DeTarDonoghue}.
 
+\begin{wrapfigure}{l}{0.4\textwidth}
+    \centering
+    \includegraphics[width=0.4\textwidth]{./Images/Bag model BC.png}
+    \caption[Diagrama de bolsa con condiciones de grontera]{\emph{Dentro de la bolsa se encuentran los quarks encerrados por la presión de la bolsa.}}
+    \label{fig: Bolsa BC}
+\end{wrapfigure}
+
 \section{La aproximación de la cavidad esférica}
 
-Consideramos la bolsa con sólo cuarks presentes, la acción está dada por
+
+La aproximación de la cavidad esférica es una simplificación del modelo de bolsa que permite estudiar el comportamiento de los quarks dentro de un hadrón asumiendo que están confinados en una región esférica de radio ${R}_{0}$. En este enfoque, la dinámica de los quarks se describe mediante la ecuación de Dirac, y las condiciones de frontera en la superficie de la bolsa garantizan que los quarks no puedan escapar de la región confinada.
+
+\hfill \break
+
+La acción que describe este sistema está dada por:
 
 \begin{equation}\label{eq-action}
 W = \int \, \mathrm{d}t \left[ \int_{V} \mathrm{d}^{3} x \, \left( \frac{i}{2} \bar{\psi} \overleftrightarrow{\partial}_{\mu} {\gamma}^{\mu} \psi - \bar{\psi} m \psi - B \right) - \frac{1}{2} \int_{S} \mathrm{d}^{2} x \bar{\psi} \psi\right]
 \end{equation}
 
-donde $V$ es el volumen ocupado en la bolsa con superficie $S$, $\psi$ es el espinor de campo de quark (${\gamma}^{\mu}$ son las matrices gamma), $\overleftrightarrow{\partial}_{\mu}$ es la derivada sobre lo de la derecha menos la derivada sobre lo de la izquierda, $m$ es la masa de los quarks que se mueven en la cavidad esférica que es la bolsa y $B$ es la presión de bolsa. El término superficial es agregado tal que los quarks se mueven como si tuvieran una masa infinita fuera de la bolsa justo este es el modelo del \acrshort{mit}.
+donde $V$ es el volumen ocupado en la bolsa, $S$ es la superficie que encierra al volumen, $\psi$ es el espinor de campo de quark (${\gamma}^{\mu}$ son las \gls{gamma_matrices}), $\overleftrightarrow{\partial}_{\mu}$ es la derivada sobre lo de la derecha menos la derivada sobre lo de la izquierda, $m$ es la masa de los quarks que se mueven en la cavidad esférica que es la bolsa y $B$ es la presión de bolsa. 
 
-\begin{wrapfigure}{l}{0.4\textwidth}
-\centering
-\includegraphics[width=0.4\textwidth]{./Images/Bag model BC.png}
-\caption[Diagrama de bolsa con condiciones de grontera]{\emph{Dentro de la bolsa se encuentran los quarks encerrados por la presión de la bolsa.}}
-\label{fig: Bolsa BC}
-\end{wrapfigure}
+La acción \eqref{eq-action} describe la dinámica de los quarks dentro de la bolsa. El primer término, $\frac{i}{2} \bar{\psi} \overleftrightarrow{\partial}_{\mu} {\gamma}^{\mu} \psi$, representa la energía cinética de los quarks, mientras que el segundo término, $\bar{\psi} m \psi$, corresponde a su energía de masa. El término $B$ introduce la presión de bolsa, que actúa como una energía de confinamiento que mantiene a los quarks dentro de la región esférica. Finalmente, el término superficial $\frac{1}{2} \int_{S} \mathrm{d}^{2} x \bar{\psi} \psi$ garantiza que los quarks no puedan escapar de la bolsa, imponiendo una condición de frontera efectiva para simular que los quarks se comporten como si tuvieran una masa infinita fuera de la bolsa, lo que impide su escape. % \acrshort{mit}. %\cite{MITBagModel}.
 
-La ecuación de Dirac (y condiciones de grontera) para el caso de una bolsa con solo quarks presentes se consigue como un extremo de la acción \eqref{eq-action} bajo variaciones en $\psi$ y $V$
+Las ecuaciones de movimiento y las condiciones de frontera se obtienen al extremizar la acción, ecuación \eqref{eq-action}, bajo variaciones en $\psi$ y $V$. La ecuación de Dirac dentro de la bolsa es:
 
 \begin{equation}\label{eq-deq}
 ( i \slashed{\partial}_{\mu} - m) \psi= 0 \quad \mathrm{en} \, V,
 \end{equation}
 
-donde $\slashed{\partial}_{\mu} = {\partial}_{\mu} {\gamma}^{\mu}$ y con las condiciones de frontera
+donde $\slashed{\partial}_{\mu} = {\partial}_{\mu} {\gamma}^{\mu}$. Las condiciones de frontera en la superficie $S$ son
 
 \begin{eqnarray}\label{eq-bc-deq}
 \left.
-\begin{array}{c}
-i {n}^{\mu} {\gamma}_{\mu} \psi = \psi \\ 
-\frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) = B
-\end{array} 
+    \begin{array}{c}
+        i {n}^{\mu} {\gamma}_{\mu} \psi = \psi \\ 
+        \frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) = B
+    \end{array} 
 \right\rbrace  \quad \mathrm{sobre} \, S,
 \end{eqnarray}
 
-donde ${n}_{\mu}$ es la normal interior covariante a la superficie. La primera condición de frontera \eqref{eq-bc-deq} requiere que la componente normal del vector corriente ${J}_{\mu}=\bar{\psi}{\gamma}^{\mu}{\psi}$ se elimine en la superficie. La otra condición requiere que la presión exterior del campo de quarks se equilibre con la presión de bolsa (figura \ref{fig: Bolsa BC})[referencia MIT BM].
-50 Years of Quantum Chromodynamics
+donde ${n}_{\mu}$ es la normal interior covariante a la superficie. La primera condición de frontera, ecuación \eqref{eq-bc-deq}, requiere que la componente normal del vector corriente ${J}_{\mu}=\bar{\psi}{\gamma}^{\mu}{\psi}$ se anule en la superficie, lo que conserva la corriente. La segunda condición requiere que la presión externa del campo de quarks se equilibre con la presión de bolsa $B$ (ver Fig. \ref{fig: Bolsa BC}). %[referencia MIT BM]. 50 Years of Quantum Chromodynamics
 
-La solución general a las ecuaciones \eqref{eq-deq} y \eqref{eq-bc-deq} es una superposición (con coeficientes ${a}_{\alpha}$) de soluciones a la ecuación de Dirac libre:
+La solución general a las ecuaciones \eqref{eq-deq} y \eqref{eq-bc-deq} es una superposición de modos normales, cada uno caracterizado por un conjunto de números cuánticos $n$, $\kappa$, $j$, y $m$. 
 
 \begin{equation}
 {\psi}_{\alpha}(x,t) = \sum_{n \kappa j m} N ({\omega}_{n \kappa j}) {a}_{\alpha} (n \kappa j m) {\psi}_{n \kappa k m} (x, t).
 \end{equation}
 
-$j$ y $m$ etiquetan el modo del momento angular y su zomponente $z$. $\kappa$ es el número cuántico de Dirac\footnote{$\kappa = \pm (j + \frac{1}{2})$,},  que diferencia los dos estados de paridad opuesta para cada valor de $j$.  El índice $n$ etiqueta frecuencias que están a ser determinadas por las condiciones de frontera lineales. La  condición de fontera cuadrática (3b) restringe los modos que pueden ser excitados. Entre otras cosas, 3b permite sólo soluciones para la ecuación de Dirac.
-Para $j = \frac{1}{2}$, ya sea $\kappa = - 1$,
+donde $j$ y $m$ etiquetan el modo del momento angular y su zomponente $z$. $\kappa$ es el número cuántico de Dirac\footnote{$\kappa = \pm (j + \frac{1}{2})$,},  que diferencia los dos estados de paridad opuesta para cada valor de $j$.  El índice $n$ etiqueta frecuencias que están a ser determinadas por las condiciones de frontera lineales. Las frecuencias ${\omega}_{n \kappa j}$ se definen a partir de la expresión
+
+\begin{equation}\label{eq-omega}
+{\omega}_{n \kappa j} = \sqrt{{m}^{2} + {R}_{0}^{-2} {x}_{n \kappa j}^{2}},
+\end{equation}
+
+La  condición de frontera cuadrática, la que está igualada a la presión de bolsa $B$ en \eqref{eq-bc-deq}, restringe los modos que pueden ser excitados. Entre otras cosas, permite sólo soluciones para la ecuación de Dirac. Para el caso de los quarks, $j = \frac{1}{2}$, ya sea $\kappa = - 1$,
 
 \begin{equation}\label{eq-deq-sol-k=-1}
 {\psi}_{n \, -1 \, \frac{1}{2} \, m} (x,t) = \frac{1}{\sqrt{4 \pi}} 
@@ -305,17 +316,19 @@ i{j}_{1} ({\omega}_{n, \, 1} r / {R}_{0}) \sigma \cdot \hat{r} {U}_{m} \\
 \right) \times {e}^{- i {\omega}_{n, \, 1} t / {R}_{0}}
 \end{equation}
 
-${U}_{m}$ es un espinos de Pauli bidimensional y ${j}_{\ell}(z)$ son las funciones de Bessel esféricas. Hemos omitido los índices $j$ sobre ${\omega}_{n \kappa}$ ya que solo $j = \frac{1}{2}$ es de interés en el presente. $N({\omega}_{n \kappa})$ es una constante de normalización escogida para conveniencia futura:
+${U}_{m}$ es un espinor de Pauli bidimensional y ${j}_{\ell}(z)$ son las funciones de Bessel esféricas. Hemos omitido los índices $j$ sobre ${\omega}_{n \kappa}$ ya que solo $j = \frac{1}{2}$ es de interés en el presente (pues tratamos con partículas de \textit{espín} $\frac{1}{2}$, la cual es la componente angular total de los quarks). $N({\omega}_{n \kappa})$ es una constante de normalización escogida para conveniencia futura:
 
 \begin{equation}
 N({\omega}_{n \kappa}) \equiv \left( \frac{{\omega}_{n \kappa}^{\phantom{n \kappa} 3}}{2 {R}_{0}^{\phantom{0} 3} ({\omega}_{n \kappa} + \kappa) \sin^{2} {\omega}_{n \kappa}} \right)^{1/2}
 \end{equation}
 
-La condición de frontera lineal (3a) genera una condición eigenvalor para los modos de frecuencias ${\omega}_{n \kappa}$
+La condición de frontera lineal, la primera ecuación en \eqref{eq-bc-deq}, genera una condición eigenvalor para los modos de frecuencias ${\omega}_{n \kappa}$
 
 $$
 {j}_{0}({\omega}_{n \kappa}) = - \kappa {j}_{1} ({\omega}_{n \kappa}),
 $$
+
+\break
 
 o 
 
@@ -323,7 +336,7 @@ o
 \tan {\omega}_{n \kappa} = \frac{{\omega}_{n \kappa}}{{\omega}_{n \kappa} + \kappa}
 \end{equation}
 
-[Por convención escogemos $n$ positiva (negativa) secuencialmente para etiquetar las raíces positivas (negativas) de la eq 7] Las primeras soluciones a \eqref{eq-condeigenval} son 
+Por convención escogemos $n$ positiva (o negativa en dado caso que se escogieran modos de antipartículas, por ejemplo) secuencialmente para etiquetar las raíces positivas (o negativas) de la ecuación \eqref{eq-condeigenval} Las primeras soluciones a \eqref{eq-condeigenval} son 
 
 \begin{equation}\label{eq-deq-sols}
 \begin{array}{ccc}
