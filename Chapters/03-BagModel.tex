@@ -246,7 +246,6 @@ Además, algunas variantes del modelo de bolsa, como el modelo de bolsa quiral h
 
 \section{La aproximación de la cavidad esférica}
 
-
 La aproximación de la cavidad esférica es una simplificación del modelo de bolsa que permite estudiar el comportamiento de los quarks dentro de un hadrón asumiendo que están confinados en una región esférica de radio ${R}_{0}$. En este enfoque, la dinámica de los quarks se describe mediante la ecuación de Dirac, y las condiciones de frontera en la superficie de la bolsa garantizan que los quarks no puedan escapar de la región confinada.
 
 \hfill \break
@@ -269,30 +268,56 @@ Las ecuaciones de movimiento y las condiciones de frontera se obtienen al extrem
 
 donde $\slashed{\partial}_{\mu} = {\partial}_{\mu} {\gamma}^{\mu}$. Las condiciones de frontera en la superficie $S$ son
 
-\begin{eqnarray}\label{eq-bc-deq}
-\left.
-    \begin{array}{c}
-        i {n}^{\mu} {\gamma}_{\mu} \psi = \psi \\ 
-        \frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) = B
-    \end{array} 
-\right\rbrace  \quad \mathrm{sobre} \, S,
-\end{eqnarray}
+% \begin{eqnarray}\label{eq-bc-deq}
+% \left.
+%     \begin{array}{c}
+%         i {n}^{\mu} {\gamma}_{\mu} \psi = \psi \\ 
+%         \frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) = B
+%     \end{array} 
+% \right\rbrace  \quad \mathrm{sobre} \, S,
+% \end{eqnarray}
 
-donde ${n}_{\mu}$ es la normal interior covariante a la superficie. La primera condición de frontera, ecuación \eqref{eq-bc-deq}, requiere que la componente normal del vector corriente ${J}_{\mu}=\bar{\psi}{\gamma}^{\mu}{\psi}$ se anule en la superficie, lo que conserva la corriente. La segunda condición requiere que la presión externa del campo de quarks se equilibre con la presión de bolsa $B$ (ver Fig. \ref{fig: Bolsa BC}). %[referencia MIT BM]. 50 Years of Quantum Chromodynamics
+\begin{subequations}\label{eq-bc-deq}
+    \begin{empheq}[right=\empheqrbrace \quad \text{sobre} \, S \text{,}]{align}
+        i {n}^{\mu} {\gamma}_{\mu} \psi &= \psi \label{eq-bc-deq-a} \\
+        \frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) &= B \label{eq-bc-deq-b}
+    \end{empheq}
+\end{subequations}
 
-La solución general a las ecuaciones \eqref{eq-deq} y \eqref{eq-bc-deq} es una superposición de modos normales, cada uno caracterizado por un conjunto de números cuánticos $n$, $\kappa$, $j$, y $m$. 
+donde ${n}_{\mu}$ es la normal interior covariante a la superficie. La primera condición de frontera, ecuación \eqref{eq-bc-deq-a}, requiere que la componente normal del vector corriente ${J}_{\mu}=\bar{\psi}{\gamma}^{\mu}{\psi}$ se anule en la superficie, lo que conserva la corriente. La segunda condición, ecuación \eqref{eq-bc-deq-b}, requiere que la presión externa del campo de quarks se equilibre con la presión de bolsa $B$ (ver Fig. \ref{fig: Bolsa BC}). %[referencia MIT BM]. 50 Years of Quantum Chromodynamics
 
-\begin{equation}
+La solución general a las ecuaciones \eqref{eq-deq} y \eqref{eq-bc-deq-a} es una superposición de modos normales, cada uno caracterizado por un conjunto de números cuánticos $n$, $\kappa$, $j$, y $m$. 
+
+\begin{equation}\label{eq-general-sol}
 {\psi}_{\alpha}(x,t) = \sum_{n \kappa j m} N ({\omega}_{n \kappa j}) {a}_{\alpha} (n \kappa j m) {\psi}_{n \kappa k m} (x, t).
 \end{equation}
 
-donde $j$ y $m$ etiquetan el modo del momento angular y su zomponente $z$. $\kappa$ es el número cuántico de Dirac\footnote{$\kappa = \pm (j + \frac{1}{2})$,},  que diferencia los dos estados de paridad opuesta para cada valor de $j$.  El índice $n$ etiqueta frecuencias que están a ser determinadas por las condiciones de frontera lineales. Las frecuencias ${\omega}_{n \kappa j}$ se definen a partir de la expresión
+donde:
+
+\begin{itemize}
+    \item[$\bullet$] $n$ es el número cuántico principal,
+    \item[$\bullet$] $\kappa = \pm (j + \frac{1}{2})$ es el número cuántico de Dirac,
+    \item[$\bullet$] $j$ y $m$ etiquetan el modo del momento angular y su componente $z$, respectivamente,
+    \item[$\bullet$] $N({\omega}_{n \kappa j})$ es una constante de normalización,
+    \item[$\bullet$] ${a}_{\alpha} (n \kappa j m)$ son los coeficientes de expansión que determinan la contribución de cada modo,
+    \item[$\bullet$] y ${\psi}_{n \kappa k m} (x, t)$ son los modos normales de la ecuación de Dirac:
+    \begin{equation}\label{eq-normal-modes}
+        \psi_{n \kappa j m}(x, t) = \begin{pmatrix}
+        f_{n \kappa j}(r) \, \Omega_{\kappa j m}(\theta, \phi) \\
+        i g_{n \kappa j}(r) \, \Omega_{-\kappa j m}(\theta, \phi)
+        \end{pmatrix} e^{-i \omega_{n \kappa j} t},
+    \end{equation}
+\end{itemize}
+
+donde $f_{n \kappa j}(r)$ y $g_{n \kappa j}(r)$ son las funciones radiales, y $\Omega_{\kappa j m}(\theta, \phi)$ son las funciones angulares \cite{Chodos_1974}. %\cite{Chodos1974, "Relativistic Quantum Mechanics" por Bjorken y Drell, "Quantum Field Theory" por Itzykson y Zuber,"Introduction to Quantum Field Theory" por Peskin y Schroeder.}
+Las frecuencias ${\omega}_{n \kappa j}$ se definen a partir de la expresión
 
 \begin{equation}\label{eq-omega}
 {\omega}_{n \kappa j} = \sqrt{{m}^{2} + {R}_{0}^{-2} {x}_{n \kappa j}^{2}},
 \end{equation}
 
-La  condición de frontera cuadrática, la que está igualada a la presión de bolsa $B$ en \eqref{eq-bc-deq}, restringe los modos que pueden ser excitados. Entre otras cosas, permite sólo soluciones para la ecuación de Dirac. Para el caso de los quarks, $j = \frac{1}{2}$, ya sea $\kappa = - 1$,
+donde ${x}_{n \kappa j}$ son las soluciones de la ecuación trascendental a la que llegamos a partir de  \eqref{eq-bc-deq}.
+La  condición de frontera cuadrática, la que está igualada a la presión de bolsa $B$ en \eqref{eq-bc-deq-b}, restringe los modos que pueden ser excitados. Entre otras cosas, permite sólo soluciones para la ecuación de Dirac. Para el caso de los quarks, $j = \frac{1}{2}$, ya sea $\kappa = - 1$,
 
 \begin{equation}\label{eq-deq-sol-k=-1}
 {\psi}_{n \, -1 \, \frac{1}{2} \, m} (x,t) = \frac{1}{\sqrt{4 \pi}} 
@@ -316,19 +341,28 @@ i{j}_{1} ({\omega}_{n, \, 1} r / {R}_{0}) \sigma \cdot \hat{r} {U}_{m} \\
 \right) \times {e}^{- i {\omega}_{n, \, 1} t / {R}_{0}}
 \end{equation}
 
-${U}_{m}$ es un espinor de Pauli bidimensional y ${j}_{\ell}(z)$ son las funciones de Bessel esféricas. Hemos omitido los índices $j$ sobre ${\omega}_{n \kappa}$ ya que solo $j = \frac{1}{2}$ es de interés en el presente (pues tratamos con partículas de \textit{espín} $\frac{1}{2}$, la cual es la componente angular total de los quarks). $N({\omega}_{n \kappa})$ es una constante de normalización escogida para conveniencia futura:
+${U}_{m}$ es un espinor de Pauli bidimensional y ${j}_{\ell}(z)$ son las funciones de Bessel esféricas. Hemos omitido los índices $j$ sobre ${\omega}_{n \kappa}$ ya que solo $j = \frac{1}{2}$ es de interés en el presente (pues tratamos con partículas de \textit{espín} $\frac{1}{2}$, la cual es la componente angular total de los quarks). $N({\omega}_{n \kappa})$ es una constante de normalización escogida como
 
 \begin{equation}
 N({\omega}_{n \kappa}) \equiv \left( \frac{{\omega}_{n \kappa}^{\phantom{n \kappa} 3}}{2 {R}_{0}^{\phantom{0} 3} ({\omega}_{n \kappa} + \kappa) \sin^{2} {\omega}_{n \kappa}} \right)^{1/2}
 \end{equation}
 
-La condición de frontera lineal, la primera ecuación en \eqref{eq-bc-deq}, genera una condición eigenvalor para los modos de frecuencias ${\omega}_{n \kappa}$
+a partir de la restricción de normalización de \eqref{eq-general-sol} y la imposición de ortogonalidad sobre los modos normales, ecuación \eqref{eq-normal-modes}, es decir
 
-$$
-{j}_{0}({\omega}_{n \kappa}) = - \kappa {j}_{1} ({\omega}_{n \kappa}),
-$$
+\begin{equation}
+    \int_{V} \mathrm{d}^{3} x \, \bar{\psi}_{n \kappa j m} (x) \psi_{n' \kappa' j' m'} (x) = \delta_{n n'} \delta_{\kappa \kappa'} \delta_{j j'} \delta_{m m'}.
+\end{equation}
 
-\break
+La condición de frontera lineal, ecuación \eqref{eq-bc-deq-a}, genera una condición eigenvalor para los modos de frecuencias ${\omega}_{n \kappa}$
+
+\[
+j_{0}(\omega_{n \kappa}) = - \kappa \, j_{1} (\omega_{n \kappa}),\footnote{
+    Las funciones \( j_0(x) \) y \( j_1(x) \) son los armónicos esféricos de orden 0 y 1, respectivamente. Sus expresiones son:
+    \[
+    j_0(x) = \frac{\sin x}{x}, \quad j_1(x) = \frac{\sin x}{x^2} - \frac{\cos x}{x}.
+    \]
+}
+\]
 
 o 
 
@@ -345,7 +379,7 @@ Por convención escogemos $n$ positiva (o negativa en dado caso que se escogiera
 \end{array}
 \end{equation}
 
-La condición de frontera cuadrática requiere que $\sum_{\alpha} (\partial / \partial r) \bar{\psi}_{\alpha} (x) {\psi}_{\alpha}(x)$ sea independiente de tiempo y dirección para $r={R}_{0}$. La independencia angular requiere que $j = \frac{1}{2}$. Para obtener independencia temporal, ajustamos
+La condición de frontera cuadrática \eqref{eq-bc-deq-a} requiere que $\sum_{\alpha} (\partial / \partial r) \bar{\psi}_{\alpha} (x) {\psi}_{\alpha}(x)$ sea independiente de tiempo y dirección para $r={R}_{0}$ (lo que significa sobre la superficie de la bolsa). La independencia angular requiere que $j = \frac{1}{2}$. Para obtener independencia temporal, ajustamos
 
 \begin{equation}\label{eq-condortogon}
 \sum_{\alpha} {a}_{\alpha}^{*} (n \, \kappa \, j= \frac{1}{2} \, m) {a}_{\alpha} (n' \, \kappa' \, j= \frac{1}{2} \, m') = 0,
