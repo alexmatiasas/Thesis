@@ -1,4 +1,4 @@
-\chapter{Estadística de Tsallis}\label{ch-Tsallis}
+\chapter{Presión de quarks y gluones en el marco de la estadística de Tsallis}\label{ch-Tsallis}
 
 % \pagestyle{fancy}
 % \fancyhead{} % clear all header fields
@@ -8,232 +8,371 @@
 % % \fancyfoot[LO,CE]{Introducción}
 % \fancyfoot[CO,CE]{Estadística de Tsallis}
 
+% =====================Estilo de página================================
+\pagestyle{fancy}
+\fancyhf{} % Limpia todos los campos de encabezado y pie de página
+\fancyhead[LE]{\nouppercase{\textit{\rightmark}}} % Sección en páginas pares (izquierda)
+\fancyhead[RO]{\nouppercase{\textit{\rightmark}}} % Sección en páginas impares (derecha)
+\fancyhead[RE]{\nouppercase{\hfill \textbf{Capítulo 2. Presión de quarks y gluones en\\el marco de la estadística de Tsallis}}} % Capítulo en páginas impares (izquierda)
+\fancyhead[LO]{\nouppercase{\textbf{Capítulo 2. Presión de quarks y gluones en\\el marco de la estadística de Tsallis} \hfill}} % Capítulo en páginas pares (derecha)
+\fancyfoot[LE]{\nouppercase{\thepage \hfill \emph{Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model}}} % Pie de página en páginas pares
+\fancyfoot[RO]{\nouppercase{\emph{Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model} \hfill \thepage}} % Pie de página en páginas impares
+% =====================================================================
+
 \section{Introducción}
 
-La mecánica estadística estándar está basada en la entropía de \acrfull{bg}, 
+La mecánica estadística estándar está basada en la entropía de \Gls{boltzman-gibbs} (\acrshort{bg}), que se define como
 
 \begin{equation}
-{S}_{\mathrm{BG}} = - k \sum_{i=1}^{W} {p}_{i} \ln {p}_{i}, \quad \sum_{i=1}^{W} {p}_{i} = 1
+{S}_{\mathrm{BG}} = - {k}_{\mathrm{B}} \sum_{i=1}^{W} {p}_{i} \ln {p}_{i}, \quad \sum_{i=1}^{W} {p}_{i} = 1,
 \end{equation}
 
-donde $W$ es el número de configuraciones microscópicas del sistema y ${p}_{i}$ es la probabilidad de acceder a la $i$-ésima configuración. Sin embargo, sistemas de no lineales dinámicos de muchos cuerpos requieren \emph{ergodicidad} (que su valor esperado sea igual a su promedio a largo plazo). Para sistemas no ergódicos, que sucede con sistemas complejos, no existe razón para usar estadística \acrshort{bg}. Por esta razón se ha requerido de una extensión para sistemas de este tipo, llamados \emph{no extensivos} (pues no son proporcional al número total de elementos del sistema), una de ellas es la siguiente, que extiende la entropía de \acrshort{bg} como
+donde \( W \) es el número de configuraciones microscópicas del sistema y \( {p}_{i} \) es la probabilidad de acceder a la \( i \)-ésima configuración. Sin embargo, sistemas no lineales dinámicos de muchos cuerpos, como los que se encuentran en física de partículas o en plasmas, a menudo no cumplen con las condiciones de \emph{ergodicidad} (que su valor esperado sea igual a su promedio a largo plazo) o \emph{extensividad} (que las propiedades del sistema sean proporcionales al número de partículas). Para estos sistemas, la estadística de \acrshort{bg} no es adecuada, lo que ha llevado al desarrollo de extensiones como la estadística de \Gls{tsallis}.
+
+La estadística de Tsallis generaliza la entropía de \acrshort{bg} mediante la introducción de un parámetro no extensivo \( q \), definido por:
 
 \begin{equation}
-{S}_{q} = k \frac{1-\sum_{i} {p}_{i}^{q}}{q-1} \qquad (q\in \mathbb{R};\; {S}_{q=1} = {S}_{\mathrm{BG}})
+{S}_{q} = {k}_{\mathrm{B}} \frac{1-\sum_{i} {p}_{i}^{q}}{q-1} \qquad (q\in \mathbb{R};\; {S}_{q=1} = {S}_{\mathrm{BG}}),
 \end{equation}
+
+El parámetro \( q \) mide el grado de no extensividad del sistema. Para \( q = 1 \), se recupera la estadística de \acrshort{bg}, mientras que valores de \( q \neq 1 \) indican desviaciones de la extensividad, lo que es característico de sistemas con correlaciones de largo alcance, inhomogeneidades o memoria de largo plazo.% \cite{TsallisStatistics}.
 
 Bajo esta generalización, en un sistema constituido por dos subsistemas probabilisticamente independientes $A$ y $B$ (i.e., si ${p}_{ij}^{A+B} = {p}_{i}^{A}{p}_{j}^{B}$), entonces
 
 \begin{equation}\label{eq-TsallisTwoSystems}
-\frac{{S}_{{q}}(A+B)}{k} = \frac{{S}_{q}(A)}{k} + \frac{{S}_{q}(B)}{k} + (1 - q) \frac{{S}_{q}(A)}{k}\frac{{S}_{q}(B)}{k},
+\frac{{S}_{{q}}(A+B)}{{k}_{\mathrm{B}}} = \frac{{S}_{q}(A)}{{k}_{\mathrm{B}}} + \frac{{S}_{q}(B)}{{k}_{\mathrm{B}}} + (1 - q) \frac{{S}_{q}(A)}{{k}_{\mathrm{B}}}\frac{{S}_{q}(B)}{{k}_{\mathrm{B}}}\footnote{Más adelante se usarán unidades naturales por lo que no aparecerá la constante de Boltzmann, ${k}_{\mathrm{B}}$},
 \end{equation}
 
-(más adelante se usarán unidades naturales por lo que no aparecerá la constante de \acrshort{bg}, $k$) de donde se observa claramente que cuando $q=1$ se regresa a la estadística de \acrshort{bg} [ref Tsallis statistics].
+de donde se observa claramente que cuando $q=1$ se regresa a la estadística de \acrshort{bg} %[ref Tsallis statistics].
 
-NOTA: En la misma referencia se agrega la obtención de la energía de Tsallis para las masas
+La estadística de Tsallis ha demostrado ser particularmente útil en el estudio de sistemas complejos y fuera del equilibrio, como los que se encuentran en física de altas energías, plasmas o sistemas biológicos. %\cite{TsallisApplications}. 
+En este trabajo, exploraremos cómo esta generalización de la entropía puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más precisa de sistemas que no pueden ser tratados adecuadamente con la estadística de \acrshort{bg}.
+
+En el capítulo anterior, se presentó el modelo de bolsa como un marco teórico para entender el confinamiento de quarks dentro de los hadrones. Sin embargo, este modelo tradicional tiene limitaciones en la descripción de sistemas fuera del equilibrio o en condiciones extremas. La estadística de Tsallis, con su parámetro no extensivo \( q \), ofrece una herramienta poderosa para abordar estas limitaciones y proporcionar una descripción más general de sistemas complejos. %\cite{BagModelLimitations}.
+
+% Este capítulo se divide en varias secciones. En la primera, se presenta la entropía de Tsallis y su relación con la entropía de \acrshort{bg}. Posteriormente, se discuten las propiedades clave de la estadística de Tsallis, incluyendo su aplicación a sistemas no extensivos. Finalmente, se explorará cómo esta estadística puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más general de sistemas complejos.
+
+% NOTA: En la misma referencia se agrega la obtención de la energía de Tsallis para las masas
+
+% % Bibliografía (opcional)
+% \begin{thebibliography}{9}
+%     \bibitem{TsallisStatistics} 
+%     C. Tsallis, "Possible generalization of Boltzmann-Gibbs statistics", Journal of Statistical Physics, 1988.
+    
+%     \bibitem{TsallisApplications} 
+%     C. Tsallis, "Applications of statistical mechanics to complex systems", Physics Reports, 2009.
+    
+%     \bibitem{BagModelLimitations} 
+%     A. Chodos et al., "Limitations of the bag model in describing hadron properties", Physical Review D, 1974.
+%     \end{thebibliography}
 
 \section{Presión dentro del hadrón}\label{sec-PresTsa}
 
-A partir de la ecuación \eqref{eq-TsallisTwoSystems}, podemos obtener la entropía dentro de un hadrón que consiste en una mezcla de gases quarks y gluon. De esta manera empezamos por considerar el cálculo de cada contribución, los quarks vistos como un gas ideal de Fermi ultrarelativista y los gluones vistos como un gas ideal de \acrfull{be}  ultrarelativista, ambos sin masa y no interactuantes, la interacción vendrá al final del parámetro $q$ de Tsallis
+A partir de la ecuación \eqref{eq-TsallisTwoSystems}, podemos obtener la entropía dentro de un hadrón que consiste en una mezcla de gases de quarks y gluones. Para ello, comenzamos considerando el cálculo de cada contribución: los quarks, vistos como un gas ideal de \acrfull{fd} ultrarrelativista, y los gluones, vistos como un gas ideal de \acrfull{be} ultrarrelativista. Ambos se consideran sin masa y no interactuantes, ya que la interacción se introduce a través del parámetro \( q \) de Tsallis.
 
 \subsection{Presión de gluones, un gas ideal de Bose - Einstein ultrarelativista}
 
-Los níveles de energía de un bosón visto como un gas ideal de \acrshort{be} están dados por ${\epsilon}_{k}=cp=\hbar c k$, $p$ es la magnitud del momento de las partículas del gas, y $k$ la magnitud del vector de onda. Y la función de partición para un gas ideal de \acrshort{be} está determinada por:
+Los niveles de energía de un bosón en un gas ideal de \acrshort{be} ultrarrelativista están dados por:
+
+\begin{equation}
+{\epsilon}_{k} = cp = \hbar c k,
+\end{equation}
+
+donde $p$ es la magnitud del momento de las partículas del gas y $k$ la magnitud del vector de onda. La función de partición para este sistema es:
 
 \begin{equation}\label{eq-partfunc}
 {\Xi}^{\mathrm{BE}}\left(T,V,\mu\right) = \prod_{k=1}^{\infty}\frac{1}{1-\xi {e}^{-\beta {\epsilon}_{k}}},
 \end{equation}
 
-donde $\beta = \frac{1}{kT}$, y ${\xi} = {e}^{\beta \mu}$ es la fugacidad del gas, $T$ es la temperatura del gas, $V$ el volumen del gas y $\mu$ el potencial químico del gas. El número de partículas promedio en cada estado de energía ${\epsilon}_{k}$ se calcula a través de la ecuación:
+con $\beta = (k_B T)^{-1}$ y $\xi = e^{\beta\mu}$ siendo la fugacidad del gas. El número promedio de partículas en cada estado ${\epsilon}_k$ es:
 
-\begin{equation}\label{eq-avg-numb-parts}
-\left\langle {n}_{k} \right\rangle = -\frac{1}{\beta} \frac{\partial}{\partial {\epsilon}_{k}} \ln {\Xi}^{\mathrm{BE}}\left.\right|_{\xi,V,{\epsilon}_{i \neq k}},
-\end{equation}
+% donde $\beta = \frac{1}{{k}_{\mathrm{B}}T}$, y ${\xi} = {e}^{\beta \mu}$ es la fugacidad del gas, $T$ es la temperatura del gas, $V$ el volumen del gas y $\mu$ el potencial químico del gas. El número de partículas promedio en cada estado de energía ${\epsilon}_{k}$ se calcula a través de la ecuación:
+
+% \begin{equation}\label{eq-avg-numb-parts}
+% \left\langle {n}_{k} \right\rangle = -\frac{1}{\beta} \frac{\partial}{\partial {\epsilon}_{k}} \ln {\Xi}^{\mathrm{BE}}\left.\right|_{\xi,V,{\epsilon}_{i \neq k}},
+% \end{equation}
 
 \begin{equation}
-\left\langle {n}_{k} \right\rangle = \frac{1}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1} 
+    \left\langle {n}_{k} \right\rangle = \frac{1}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1} 
 \end{equation}
 
-De tal manera que el número total de partículas promedio y energía se pueden calcular como
+Las cantidades termodinámicas fundamentales se expresan como:
 
 \begin{equation}\label{eq-BE-Ntotal}
-N(T,V,\mu)=\sum_{k}\left\langle {n}_{k} \right\rangle = \sum_{k}\frac{1}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}
+N(T,V,\mu) = \sum_k \langle n_k \rangle = \sum_k \frac{1}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}
 \end{equation}
 
 \begin{equation}\label{eq-BE-Etotal}
-E(T,V,\mu) = \sum_{k}\left\langle {n}_{k} \right\rangle {\epsilon}_{k} = \sum_{k}\frac{{\epsilon}_{k}}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}.
+E(T,V,\mu) = \sum_k \langle n_k \rangle \epsilon_k = \sum_k \frac{\epsilon_k}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}
 \end{equation}
 
-Para una gran cantidad de partículas, podemos sustituir la suma por una integral, considerando el número total de estados en el espacio fase clásico tenemos
+% De tal manera que el número total de partículas promedio y energía se pueden calcular como
 
-\begin{equation}
-\begin{split}
-\Sigma &= \int \frac{\mathrm{d}^{3}r \mathrm{d}^{3}p}{{h}^{3}} \\ 
-& = V\int \frac{4\pi {p}^{2} \mathrm{d}p}{{h}^{3}} \\
-& = \frac{4\pi V}{{h}^{3}} \int_{0}^{\infty} {p}^{2} \mathrm{d} p 
-\end{split}
-\end{equation}
+% \begin{equation}\label{eq-BE-Ntotal}
+% N(T,V,\mu)=\sum_{k}\left\langle {n}_{k} \right\rangle = \sum_{k}\frac{1}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}
+% \end{equation}
 
-Usando la relación ${\epsilon}_{k} = cp$ obtenemos
+% \begin{equation}\label{eq-BE-Etotal}
+% E(T,V,\mu) = \sum_{k}\left\langle {n}_{k} \right\rangle {\epsilon}_{k} = \sum_{k}\frac{{\epsilon}_{k}}{{\xi}^{-1}{e}^{\beta{\epsilon}_{k}}-1}.
+% \end{equation}
+
+Para el límite termodinámico, reemplazamos las sumas por integrales usando la densidad de estados:
 
 \begin{equation}\label{eq-totalestados}
-\Sigma = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} {\epsilon}^{2} \mathrm{d} \epsilon
-\end{equation} 
+\Sigma = \frac{4\pi V}{(hc)^3} \int_0^\infty \epsilon^2 d\epsilon
+\end{equation}
 
-De esta forma, sustituyendo \eqref{eq-totalestados} en \eqref{eq-BE-Ntotal} y \eqref{eq-BE-Etotal}, obtenemos
+% Para una gran cantidad de partículas, podemos sustituir la suma por una integral, considerando el número total de estados en el espacio fase clásico tenemos
+
+% \begin{equation}
+% \begin{split}
+% \Sigma &= \int \frac{\mathrm{d}^{3}r \mathrm{d}^{3}p}{{h}^{3}} \\ 
+% & = V\int \frac{4\pi {p}^{2} \mathrm{d}p}{{h}^{3}} \\
+% & = \frac{4\pi V}{{h}^{3}} \int_{0}^{\infty} {p}^{2} \mathrm{d} p 
+% \end{split}
+% \end{equation}
+
+% Usando la relación ${\epsilon}_{k} = cp$ obtenemos
+
+% \begin{equation}\label{eq-totalestados}
+% \Sigma = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} {\epsilon}^{2} \mathrm{d} \epsilon
+% \end{equation} 
+
+Esto nos lleva a:
 
 \begin{equation}\label{eq-BE-Ntotalint}
-N(T,V,\mu) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{2} \mathrm{d} \epsilon}{{\xi}^{-1} {e}^{\beta \epsilon} - 1}
+N(T,V,\mu) = \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 d\epsilon}{{\xi}^{-1}e^{\beta\epsilon}-1}
 \end{equation}
 
 \begin{equation}\label{eq-BE-Etotalint}
-E(T,V,\mu) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{{\xi}^{-1} {e}^{\beta \epsilon} - 1}
+E(T,V,\mu) = \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 d\epsilon}{{\xi}^{-1}e^{\beta\epsilon}-1}
 \end{equation}
 
-Dado que tratamos con partículas sin masa, es posible tener infinitas partículas con energía ${\epsilon}_{0}=0$. De esta manera, el potencial químico $\mu$ debe ser cero pues es posible crear infinitas partículas con energía $0$ sin afectar a nuestros resultados puesto que no contribuyen a la energía total del sistema. Así, si $\mu=0$, entonces $\xi = 1$. Y sustituyendo en las ecuaciones \eqref{eq-BE-Ntotalint} y \eqref{eq-BE-Etotalint} obtenemos 
+% De esta forma, sustituyendo \eqref{eq-totalestados} en \eqref{eq-BE-Ntotal} y \eqref{eq-BE-Etotal}, obtenemos
+
+% \begin{equation}\label{eq-BE-Ntotalint}
+% N(T,V,\mu) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{2} \mathrm{d} \epsilon}{{\xi}^{-1} {e}^{\beta \epsilon} - 1}
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalint}
+% E(T,V,\mu) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{{\xi}^{-1} {e}^{\beta \epsilon} - 1}
+% \end{equation}
+
+Para gluones (partículas sin masa con $\mu=0$), estas expresiones se simplifican a:
 
 \begin{equation}\label{eq-BE-Ntotalintnofug}
-N(T,V) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{2} \mathrm{d} \epsilon}{{e}^{\beta \epsilon} - 1}
+N(T,V) = \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 d\epsilon}{e^{\beta\epsilon}-1}
 \end{equation}
 
 \begin{equation}\label{eq-BE-Etotalintnofug}
-E(T,V) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{ {e}^{\beta \epsilon} - 1}
+E(T,V) = \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 d\epsilon}{e^{\beta\epsilon}-1}
 \end{equation}
 
-Para resolver las integrales, consideramos el cambio de variable $x=\beta \epsilon$, por lo que $\epsilon = \frac{x}{\beta}$ y así $\mathrm{d}\epsilon = \frac{\mathrm{d}x}{\beta}$ y así, entonces 
+% Dado que tratamos con partículas sin masa, es posible tener infinitas partículas con energía ${\epsilon}_{0}=0$. De esta manera, el potencial químico $\mu$ debe ser cero pues es posible crear infinitas partículas con energía $0$ sin afectar a nuestros resultados puesto que no contribuyen a la energía total del sistema. Así, si $\mu=0$, entonces $\xi = 1$. Y sustituyendo en las ecuaciones \eqref{eq-BE-Ntotalint} y \eqref{eq-BE-Etotalint} obtenemos 
+
+% \begin{equation}\label{eq-BE-Ntotalintnofug}
+% N(T,V) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{2} \mathrm{d} \epsilon}{{e}^{\beta \epsilon} - 1}
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalintnofug}
+% E(T,V) = \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{ {e}^{\beta \epsilon} - 1}
+% \end{equation}
+
+Mediante el cambio de variable $x=\beta\epsilon$, obtenemos:
 
 \begin{equation}\label{eq-BE-Ntotalintnofug-x}
-N(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{3}}\int_{0}^{\infty} \frac{{x}^{2} \mathrm{d} x}{{e}^{x} - 1}
+N(T,V) = \frac{4\pi V}{(hc)^3 \beta^3} \int_0^\infty \frac{x^2 dx}{e^x-1}
 \end{equation}
 
 \begin{equation}\label{eq-BE-Etotalintnofug-x}
-E(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{4}} \int_{0}^{\infty} \frac{{x}^{3} \mathrm{d} x}{ {e}^{x} - 1}
+E(T,V) = \frac{4\pi V}{(hc)^3 \beta^4} \int_0^\infty \frac{x^3 dx}{e^x-1}
 \end{equation}
 
-Con lo cual, obtenemos las funciones especiales ${g}_{n}(\xi)$ con $0 \leq \xi \leq 1$ tales que
+% Para resolver las integrales, consideramos el cambio de variable $x=\beta \epsilon$, por lo que $\epsilon = \frac{x}{\beta}$ y así $\mathrm{d}\epsilon = \frac{\mathrm{d}x}{\beta}$ y así, entonces 
 
-\begin{equation}\label{eq-g-xi}
-{g}_{n}(\xi) = \frac{1}{\Gamma(n)} \int_{0}^{\infty} \frac{{x}^{n-1} \mathrm{d}x}{{\xi}^{-1}{e}^{x}-1}
-\end{equation}
+% \begin{equation}\label{eq-BE-Ntotalintnofug-x}
+% N(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{3}}\int_{0}^{\infty} \frac{{x}^{2} \mathrm{d} x}{{e}^{x} - 1}
+% \end{equation}
 
-Tal que las integrales de \eqref{eq-BE-Ntotalintnofug-x} y \eqref{eq-BE-Etotalintnofug-x} se vuelven
+% \begin{equation}\label{eq-BE-Etotalintnofug-x}
+% E(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{4}} \int_{0}^{\infty} \frac{{x}^{3} \mathrm{d} x}{ {e}^{x} - 1}
+% \end{equation}
+
+Estas integrales se resuelven en términos de funciones especiales\footnote{Con $\Gamma(n)$ como la función gamma y con $\zeta(n)$ como la función zeta de Riemann
+$$
+    \Gamma(n) = (n-1)!, \quad \zeta(n) = \sum_{k=1}^{\infty} \frac{1}{k^n}; \qquad n \in \mathbb{N}
+$$
+}:
 
 \begin{equation}\label{eq-sol-int-N}
-\int_{0}^{\infty} \frac{{x}^{2} \mathrm{d} x}{ {e}^{x} - 1} = \Gamma(3) {g}_{3}(1)
+    \int_0^\infty \frac{x^2 dx}{e^x-1} = \Gamma(3)\zeta(3) = 2\zeta(3)
 \end{equation}
 
 \begin{equation}\label{eq-sol-int-E}
-\int_{0}^{\infty} \frac{{x}^{3} \mathrm{d} x}{ {e}^{x} - 1}= \Gamma(4) {g}_{4}(1)
+    \int_0^\infty \frac{x^3 dx}{e^x-1} = \Gamma(4)\zeta(4) = \frac{\pi^4}{15}
 \end{equation}
 
-Sustituyendo las ecuaciones \eqref{eq-sol-int-N} y \eqref{eq-sol-int-E} en \eqref{eq-BE-Ntotalintnofug-x} y \eqref{eq-BE-Etotalintnofug-x}, respectivamente, y usando la propiedad ${g}_{n}(1) = \zeta(n)$, con $\zeta(n)$ representando la función zeta de Rienamann, se obtiene
+% Con lo cual, obtenemos las funciones especiales ${g}_{n}(\xi)$ con $0 \leq \xi \leq 1$ tales que
 
-\begin{equation}\label{eq-BE-Ntotalintreduced1}
-N(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{3}}\Gamma(3) \zeta(3)
-\end{equation}
+% \begin{equation}\label{eq-g-xi}
+% {g}_{n}(\xi) = \frac{1}{\Gamma(n)} \int_{0}^{\infty} \frac{{x}^{n-1} \mathrm{d}x}{{\xi}^{-1}{e}^{x}-1}
+% \end{equation}
 
-\begin{equation}\label{eq-BE-Etotalintreduced1}
-E(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{4}} \Gamma(4) \zeta(4)
-\end{equation}
+% Tal que las integrales de \eqref{eq-BE-Ntotalintnofug-x} y \eqref{eq-BE-Etotalintnofug-x} se vuelven
 
-Ya que $\Gamma(n-1) = n!$ y $\zeta(4) = \frac{{\pi}^{4}}{90}$ se llega a
+% \begin{equation}\label{eq-sol-int-N}
+% \int_{0}^{\infty} \frac{{x}^{2} \mathrm{d} x}{ {e}^{x} - 1} = \Gamma(3) {g}_{3}(1)
+% \end{equation}
 
- \begin{equation}\label{eq-BE-Ntotalintreduced2}
-N(T,V) = 8\pi V \left(\frac{kT}{hc} \right)^{3} \zeta(3)
-\end{equation}
+% \begin{equation}\label{eq-sol-int-E}
+% \int_{0}^{\infty} \frac{{x}^{3} \mathrm{d} x}{ {e}^{x} - 1}= \Gamma(4) {g}_{4}(1)
+% \end{equation}
 
-\begin{equation}\label{eq-BE-Etotalintreduced2}
-E(T,V) = \frac{8\pi V}{(hc)^{3}} \left(k T \right)^{4} \frac{{\pi}^{4}}{30}
-\end{equation}
-
-Y usando unidades naturales $\hbar=k=x=1$ y $h=2\pi \hbar = 2\pi$, así entonces
-
- \begin{equation}\label{eq-BE-Ntotalintreduced3}
-N(T,V) = \frac{1}{{\pi}^{2}} \zeta(3)V{T}^{3}
-\end{equation}
-
-\begin{equation}\label{eq-BE-Etotalintreduced3}
-E(T,V) = \frac{{\pi}^{2}}{30} V{T}^{4}
-\end{equation}
-
-Finalmente, dado que hay tres componentes independientes de la carga de color, y consecuentemente $3 \times 3 - 1$ generadores de $SU(3)$, hay 8 diferentes tipos de gluones, y como cada gluón tiene dos proyecciones de espín, el factor de degeneración corresponde a ${g}_{G} = 8 \times 2 = 16$. Por lo tanto, pasamos a que las expresiones para el número total de gluones y la energía total de gluones como un gas ideal de \acrshort{be} ultrarrelativista son
-
- \begin{equation}\label{eq-BE-Ntotalgluons}
-{N}_{G}(T,V) = \frac{{g}_{G}}{{\pi}^{2}} \zeta(3)V{T}^{3}
-\end{equation}
+Considerando la degeneración de los gluones ($g_G = 16$ para 8 tipos de gluones con 2 proyecciones de espín), obtenemos\footnote{Usando unidades naturales $\hbar={k}_{\mathrm{B}}=c=1$ y $h=2\pi \hbar = 2\pi$}:
 
 \begin{equation}\label{eq-BE-Etotalgluons}
-{E}_{G}(T,V) = {g}_{G}\frac{{\pi}^{2}}{30} V{T}^{4}
+E_G(T,V) = g_G \frac{\pi^2}{30} V T^4
 \end{equation}
 
-Para calcular la contribución de presión debido a los gluones, partimos de la función de partición ${\Xi}^{BE}$ y el potencial macrocanónico o potencial gran canónico $\phi$
+% Sustituyendo las ecuaciones \eqref{eq-sol-int-N} y \eqref{eq-sol-int-E} en \eqref{eq-BE-Ntotalintnofug-x} y \eqref{eq-BE-Etotalintnofug-x}, respectivamente, y usando la propiedad ${g}_{n}(1) = \zeta(n)$, con $\zeta(n)$ representando la función zeta de Rienamann, se obtiene
+
+% \begin{equation}\label{eq-BE-Ntotalintreduced1}
+% N(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{3}}\Gamma(3) \zeta(3)
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalintreduced1}
+% E(T,V) = \frac{4\pi V}{(hc)^{3}} \frac{1}{{\beta}^{4}} \Gamma(4) \zeta(4)
+% \end{equation}
+
+% Ya que $\Gamma(n-1) = n!$ y $\zeta(4) = \frac{{\pi}^{4}}{90}$ se llega a
+
+%  \begin{equation}\label{eq-BE-Ntotalintreduced2}
+% N(T,V) = 8\pi V \left(\frac{{k}_{\mathrm{B}}T}{hc} \right)^{3} \zeta(3)
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalintreduced2}
+% E(T,V) = \frac{8\pi V}{(hc)^{3}} \left({k}_{\mathrm{B}} T \right)^{4} \frac{{\pi}^{4}}{30}
+% \end{equation}
+
+% Y usando unidades naturales $\hbar={k}_{\mathrm{B}}=c=1$ y $h=2\pi \hbar = 2\pi$, así entonces
+
+%  \begin{equation}\label{eq-BE-Ntotalintreduced3}
+% N(T,V) = \frac{1}{{\pi}^{2}} \zeta(3)V{T}^{3}
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalintreduced3}
+% E(T,V) = \frac{{\pi}^{2}}{30} V{T}^{4}
+% \end{equation}
+
+% Finalmente, dado que hay tres componentes independientes de la carga de color, y consecuentemente $3 \times 3 - 1$ generadores de $SU(3)$, hay 8 diferentes tipos de gluones, y como cada gluón tiene dos proyecciones de espín, el factor de degeneración corresponde a ${g}_{G} = 8 \times 2 = 16$. Por lo tanto, pasamos a que las expresiones para el número total de gluones y la energía total de gluones como un gas ideal de \acrshort{be} ultrarrelativista son
+
+%  \begin{equation}\label{eq-BE-Ntotalgluons}
+% {N}_{G}(T,V) = \frac{{g}_{G}}{{\pi}^{2}} \zeta(3)V{T}^{3}
+% \end{equation}
+
+% \begin{equation}\label{eq-BE-Etotalgluons}
+% {E}_{G}(T,V) = {g}_{G}\frac{{\pi}^{2}}{30} V{T}^{4}
+% \end{equation}
+
+La presión se obtiene a partir del potencial gran canónico:
 
 \begin{equation}\label{eq-BE-P1}
-\begin{split}
-\phi = -PV  & = -k T \ln {\Xi}^{BE} \\ 
-\Rightarrow P & = \frac{kT}{V} \ln {\Xi}^{BE}
-\end{split}
+P = \frac{k_B T}{V} \ln \Xi^{BE}
 \end{equation}
 
-Calculando el logaritmo de la función de partición \eqref{eq-partfunc} se tiene
-
-\begin{equation}
-\ln {\Xi}^{BE} = - \sum_{k=1}^{\infty} \ln\left(1 - \xi{e}^{-\beta {\epsilon}_{k}}\right)
-\end{equation}
-
-Nuevamente ocupamos el hecho de que son estados energéticos tan cercanos y tal cantidad de partículas en distintos estados energéticos, podemos sustituir la suma por una integral, usando el número total de estados \eqref{eq-totalestados} y el hecho de que no hay potencial químico ($\mu=0 \Rightarrow \xi=1$) para obtener
-
-\begin{equation}
-\ln {\Xi}^{BE} = - \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} {\epsilon}^{2} \ln \left(1 - {e}^{-\beta\epsilon} \right) \mathrm{d} \epsilon
-\end{equation}
-
-Realizando la integral por partes tendremos
-
-\begin{equation}
-\begin{split}
-\ln {\Xi}^{BE} & = - \frac{4\pi V}{(hc)^{3}} \left[ \left. \frac{1}{3} {\epsilon}^{3} \ln \left( 1 - {e}^{-\beta \epsilon}\right) \right|_{0}^{\infty} - \frac{1}{3} \beta \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d}\epsilon}{{e}^{\beta \epsilon} - 1} \right] \\ 
-& = \frac{4\pi V}{(hc)^{3}} \frac{kT}{3} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{{e}^{-\beta \epsilon} - 1}
-\end{split}
-\end{equation}
-
-Resolviendo la integral, de la misma forma que con la ecuación \eqref{eq-BE-Etotalintnofug}, usando \eqref{eq-sol-int-E} y simplificando se llega a que la presión ejercida por un gas de partículas ultrarrelativistas tipo \acrshort{be}, usando la expresión \eqref{eq-BE-P1}, está dada como
+Desarrollando esta expresión y realizando integración por partes, encontramos la relación fundamental:
 
 \begin{equation}\label{eq-BE-P2}
-P= \frac{1}{3} \frac{E}{V}
+P = \frac{1}{3} \frac{E}{V}
 \end{equation}
 
-Y dado que existen ${g}_{G}$ estados degenerados para la energía de los gluones, entonces, la presión correspondiente a los gluones es, usando \eqref{eq-BE-Etotalgluons},
+Lo que nos da la presión de gluones:
 
 \begin{equation}\label{eq-BE-Pgluons}
-{P}_{G} = {g}_{G} \frac{{\pi}^{2}}{90}{T}^{4}
+P_G = g_G \frac{\pi^2}{90} T^4
 \end{equation}
 
-Como cálculo final, hallamos la entropía a partir del potencial gran canónico por medio de la relación
+% Para calcular la contribución de presión debido a los gluones, partimos de la función de partición ${\Xi}^{BE}$ y el potencial macrocanónico o potencial gran canónico $\phi$
 
-\begin{equation}\label{eq-BE-Entropy}
-\begin{split}
-\phi &= E-TS-\mu N = -PV, \\
-\Rightarrow S & = \frac{1}{T} \left(E+PV- \mu N \right)
-\end{split}
-\end{equation}
+% \begin{equation}\label{eq-BE-P1}
+% \begin{split}
+% \phi = -PV  & = -{k}_{\mathrm{B}} T \ln {\Xi}^{BE} \\ 
+% \Rightarrow P & = \frac{{k}_{\mathrm{B}}T}{V} \ln {\Xi}^{BE}
+% \end{split}
+% \end{equation}
 
-Sustituyendo la ecuación \eqref{eq-BE-P2} en \eqref{eq-BE-Entropy} y considerando $\mu=0$, la entropía del sistema es
+% Calculando el logaritmo de la función de partición \eqref{eq-partfunc} se tiene
 
-\begin{equation}\label{eq-BE-S}
-S = \frac{4}{3} \frac{E}{T}
-\end{equation}
+% \begin{equation}
+% \ln {\Xi}^{BE} = - \sum_{k=1}^{\infty} \ln\left(1 - \xi{e}^{-\beta {\epsilon}_{k}}\right)
+% \end{equation}
 
-Y tomando en cuenta que tratamos con la energía de gluones \eqref{eq-BE-Etotalgluons}, la entropía del gas de gluones está dado como
+% Nuevamente ocupamos el hecho de que son estados energéticos tan cercanos y tal cantidad de partículas en distintos estados energéticos, podemos sustituir la suma por una integral, usando el número total de estados \eqref{eq-totalestados} y el hecho de que no hay potencial químico ($\mu=0 \Rightarrow \xi=1$) para obtener
+
+% \begin{equation}
+% \ln {\Xi}^{BE} = - \frac{4\pi V}{(hc)^{3}} \int_{0}^{\infty} {\epsilon}^{2} \ln \left(1 - {e}^{-\beta\epsilon} \right) \mathrm{d} \epsilon
+% \end{equation}
+
+% Realizando la integral por partes tendremos
+
+% \begin{equation}
+% \begin{split}
+% \ln {\Xi}^{BE} & = - \frac{4\pi V}{(hc)^{3}} \left[ \left. \frac{1}{3} {\epsilon}^{3} \ln \left( 1 - {e}^{-\beta \epsilon}\right) \right|_{0}^{\infty} - \frac{1}{3} \beta \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d}\epsilon}{{e}^{\beta \epsilon} - 1} \right] \\ 
+% & = \frac{4\pi V}{(hc)^{3}} \frac{kT}{3} \int_{0}^{\infty} \frac{{\epsilon}^{3} \mathrm{d} \epsilon}{{e}^{-\beta \epsilon} - 1}
+% \end{split}
+% \end{equation}
+
+% Resolviendo la integral, de la misma forma que con la ecuación \eqref{eq-BE-Etotalintnofug}, usando \eqref{eq-sol-int-E} y simplificando se llega a que la presión ejercida por un gas de partículas ultrarrelativistas tipo \acrshort{be}, usando la expresión \eqref{eq-BE-P1}, está dada como
+
+% \begin{equation}\label{eq-BE-P2}
+% P= \frac{1}{3} \frac{E}{V}
+% \end{equation}
+
+% Y dado que existen ${g}_{G}$ estados degenerados para la energía de los gluones, entonces, la presión correspondiente a los gluones es, usando \eqref{eq-BE-Etotalgluons},
+
+% \begin{equation}\label{eq-BE-Pgluons}
+% {P}_{G} = {g}_{G} \frac{{\pi}^{2}}{90}{T}^{4}
+% \end{equation}
+
+Finalmente, la entropía se calcula como:
 
 \begin{equation}\label{eq-BE-Sgluons}
-{S}_{G} = 4{g}_{G} \frac{{\pi}^{2}}{90}V{T}^{3}.
+S_G = \frac{4}{3} \frac{E_G}{T} = g_G \frac{4\pi^2}{90} V T^3
 \end{equation}
+
+\subsubsection{Resultados clave}
+\begin{itemize}
+\item[$\bullet$] La energía de gluones escala con $T^4$: \eqref{eq-BE-Etotalgluons}
+\item[$\bullet$] La presión de gluones: \eqref{eq-BE-Pgluons}
+\item[$\bullet$] La entropía de gluones: \eqref{eq-BE-Sgluons}
+\end{itemize}
+
+% Como cálculo final, hallamos la entropía a partir del potencial gran canónico por medio de la relación
+
+% \begin{equation}\label{eq-BE-Entropy}
+% \begin{split}
+% \phi &= E-TS-\mu N = -PV, \\
+% \Rightarrow S & = \frac{1}{T} \left(E+PV- \mu N \right)
+% \end{split}
+% \end{equation}
+
+% Sustituyendo la ecuación \eqref{eq-BE-P2} en \eqref{eq-BE-Entropy} y considerando $\mu=0$, la entropía del sistema es
+
+% \begin{equation}\label{eq-BE-S}
+% S = \frac{4}{3} \frac{E}{T}
+% \end{equation}
+
+% Y tomando en cuenta que tratamos con la energía de gluones \eqref{eq-BE-Etotalgluons}, la entropía del gas de gluones está dado como
+
+% \begin{equation}\label{eq-BE-Sgluons}
+% {S}_{G} = 4{g}_{G} \frac{{\pi}^{2}}{90}V{T}^{3}.
+% \end{equation}
 
 \subsection{Presión de quarks, un gas ideal de Fermi - Dirac ultrarrelativista}\label{sec-Pquarks}
 
 Las partículas ultrarelativistas tienen una relación energía-momento $\epsilon = \| \overrightarrow{p} \| c$\footnote{De la fórmula general $\epsilon = \sqrt{{p}^{2}{c}^{2} + {m}^{2}{c}^{4}}$, para masa en reposo despreciable.}.
 
-Hay ciertos bosones con esta relación energía-momento, pero el número de fermiones con masa en reposo despreciable es muy poca. Para casos prácticos, ``despreciable'' significa una masa en reposo del orden de los neutrinos (${m}_{\nu} < 8 $eV). El gas ultrarelativistico de \acrfull{fd} puede ser visto como un gas caliente de fermiones con masa en reposo no despreciable, esto es, si el momento promedio en el gas es grande comparado con $mc$, es decir, si la energía térmica promedio $kT$ es grande comparada con la masa en reposo.
+Hay ciertos bosones con esta relación energía-momento, pero el número de fermiones con masa en reposo despreciable es muy poca. Para casos prácticos, ``despreciable'' significa una masa en reposo del orden de los neutrinos (${m}_{\nu} < 8 $eV). El gas ultrarelativistico de \acrshort{fd} puede ser visto como un gas caliente de fermiones con masa en reposo no despreciable, esto es, si el momento promedio en el gas es grande comparado con $mc$, es decir, si la energía térmica promedio $kT$ es grande comparada con la masa en reposo.
 
 A partir de mecánica cuántica relativista, se sabe que uno puede crear pares de partículas y antipartículas (quarks y antiquarks, en nuestro caso) del vacío con un gasto energético de $2m{c}^{2}$. Por lo tanto, no debemos considerar un gas de partículas \acrshort{fd} solitarias, sino como pares partícula-antipartícula.
 
@@ -472,7 +611,7 @@ N & = \frac{4 \pi V}{(hc)^{3}} \frac{1}{{\beta}^{3}} \left[4 \beta \mu \frac{{\p
 \end{split}
 \end{equation}
 
-Y ahora, analógamente con el gas ideal de \acrshort{be}, la expresión se reescribe en unidades naturales usando $c=\hbar = k = 1$ y $h = 2\pi$, y se agrega el factor de degeneración de los quarks ${g}_{Q}$
+Y ahora, analógamente con el gas ideal de \acrshort{be}, la expresión se reescribe en unidades naturales usando $c=\hbar = {k}_{\mathrm{B}} = 1$ y $h = 2\pi$, y se agrega el factor de degeneración de los quarks ${g}_{Q}$
 
 \begin{equation}\label{eq-FD-Total-Number-Particles-Quarks}
 {N}_{Q} = \frac{{g}_{Q}}{6} \left[\frac{\mu}{T} + \frac{1}{{\pi}^{2}} \left(\frac{\mu}{T} \right)^{3} \right] V{T}^{3}
@@ -583,7 +722,7 @@ La entropía se puede calcular a partir de una expresión similar a \eqref{eq-BE
 S = \frac{1}{T} \left(E + PV - \sum_{i} {\mu}_{i} {N}_{i} \right)
 \end{equation}
 
-donde la suma es sobre todas las especies de partículas, en este caso quarks y antiquarks. Por tanto, para el caso del gas de Fermi, tenemos 
+donde la suma es sobre todas las especies de partículas, en este caso quarks y antiquarks. Por tanto, para el caso del gas de \acrshort{fd}, tenemos 
 
 \begin{equation}\label{eq-FD-Entropy}
 \begin{split}
