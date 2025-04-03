@@ -2,7 +2,7 @@
 % ================================================================================================================================
 % Paquetes básicos
 % ================================================================================================================================
-\usepackage[english, spanish]{babel} % Idiomas
+\usepackage[spanish, mexico, english]{babel} % Idiomas
 \usepackage[utf8]{inputenc}          % Codificación
 \usepackage[LGR,T1]{fontenc}         % Soporte de fuentes
 \usepackage{textalpha}               % Soporte de caracteres adicionales
@@ -12,7 +12,7 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
 \usepackage{booktabs} % Para tablas profesionales
-\usepackage{eqnarray, amsmath, nccmath} % Ecuaciones
+\usepackage{eqnarray, amsmath, nccmath, bm} % Ecuaciones
 \usepackage{amsfonts, amssymb}          % Fuentes y símbolos
 \usepackage{physics}                    % Comandos físicos
 \usepackage{siunitx}                    % Comandos para unidades más prácticos.
@@ -147,6 +147,12 @@
 %----------------------------------------------
 \newcommand{\nomunit}[1]{%
 \renewcommand{\nomentryend}{\hspace*{\fill}#1}}
+%----------------------------------------------
+
+%----------------------------------------------
+\newcommand{\iwithoutdot}{\tikz[baseline]{\node[inner sep=0pt, outer sep=0pt, anchor=base] at (0,0) {{i}};}}
+\let\lim\relax % release ("undefine") "\lim" as a macro name
+\DeclareMathOperator*{\lim}{l\acute{\i}m}
 %----------------------------------------------
 
 % renombando headrule with ornament

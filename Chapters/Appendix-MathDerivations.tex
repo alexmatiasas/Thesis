@@ -803,3 +803,65 @@ C = \frac{1}{3}{g}_Q \left[\frac{1}{8\pi^2}\mu^4\right]
 % \end{equation}
 
 % donde las entropías de los subsistemas de quarks y de gluones ya se han definido por las ecuaciones  \eqref{eq-BE-Sgluons} y \eqref{eq-FD-Quark-Entropy} así que 
+
+---
+
+\subsection{La presión en el modelo de Tsallis}\label{sec-Tsallis-Pressure}
+
+% Partimos de la relación de Maxwell
+
+% \begin{equation}\label{eq-Max-rel-S-P}
+% \left. \frac{\partial{S}_{q}}{\partial V} \right|_{V,\mu} = \left. \frac{\partial{P}_{q}}{\partial T} \right|_{V,\mu}
+% \end{equation}
+
+% Donde se ha considerado que el volumen y la temperatura se mantienen como cantidades extensivas, pero la entropía ni la presión son extensivas, es decir, podemos aplicarles estadística de Tsallis.Así, derivando \eqref{eq-Tsallis-Entropy} con respecto de V, se obtiene 
+
+% \begin{equation}
+% \begin{split}
+% \left. \frac{\partial{S}_{q}}{\partial V} \right|_{V,\mu}  =  & \left[ 7{g}_{Q} + 4 {g}_{G}\right] \frac{{\pi}^{2}}{90} {T}^{3} + \frac{1}{6} {g}_{Q} \left(\frac{\mu}{T} \right)^{2} {T}^{3}\\
+% & + \frac{8{\pi}^{2}}{90} {g}_{Q}{g}_{G} (1-q) \left[ \frac{7{\pi}^{2}}{90} + \frac{1}{6} \left(\frac{\mu}{T} \right)^{2} \right]V{T}^{6}
+% \end{split}
+% \end{equation}
+
+% Considerando que la expresión anterior cumple con la relación de Maxwell \eqref{eq-Max-rel-S-P}, podemos hallar la presión de Tsallis ${P}_{q}$, integrando la expresión anterior con respecto a la temperatura, $T$, y así obtenemos
+
+% \begin{equation}\label{eq-Tsallis-Pressure}
+% \begin{split}
+% {P}_{q} = & \left[\frac{7}{4} {g}_{Q} + {g}_{G} \right] \frac{{\pi}^{2}}{90} {T}^{4} + \frac{1}{12}{g}_{Q} \left[\frac{\mu}{T}\right]^{2}{T}^{4}\\
+% & + \frac{8{\pi}^{2}}{90} {g}_{Q}{g}_{G}(1-q) \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left( \frac{\mu}{T}\right)^{2}\right]V{T}^{7} + C(V,\mu,q).
+% \end{split}
+% \end{equation}
+
+% Ya que el parámetro $q \neq 1$ de alguna forma incluye las interacciones entre los quarks y los gluones, para $q=1$ se debe cumplir que ${P}_{q=1} = {P}_{Q} + {P}_{G}$. Esta condición se utiliza para determinar la constante de integración $C(V,\mu,q)$. Por lo tanto, para $q = 1$ se debería cumplir que, usando las ecuaciones \eqref{eq-BE-Pgluons} y \eqref{eq-FD-Quark-Pressure}
+
+% \begin{equation}\label{eq-Tsallis-Pressure-Const}
+% \begin{split}
+% {P}_{q=1} & = {P}_{Q} + {P}_{G}\\
+% & = \frac{{g}_{Q}}{3} \left[\frac{7 {\pi}^{2}}{120} + \frac{1}{4} \left(\frac{\mu}{T} \right)^{2} \frac{1}{8{\pi}^{2}} \left(\frac{\mu}{T} \right)^{4} \right] {T}^{4} + {g}_{G} \frac{{\pi}^{2}}{90}{T}^{4} \\
+% & = \left[\frac{37{\pi}^{2}}{90} + \left(\frac{\mu}{T} \right)^{2} + \frac{1}{2{\pi}^{2}}\left( \frac{\mu}{T}\right)^{4} \right]{T}^{4} \\
+% & = \left[\frac{7}{4} {g}_{Q} + {g}_{G} \right] \frac{{\pi}^{2}}{90} {T}^{4} + \frac{1}{12}{g}_{Q} \left[\frac{\mu}{T}\right]^{2}{T}^{4} + C(V,\mu,q).
+% \end{split}
+% \end{equation}
+
+% Tal, que al despejar la constante de integración de la expresión anterior, podemos encontrar que
+
+% \begin{equation}
+% C(V,\mu,q) = \frac{1}{3}{g}_{Q} \left[\frac{1}{8{\pi}^{2}} {\mu}^{4} \right]
+% \end{equation}
+
+% Y sustituyendo en \eqref{eq-Tsallis-Pressure}, llegamos a que
+
+% \begin{equation}
+% \begin{split}
+% {P}_{q} = & \left[\frac{7}{4} {g}_{Q} + {g}_{G} \right] \frac{{\pi}^{2}}{90} {T}^{4} + \frac{1}{3}{g}_{Q} \left[\frac{1}{4} \left(\frac{\mu}{T} \right)^{2} + \frac{1}{8{\pi}^{2}} \left(\frac{\mu}{T} \right)^{4} \right]{T}^{4}\\
+% & + \frac{8{\pi}^{2}}{90} {g}_{Q}{g}_{G}(1-q) \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left( \frac{\mu}{T}\right)^{2}\right]V{T}^{7} 
+% \end{split}
+% \end{equation}
+
+% Y sustituyendo los valores de los factores de degeneración, se llega a que la presión en la estadística de Tsallis de un sistema de quarks y gluones está dada como
+
+% \begin{equation}
+% {P}_{q} = \left[\frac{37{\pi}^{2}}{90} + \left(\frac{\mu}{T} \right)^{2} + \frac{1}{2{\pi}^{2}} \left(\frac{\mu}{T} \right)^{4} \right]{T}^{4} + \frac{256{\pi}^{2}}{15}(1-q) \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left(\frac{\mu}{T} \right)^{2} \right]V{T}^{7}
+% \end{equation}
+
+% De donde es fácil corroborar que, viendo la tercera línea de \eqref{eq-Tsallis-Pressure-Const}, se cumple para el caso trivial ${q}=1$.
