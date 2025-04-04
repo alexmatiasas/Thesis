@@ -281,6 +281,7 @@ La utilización de entropías BG para los subsistemas individuales refleja que l
 
 \subsubsection*{Forma explícita con degeneración}
 Sustituyendo los factores de degeneración ($g_Q=12$, $g_G=16$):
+
 \begin{equation}\label{eq-Tsallis-Entropy-final}
 {S}_q = \underbrace{\left[\frac{74\pi^2}{45} + 2\left(\frac{\mu}{T}\right)^2\right]V T^3}_{\text{Término extensivo}} + \underbrace{\frac{128\pi^2}{15}(1-q)\left[\frac{7\pi^2}{90} + \frac{1}{6}\left(\frac{\mu}{T}\right)^2\right]V^2 T^6}_{\text{Corrección no extensiva}}
 \end{equation}
@@ -354,18 +355,22 @@ De donde fácilmente se puede comprobar que cuando $q=1$, devolvemos a la expres
 
 Como muestra la Figura \ref{fig:Tsallis-flow-complete}, el parámetro $q$ no solo controla la entropía del sistema (Ec. \ref{eq-Entropy-Tsallis}), sino que a través de su interpretación como medidor de correlaciones (recuadro verde), afecta directamente las propiedades termodinámicas como la presión (Ec. \ref{eq-Pq-final}).
 
-\subsection{Presión generalizada}
+\subsection{Presión generalizada}\label{subsec-Tsallis-pressure}
 
 Partiendo de la relación de Maxwell:
-\begin{equation}\label{eq-Max-rel-S-P}
-\partial_V {S}_q = \partial_T {P}_q
+
+\begin{equation}\label{eq-Maxwell-Tsallis}
+    \left.\frac{\partial{S}_q}{\partial V}\right|_{T,\mu} = \left.\frac{\partial{P}_q}{\partial T}\right|_{V,\mu}
 \end{equation}
 
 La integración sobre $T$ (ver la derivación completa de $P_q$ se encuentra en la Sección \ref{app:Tsallis-pressure}) da:
-\begin{align}\label{eq-Pq-final}
-{P}_q &= \underbrace{\left[\frac{37\pi^2}{90} + \left(\frac{\mu}{T}\right)^2 + \frac{1}{2\pi^2}\left(\frac{\mu}{T}\right)^4\right]T^4}_{\text{Término extensivo (Presión de \acrshort{bg}, $q=1$)}} \nonumber \\
-&\quad + \underbrace{\frac{256\pi^2}{15}(1-q)V T^7 \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left(\frac{\mu}{T} \right)^{2} \right]}_{\text{Término no extensivo}}
-\end{align}
+
+\begin{equation}\label{eq-Pq-final}
+    \begin{split}
+    {P}_q &= \underbrace{\left[\frac{37\pi^2}{90} + \left(\frac{\mu}{T}\right)^2 + \frac{1}{2\pi^2}\left(\frac{\mu}{T}\right)^4\right]T^4}_{\text{Término extensivo (Presión de \acrshort{bg}, $q=1$)}} \\
+    &\quad + \underbrace{\frac{256\pi^2}{15}(1-q)V T^7 \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left(\frac{\mu}{T} \right)^{2} \right]}_{\text{Término no extensivo}}
+    \end{split}
+\end{equation}
 
 \paragraph{Discusión física}  
 El término $\propto V T^7$ es característico de Tsallis y:
@@ -391,3 +396,18 @@ Valores experimentales típicos en QCD: $q \approx 1.1 - 1.2$ para sistemas de a
     \item[$\bullet$] El término no extensivo escala con $V T^7$, dominando a altas temperaturas
     \item[$\bullet$] La simetría $\mu \leftrightarrow -\mu$ se preserva
 \end{itemize}
+
+\begin{table}[h]
+    \centering
+    \caption{Comparación entre estadística BG y Tsallis}
+    \begin{tabular}{lcc}
+    \toprule
+    \textbf{Propiedad} & \textbf{BG ($q=1$)} & \textbf{Tsallis ($q\neq1$)} \\
+    \midrule
+    Entropía & Aditiva & No aditiva \\
+    Presión & $\sim T^4$ & $\sim T^4 + (1-q)V T^7$ \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:BG-vs-Tsallis}
+\end{table}
+    
