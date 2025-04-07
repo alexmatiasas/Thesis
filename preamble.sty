@@ -12,10 +12,10 @@
 \usepackage{tikz}
 \usetikzlibrary{shapes,arrows,positioning}
 \usepackage{booktabs} % Para tablas profesionales
-\usepackage{eqnarray, amsmath, nccmath, bm} % Ecuaciones
+\usepackage{eqnarray, amsmath, nccmath, bm, amsthm} % Ecuaciones
 \usepackage{amsfonts, amssymb}          % Fuentes y símbolos
 \usepackage{physics}                    % Comandos físicos
-\usepackage{siunitx}                    % Comandos para unidades más prácticos.
+\usepackage[separate-uncertainty = true]{siunitx}                    % Comandos para unidades más prácticos.
 % Para que no haya conflicto con qty
 \AtBeginDocument{\RenewCommandCopy\qty\SI}
 
@@ -35,6 +35,8 @@
 \usepackage[labelfont=bf, font=small, labelsep=colon]{caption}
 \usepackage{empheq}
 % \usepackage{fontawesome}      % Font icons
+\usepackage{caption}
+\usepackage{subcaption}
 
 % Documentos y referencias
 \usepackage[sort&compress,numbers]{natbib} % Citas bibliográficas
@@ -152,6 +154,11 @@
 %----------------------------------------------
 \let\lim\relax % release ("undefine") "\lim" as a macro name
 \DeclareMathOperator*{\lim}{l\acute{i} m}
+%----------------------------------------------
+
+%----------------------------------------------
+\theoremstyle{remark}
+\newtheorem*{remark}{Observación}
 %----------------------------------------------
 
 % renombando headrule with ornament

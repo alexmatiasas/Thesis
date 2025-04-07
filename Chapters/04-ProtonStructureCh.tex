@@ -8,9 +8,147 @@ Tsallis-MIT Bag Model}}}
 \fancyfoot[RO]{\nouppercase{\emph{Pressure Distribution Inside Nucleons in a
 Tsallis-MIT Bag Model} \hfill \thepage}}
 
-\begin{abstractbox}
-    Este capítulo desarrolla un modelo termodinámico de la distribución radial de presión en protones, generalizando los resultados clásicos del modelo de bolsa mediante la estadística de Tsallis. Se analizan dos configuraciones gluónicas posibles y sus implicaciones en los perfiles de temperatura y presión.
-\end{abstractbox}
+% \vspace{1em}
+\begin{center}
+\fboxrule=1pt
+\fboxsep=10pt
+\fcolorbox{gray!20}{gray!10}{
+\begin{minipage}{0.9\textwidth}
+\small\noindent
+\textbf{Resumen.} Este capítulo desarrolla un modelo termodinámico de la distribución radial de presión en protones, generalizando los resultados clásicos del modelo de bolsa mediante la estadística de Tsallis. Se analizan dos configuraciones gluónicas posibles y sus implicaciones en los perfiles de temperatura y presión.
+\end{minipage}
+}
+\end{center}
+\vspace{1em}
+
+\section{Modelo termodinámico del protón}
+El protón puede modelarse como un sistema confinado de quarks y gluones cuya dinámica sigue las ecuaciones de estado derivadas en el Capítulo \ref{ch-Tsallis}. Considerando:
+
+\begin{enumerate}[i.]
+    \item Confinamiento mediante condiciones de borde del MIT Bag Model (Capítulo \ref{ch-BagModel})
+    \item Estadística no extensiva con parámetro $q$ (Sección \ref{sec-PresTsa})
+    \item Equilibrio local con $T = T(r)$ y $\mu \approx 0$
+\end{enumerate}
+
+Las densidades de partículas y energía toman la forma:
+
+\begin{align}
+n(r) &= \frac{16\zeta(3)}{\pi^2}T(r)^3 \label{eq-density} \\
+\epsilon(r) &= \frac{37\pi^2}{30}T(r)^4 + (1-q)\mathcal{F}(V,T) \label{eq-energy}
+\end{align}
+
+donde $\mathcal{F}$ representa las correcciones no extensivas.
+
+\section{Perfil radial de temperatura}
+\subsection{Resultados clásicos}
+El trabajo pionero de Tan et al. \cite{Tsallis1988} estableció mediante simulaciones numéricas que la temperatura intracelular sigue un comportamiento crítico:
+
+\begin{equation} \label{eq-Tclassic}
+T_{\text{BG}}(r) = T_0\left(\frac{r}{r_0}\right)^{-\gamma}
+\end{equation}
+
+con:
+
+\begin{enumerate}[ a) ]
+    \item $T_0 = \qty{105}{MeV}$ a $r_0 = \qty{1}{fm}$
+    \item Exponente crítico $\gamma = 3/4$
+    \item Comportamiento singular suave para $r \to 0$
+\end{enumerate}
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.6\textwidth]{./Images/T(R).png}
+    \caption{Perfil de temperatura radial (adaptado de \cite{tan2019}).} %La línea roja muestra nuestro ajuste con $\gamma = 0.75 \pm 0.02$.}
+    \label{fig:Tprofile}
+\end{figure}
+
+\subsection{Generalización con Tsallis}
+Incorporamos no-extensividad mediante:
+
+\begin{equation}
+T_q(r) = T_{\text{BG}}(r)\left[1 + (1-q)\Phi(r/R)\right] \label{eq-Tq}
+\end{equation}
+
+donde $\Phi(x)$ es una función de corrección (Apéndice \ref{app:Phi}) que cumple:
+
+
+\begin{enumerate}[ i. ]
+    \item $\Phi(0) = 1$ (máxima corrección en el centro)
+    \item $\Phi(1) = 0$ (comportamiento clásico en la frontera)
+\end{enumerate}
+
+\section{Configuraciones gluónicas}
+El modelo permite dos topologías distintas para el campo gluónico:
+
+\begin{figure}[h]
+    \centering
+    \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{./Images/Bag_model_sea_cropped.png}
+    \caption{Configuración tradicional: quarks en mar de gluones}
+    \label{fig:sea}
+    \end{subfigure}
+    \hfill
+    \begin{subfigure}{0.48\textwidth}
+    \includegraphics[width=\textwidth]{./Images/Bag_model_shell_cropped.png}
+    \caption{Nuestra propuesta: gluones como cascarón confinante}
+    \label{fig:shell}
+    \end{subfigure}
+    \caption{Comparativa de configuraciones gluónicas en el modelo de bolsa. Notar la diferencia en la distribución espacial de los grados de libertad.}
+    \label{fig:configs}
+\end{figure}
+
+\subsection{Energía de confinamiento}
+Para cada configuración, la presión de bolsa $B(r)$ se relaciona con la energía mediante:
+
+\begin{equation}
+B(r) = \frac{E_t - E_Q(r)}{V_{\text{eff}}(r)} \label{eq-Bdef}
+\end{equation}
+
+donde $V_{\text{eff}}$ depende de la topología:
+
+\begin{enumerate}[ i. ]
+    \item \textbf{Mar de gluones}: $V_{\text{eff}} = \frac{4\pi}{3}R^3$
+    \item \textbf{Cascarón gluónico}: $V_{\text{eff}} = \frac{4\pi}{3}(R^3 - R_i^3)$
+\end{enumerate}
+
+\section{Resultados de presión radial}
+\subsection{Ajustes empíricos}
+Nuestro análisis reproduce cualitativamente los resultados de \cite{tan2019} pero con formas funcionales mejoradas:
+
+\begin{figure}[h]
+    \centering
+    \includegraphics[width=0.8\textwidth]{./Images/B(R).png}
+    \caption{Presión de bolsa generalizada para diferentes valores de $q$. Las bandas muestran incertidumbre en $R = \qty{0.84 \pm 0.01}{fm}$.}
+    \label{fig:Bpressure}
+\end{figure}
+
+\subsection{Formas analíticas}
+Para cada configuración encontramos:
+
+\begin{enumerate}
+    \item \textbf{Mar de gluones} (ajuste de potencia):
+    \begin{equation}
+    {B}^{1/4}(r) = (0.17 \pm 0.01) {r}^{-0.65 \pm 0.03} \left[\unit[per-mode = fraction]{{GeV}^{1/4}.{fm}^{0.65}}\right] \label{eq-Bsea}
+    \end{equation}
+    \item \textbf{Cascarón gluónico} (ajuste exponencial):
+    \begin{equation}
+    {B}^{1/4}(r) = (0.20 \pm 0.01) e^{-(0.29 \pm 0.02)r} \left[\unit{{GeV}^{1/4}}\right] \label{eq-Bshell}
+    \end{equation}
+\end{enumerate}
+
+\section{Discusión}
+
+La comparación entre modelos muestra:
+
+\begin{enumerate}[ i. ]
+    \item Mayor sensibilidad a $q$ en la región $r < \qty{0.5}{fm}$
+    \item El escenario de cascarón gluónico provee mejor ajuste para $q \in [1.1,1.2]$
+    \item La no-extensividad modifica significativamente el core hadrónico
+\end{enumerate}
+
+\begin{remark}
+    Estos resultados sugieren que la estadística de Tsallis puede explicar desviaciones en mediciones de estructura hadrónica, particularmente en experimentos de dispersión profunda.
+\end{remark}
 
 % El protón, al ser considerado compuesto por quarks y gluones independientes entre sí, puede separar sus contribuciones energéticas por cada una de las partes. El \acrshort{bm} describe a los quarks como siendo confinados dentro del hadrón. Aunque hay varias versiones del modelo de bolsa, la característica principal es la fenomenología de confinamiento de quarks. Los gluones son bosones mediadores que transfieren las interacciones entre quarks. Como ya hemos detallado en la sección \ref{sec-PresTsa}, la energía y el número total de partículas para un sistema de quarks y gluones sin masa dentro de un hadrón están dadas por
 
