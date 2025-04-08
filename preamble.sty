@@ -6,11 +6,15 @@
 \usepackage[utf8]{inputenc}          % Codificación
 \usepackage[LGR,T1]{fontenc}         % Soporte de fuentes
 \usepackage{textalpha}               % Soporte de caracteres adicionales
+\usepackage{mdframed} 
+\usepackage{float}
+\usepackage[many]{tcolorbox}  % Para múltiples estilos
 
 % Paquetes matemáticos y científicos
 \usepackage{enumerate}
 \usepackage{tikz}
-\usetikzlibrary{shapes,arrows,positioning}
+\usetikzlibrary{shapes,arrows,positioning,arrows.meta}
+\usepackage{cancel}           % Para \cancelto
 \usepackage{booktabs} % Para tablas profesionales
 \usepackage{eqnarray, amsmath, nccmath, bm, amsthm} % Ecuaciones
 \usepackage{amsfonts, amssymb}          % Fuentes y símbolos
@@ -160,6 +164,39 @@
 \theoremstyle{remark}
 \newtheorem*{remark}{Observación}
 %----------------------------------------------
+
+
+%----------------------------------------------
+\newmdenv[
+    backgroundcolor=gray!10,
+    linewidth=0.5pt,
+    linecolor=gray,
+    leftmargin=10pt,
+    rightmargin=10pt,
+    nobreak=true
+]{physicalinsight}
+%----------------------------------------------
+
+\newtcolorbox{diagramabox}[1][]{
+    enhanced,
+    sharp corners,
+    colback=white,
+    boxrule=0.5pt,
+    arc=0pt,
+    top=4mm,  % Espacio superior
+    bottom=4mm,  % Espacio inferior
+    left=2mm,  % Espacio izquierdo
+    right=2mm,  % Espacio derecho
+    width=\linewidth,  % Ancho ajustado al texto
+    float*=htbp,  % Posición flexible pero prioritaria
+    height fixedfor=all,  % Altura fija
+    max height=0.7\textheight,  % Máximo 70% de la página
+    overlay={
+        \node[anchor=north east, inner sep=2mm] at (frame.north east) 
+            {\small Figura~\thefigure};  % Número de figura automático
+    },
+    #1
+}
 
 % renombando headrule with ornament
 \renewcommand{\headrule}{%
