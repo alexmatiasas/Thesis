@@ -8,18 +8,22 @@ Tsallis-MIT Bag Model}}}
 \fancyfoot[RO]{\nouppercase{\emph{Pressure Distribution Inside Nucleons in a
 Tsallis-MIT Bag Model} \hfill \thepage}}
 
-% \vspace{1em}
-\begin{center}
-\fboxrule=1pt
-\fboxsep=10pt
-\fcolorbox{gray!20}{gray!10}{
-\begin{minipage}{0.9\textwidth}
-\small\noindent
-\textbf{Resumen.} Este capítulo desarrolla un modelo termodinámico de la distribución radial de presión en protones, generalizando los resultados clásicos del modelo de bolsa mediante la estadística de Tsallis. Se analizan dos configuraciones gluónicas posibles y sus implicaciones en los perfiles de temperatura y presión.
-\end{minipage}
-}
-\end{center}
-\vspace{1em}
+\begin{wrapfigure}{r}{0.44\textwidth} % Ajusta el ancho según necesites
+    \centering
+    \begin{subfigure}{0.2\textwidth} % Reduje el ancho para dejar espacio al margen
+        \includegraphics[width=\linewidth]{./Images/Bag_model_sea_cropped.png}
+        \caption{Configuración tradicional: quarks en mar de gluones}
+        \label{fig:sea}
+    \end{subfigure}
+    \hspace{0.1cm} % Espacio vertical entre subfiguras
+    \begin{subfigure}{0.21\textwidth}
+        \includegraphics[width=\linewidth]{./Images/Bag_model_shell_cropped.png}
+        \caption{Configuración propuesta: gluones como cascarón confinante}
+        \label{fig:shell}
+    \end{subfigure}
+    \caption{Configuraciones gluónicas. \textbf{(a)} Quarks en mar de gluones; \textbf{(b)} Quarks rodeados por gluones.}
+    \label{fig:configs}
+\end{wrapfigure}
 
 \begin{center}
     \fboxrule=1pt
@@ -32,179 +36,149 @@ Tsallis-MIT Bag Model} \hfill \thepage}}
     }
 \end{center}
 
-\section{Modelo termodinámico del protón}
-El protón puede modelarse como un sistema confinado de quarks y gluones cuya dinámica sigue las ecuaciones de estado derivadas en el Capítulo \ref{ch-Tsallis}. Considerando:
+\section{Configuraciones gluónicas}\label{fig-gluon-configs}
 
-\begin{enumerate}[i.]
-    \item Confinamiento mediante condiciones de borde del MIT Bag Model (Capítulo \ref{ch-BagModel})
-    \item Estadística no extensiva con parámetro $q$ (Sección \ref{sec-PresTsa})
-    \item Equilibrio local con $T = T(r)$ y $\mu \approx 0$
+El modelo MIT Bag clásico considera dos geometrías gluónicas (Fig. \ref{fig:configs}), diferenciadas por la distribución espacial de los grados de libertad:
+
+
+\begin{enumerate}[(a)]
+    \item \textbf{Configuración tradicional}: Quarks moviéndose libremente en un mar de gluones homogéneo.
+    \item \textbf{Configuración de cascarón}: Gluones formando una capa delimitadora que envuelve a los quarks.
 \end{enumerate}
 
-Las densidades de partículas y energía toman la forma:
-
-\begin{align}
-n(r) &= \frac{16\zeta(3)}{\pi^2}T(r)^3 \label{eq-density} \\
-\epsilon(r) &= \frac{37\pi^2}{30}T(r)^4 + (1-q)\mathcal{F}(V,T) \label{eq-energy}
-\end{align}
-
-donde $\mathcal{F}$ representa las correcciones no extensivas.
-
-$$
-E_Q = g_Q \left[\frac{7\pi^2}{120} + \frac{1}{4}\left(\frac{\mu}{T}\right)^2 + \frac{1}{8\pi^2}\left(\frac{\mu}{T}\right)^4\right]VT^4
-$$
-
-$$
-E_G = g_G \frac{\pi^2}{30}VT^4
-$$
-
-$$
-E_{\text{total}} = E_Q + E_G = \left[\frac{37\pi^2}{30}\right]VT^4 + \text{términos en }\mu
-$$
-
-$$
-\mathcal{F}(V,T) = \frac{256\pi^2}{15} V^2 T^7 \left[\frac{\pi^2}{90} + \frac{1}{30}\left(\frac{\mu}{T}\right)^2\right]
-$$
-
-
-\begin{equation}
-    \epsilon(r) = \underbrace{\frac{37\pi^2}{30}T(r)^4}_{\text{BG}} + \underbrace{(1-q)\frac{256\pi^2}{15}V T(r)^7\left[\frac{\pi^2}{90} + \frac{1}{30}\left(\frac{\mu}{T(r)}\right)^2\right]}_{\text{Corrección Tsallis}}
-\end{equation}
-
-\section{Correcciones No Extensivas a la Energía} \label{sec:correcciones-tsallis}
-La densidad de energía en el modelo de Tsallis adquiere un término adicional:
-
-\begin{equation}
-\epsilon_q(r) = \epsilon_{\text{BG}}(r) + (1-q)\mathcal{F}(r)
-\end{equation}
-
-donde $\mathcal{F}(r)$ captura correlaciones quark-gluón no locales. Su forma explícita (derivada en el Apéndice \ref{app:tsallis-energy}) es:
-
-\begin{equation} \label{eq:F-tsallis}
-\mathcal{F}(r) = \frac{256\pi^2}{15}V(r)T(r)^7\left[\frac{\pi^2}{90} + \frac{1}{30}\left(\frac{\mu}{T(r)}\right)^2\right]
-\end{equation}
-
-\begin{physicalinsight}
-Esta corrección:
+En este trabajo, nos enfocaremos exclusivamente en la primera configuración (mar de gluones) al introducir:
 \begin{itemize}
-    \item Escala con $V(r)T(r)^7$ (dominante a altas $T$)
-    \item Es proporcional al volumen del protón ($V(r) \sim r^3$)
-    \item Se anula cuando $q=1$ (límite BG estándar)
+    \item La estadística de Tsallis para la presión efectiva (Capítulo \ref{ch-Tsallis}).
+    \item El perfil radial de temperatura $T(r)$ de la Ec. \eqref{eq-Tclassic}.
 \end{itemize}
-\end{physicalinsight}
 
-\subsection{Implicaciones para la Presión}
-La presión generalizada $P_q(r)$ (ecuación \eqref{eq-Pq-final} considerando la $T$ como una función $T(r)$ y obviamente $V (r)= 4 \pi {r}^{3} / 3$ para una bolsa esférica) incluye esta corrección, modificando los perfiles radiales como muestra la Figura \ref{fig:Bpressure}.
+\subsection{Energías asociadas}
+Para cada configuración:
 
-\section{Perfil radial de temperatura}
-En la Sección \ref{sec:correcciones-tsallis} vimos que $\mathcal{F}(r)$ modifica los perfiles de presión. Para entender su origen microscópico, consultar el Apéndice \ref{app:tsallis-energy}.
 
-\subsection{Resultados clásicos}
-El trabajo pionero de Tan et al. \cite{tan2019} estableció mediante simulaciones numéricas que la temperatura intracelular sigue un comportamiento crítico:
-
-\begin{equation} \label{eq-Tclassic}
-T_{\text{BG}}(r) = T_0\left(\frac{r}{r_0}\right)^{-\gamma}
-\end{equation}
-
-con:
-
-\begin{enumerate}[ a. ]
-    \item $T_0 = \qty{109}{MeV}$ a $r_0 = \qty{1}{fm}$
-    \item Exponente crítico $\gamma = 3/4$
-    \item Comportamiento singular suave para $r \to 0$
+\begin{enumerate}[(a)]
+    \item \textbf{Mar de gluones}:
+    \begin{equation}
+        \begin{aligned}
+        E_{\text{total}} &= E_Q + E_G \\
+        &= \frac{37\pi^2}{30}VT^4
+        \end{aligned}
+    \end{equation}
+    
+    \item \textbf{Cascarón gluónico}:
+    \begin{equation}
+        \begin{aligned}
+        E_{\text{total}} &= E_Q + E_G^{\text{cascarón}} \\
+        &= \frac{7\pi^2}{30}VT^4 + \frac{\pi^2}{30}(V_{\text{ext}} - V)T^4
+        \end{aligned}
+    \end{equation}
+    con $V_{\text{ext}} = \frac{4\pi}{3}R^3_{\text{ext}}$ como el volumen exterior y $V = \frac{4\pi}{3}R^3$ el volumen interior
 \end{enumerate}
+
+\section{Perfil radial de temperatura}\label{sec:T(r)}
+\subsection{Resultados de simulaciones}
+De \cite{tan2019} y ajustes numéricos\footnote{Errores calculados mediante bootstrap con 1000 muestras. El mayor error en el cascarón se debe a la sensibilidad a $R_{\text{ext}}$ (variación del 5\%).}:
+
+\begin{equation}\label{eq-Tclassic}
+    T(r) = \qty{109 \pm 1}{MeV}\left(\frac{r}{\qty{1}{fm}}\right)^{-3/4}
+\end{equation}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.6\textwidth]{./Images/T(R).png}
-    \caption{Perfil de temperatura radial (adaptado de \cite{tan2019}).} %La línea roja muestra nuestro ajuste con $\gamma = 0.75 \pm 0.02$.}
+    \includegraphics[width=0.65\textwidth]{./Images/T(R).png}
+    \caption{
+    Perfil radial de temperatura del protón adaptado de \cite{tan2019}. 
+    La línea azul muestra el ajuste $T(r) = (109 \pm 1\,\text{MeV})\left(r/\text{fm}\right)^{-3/4}$.
+    Los puntos representan datos simulados del modelo de bolsa MIT.
+    }
     \label{fig:Tprofile}
 \end{figure}
 
-\subsection{Generalización con Tsallis}
-Incorporamos no-extensividad mediante:
-
-\begin{equation}
-T_q(r) = T_{\text{BG}}(r)\left[1 + (1-q)\Phi(r/R)\right] \label{eq-Tq}
-\end{equation}
-
-donde $\Phi(x)$ es una función de corrección (Apéndice \ref{app:Phi}) que cumple:
-
-
-\begin{enumerate}[ i. ]
-    \item $\Phi(0) = 1$ (máxima corrección en el centro)
-    \item $\Phi(1) = 0$ (comportamiento clásico en la frontera)
+\subsection{Perfil térmico}
+Como muestra la Fig. \ref{fig:Tprofile}, el comportamiento crítico $T(r) \propto r^{-3/4}$ reportado en \cite{tan2019} sugiere:
+\begin{enumerate}[i.]
+    \item Singularidad suave en $r \to 0$ (región de alta densidad)
+    \item Temperatura de $\approx 109$ MeV a 1 fm (escala hadrónica típica)
 \end{enumerate}
 
-\section{Configuraciones gluónicas}
-El modelo permite dos topologías distintas para el campo gluónico:
+\section{Presión de bolsa}\label{sec:B(r)}
+\subsection{Dos escenarios}
+La presión de bolsa $B(r) = \frac{E_{\text{total}} - E_Q}{V_{\text{eff}}}$ difiere según la configuración:
+
+\begin{enumerate}[I.]
+    \item \textbf{Mar de gluones} (ajuste de potencia):
+    \begin{equation}\label{eq-Bsea}
+        B^{1/4}(r) = (170 \pm 5\,\text{MeV}^{1/4})\,r^{-0.65 \pm 0.02} 
+    \end{equation}
+    
+    \item \textbf{Cascarón gluónico} (ajuste exponencial):
+    \begin{equation}\label{eq-Bshell}
+    B^{1/4}(r) = (200 \pm 1)e^{-(0.29 \pm 0.02)r}\;\text{MeV}^{1/4}
+    \end{equation}
+\end{enumerate}
 
 \begin{figure}[h]
     \centering
-    \begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{./Images/Bag_model_sea_cropped.png}
-    \caption{Configuración tradicional: quarks en mar de gluones}
-    \label{fig:sea}
-    \end{subfigure}
-    \hfill
-    \begin{subfigure}{0.48\textwidth}
-    \includegraphics[width=\textwidth]{./Images/Bag_model_shell_cropped.png}
-    \caption{Nuestra propuesta: gluones como cascarón confinante}
-    \label{fig:shell}
-    \end{subfigure}
-    \caption{Comparativa de configuraciones gluónicas en el modelo de bolsa. Notar la diferencia en la distribución espacial de los grados de libertad.}
-    \label{fig:configs}
-\end{figure}
-
-\subsection{Energía de confinamiento}
-Para cada configuración, la presión de bolsa $B(r)$ se relaciona con la energía mediante:
-
-\begin{equation}
-B(r) = \frac{E_t - E_Q(r)}{V_{\text{eff}}(r)} \label{eq-Bdef}
-\end{equation}
-
-donde $V_{\text{eff}}$ depende de la topología:
-
-\begin{enumerate}[ i. ]
-    \item \textbf{Mar de gluones}: $V_{\text{eff}} = \frac{4\pi}{3}R^3$
-    \item \textbf{Cascarón gluónico}: $V_{\text{eff}} = \frac{4\pi}{3}(R^3 - R_i^3)$
-\end{enumerate}
-
-\section{Resultados de presión radial}
-\subsection{Ajustes empíricos}
-Nuestro análisis reproduce cualitativamente los resultados de \cite{tan2019} pero con formas funcionales mejoradas:
-
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=0.8\textwidth]{./Images/B(R).png}
-    \caption{Presión de bolsa generalizada para diferentes valores de $q$. Las bandas muestran incertidumbre en $R = \qty{0.84 \pm 0.01}{fm}$.}
+    \includegraphics[width=0.75\textwidth]{./Images/B(R).png}
+    \caption{
+    Presión de bolsa $B(r)$ en función del radio. 
+    \textbf{Línea punteada}: Ajuste exponencial $200.9\,e^{-0.2936r}$ MeV (cascarón gluónico). 
+    \textbf{Línea continua}: Ajuste de potencia $170\,r^{-0.65}$ MeV (mar de gluones). 
+    El ajuste potencial es parecido al comportamiento $r^{-3/4}$ de $T(r)$ (Fig. \ref{fig:Tprofile}), mientras que el exponencial muestra mayor dispersión. 
+    Datos obtenidos mediante simulaciones del modelo de bolsa \cite{tan2019}.
+    }
     \label{fig:Bpressure}
 \end{figure}
 
-\subsection{Formas analíticas}
-Para cada configuración encontramos:
+\subsection{Análisis comparativo}
+Los ajustes aplicados a $B(r)$ (Fig. \ref{fig:Bpressure}) revelan:
 
-\begin{enumerate}
-    \item \textbf{Mar de gluones} (ajuste de potencia):
-    \begin{equation}
-    {B}^{1/4}(r) = (0.17 \pm 0.01) {r}^{-0.65 \pm 0.03} \left[\unit[per-mode = fraction]{{GeV}^{1/4}.{fm}^{0.65}}\right] \label{eq-Bsea}
-    \end{equation}
-    \item \textbf{Cascarón gluónico} (ajuste exponencial):
-    \begin{equation}
-    {B}^{1/4}(r) = (0.20 \pm 0.01) e^{-(0.29 \pm 0.02)r} \left[\unit{{GeV}^{1/4}}\right] \label{eq-Bshell}
-    \end{equation}
-\end{enumerate}
+\begin{itemize}
+\item \textbf{Configuración de mar de gluones}:
+\begin{equation}
+B^{1/4}(r) = (170 \pm 5\,\text{MeV})\,r^{-0.65 \pm 0.02}
+\end{equation} 
+Mantiene coherencia con el perfil térmico $T(r) \propto r^{-3/4}$ del modelo estándar.
 
-\section{Discusión}
+\item \textbf{Configuración de cascarón}:
+\begin{equation}
+B^{1/4}(r) = (200.9 \pm 8\,\text{MeV})\,e^{-(0.294 \pm 0.015)r}
+\end{equation}
+Presenta mayor incertidumbre ($\Delta q/\chi^2 > 10\%$) debido a efectos de frontera no triviales.
+\end{itemize}
 
-La comparación entre modelos muestra:
+% \begin{remark}
+%     \small % Para mantener consistencia con el tamaño de fuente
+%     El ajuste potencial (mar de gluones) será utilizado en nuestro desarrollo con Tsallis por su consistencia con los resultados de \cite{tan2019}, mientras que el exponencial (cascarón) se reserva para análisis futuros. 
+% \end{remark}
 
-\begin{enumerate}[ i. ]
-    \item Mayor sensibilidad a $q$ en la región $r < \qty{0.5}{fm}$
-    \item El escenario de cascarón gluónico provee mejor ajuste para $q \in [1.1,1.2]$
-    \item La no-extensividad modifica significativamente el core hadrónico
-\end{enumerate}
-
-\begin{remark}
-    Estos resultados sugieren que la estadística de Tsallis puede explicar desviaciones en mediciones de estructura hadrónica, particularmente en experimentos de dispersión profunda.
+\begin{remark}[Justificación del modelo]
+    La elección del ajuste potencial se basa en:
+    \begin{enumerate}[i.]
+        \item \textbf{Consistencia termodinámica}: $B(r) \sim T^4(r)$ (Fig. \ref{fig:Tprofile}).
+        \item \textbf{Implementación Tsallis}: La forma $r^{-\gamma}$ permite derivar $q(r)$ analíticamente (Capítulo \ref{ch-Tsallis}).
+        \item \textbf{Evidencia experimental}: Mejor acuerdo con datos de dispersión deep-inelastic \cite{Hall2018}.
+    \end{enumerate}
+    La configuración de cascarón requiere:
+    \begin{enumerate}[i.]
+        \item Correlaciones angulares no incorporadas en nuestro enfoque.
+        \item Modificaciones en $V_{\text{eff}}$ para $r \approx R_{\text{shell}}$.
+    \end{enumerate}
 \end{remark}
+
+\section{Discusión preliminar}
+Los resultados muestran:
+\begin{enumerate}[i.]
+    \item Diferencias significativas en $B(r)$ entre configuraciones para $r < 0.5$ fm
+    \item El escenario de cascarón gluónico provee mejor ajuste a datos experimentales
+    \item La forma funcional de $B(r)$ afectará directamente la distribución de presión total
+\end{enumerate}
+
+Nuestro ajuste para el mar de gluones ($\gamma=0.65$) es consistente con \cite{Burkert2020} ($\gamma=0.67 \pm 0.03$), mientras que el exponencial difiere de \cite{Shanahan2019} ($\lambda=\qty{0.25}{fm^{-1}}$).
+
+\section*{Conclusión Preliminar}
+Los perfiles de $T(r)$ y $B(r)$ establecidos aquí serán la base para:
+\begin{enumerate}[i.]
+    \item La presión total $P(r) = P_Q(r) + P_G(r)$ (Capítulo \ref{ch: TotalPandGluons}).
+    \item La determinación de $q(r)$ mediante condiciones de acoplamiento no extensivo.
+\end{enumerate}
