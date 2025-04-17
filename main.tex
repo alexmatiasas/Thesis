@@ -9,6 +9,7 @@
 % Documento
 % ================================================================================================================================
 \begin{document}
+\selectlanguage{spanish}
 % ================================================================================================================================
 % Portada y Front Matter
 % ================================================================================================================================
@@ -21,19 +22,21 @@
 
 
 % Abstract en español e inglés
-\chapter*{Abstract}
-\addcontentsline{toc}{chapter}{Resumen}
-\label{ch: abstract}
-\abstractsection{spanish}{
-    \begin{flushright}
-        Resumen en español
-    \end{flushright}
-    }
-\abstractsection{english}{
-    \begin{flushright}
-        This is the abstract
-    \end{flushright}
-    }
+\chapter*{Resumen y Abstract}
+\addcontentsline{toc}{chapter}{Resumen y Abstract}
+\label{ch:abstract}
+
+\section*{Resumen (Español)}
+\selectlanguage{spanish}
+Aquí va el resumen en español...
+
+\vspace{1em}
+\hrule
+\vspace{1em}
+
+\section*{Abstract (English)}
+\selectlanguage{english}
+Here goes the abstract in English...
 
 \newpage
 \thispagestyle{empty}
@@ -79,6 +82,7 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 \include{Chapters/06-TotalPandGluons}
 \include{Chapters/05-PhysicalMeaningQ}
 \include{Chapters/08-ResultsAndConclusions}
+% NOTAS POR INTEGRAR:
 %\include{Chapters/100000-Notas}
 %\include{Chapters/07-NotasNewExtendedModel}
 
@@ -126,8 +130,4 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 
 \end{document}
 
-% run with
-% pdflatex main.tex
-% bibtex main.aux
-% pdflatex main.tex
-% pdflatex main.tex
+% 👉 Compilar con: ./build.sh  (o ./build.sh --clean para limpiar tras la compilación)

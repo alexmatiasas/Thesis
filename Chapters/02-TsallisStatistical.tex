@@ -21,21 +21,21 @@
 
 \section{Introducción}
 
-La mecánica estadística estándar está basada en la entropía de \Gls{boltzman-gibbs} (\acrshort{bg}), que se define como
+La mecánica estadística estándar está basada en la entropía de \Gls{boltzman-gibbs} (\gls{bg}), que se define como
 
 \begin{equation}
 {S}_{\mathrm{BG}} = - {k}_{\mathrm{B}} \sum_{i=1}^{W} {p}_{i} \ln {p}_{i}, \quad \sum_{i=1}^{W} {p}_{i} = 1,
 \end{equation}
 
-donde \( W \) es el número de configuraciones microscópicas del sistema y \( {p}_{i} \) es la probabilidad de acceder a la \( i \)-ésima configuración. Sin embargo, sistemas no lineales dinámicos de muchos cuerpos, como los que se encuentran en física de partículas o en plasmas, a menudo no cumplen con las condiciones de \emph{ergodicidad} (que su valor esperado sea igual a su promedio a largo plazo) o \emph{extensividad} (que las propiedades del sistema sean proporcionales al número de partículas). Para estos sistemas, la estadística de \acrshort{bg} no es adecuada, lo que ha llevado al desarrollo de extensiones como la estadística de \Gls{tsallis}.
+donde \( W \) es el número de configuraciones microscópicas del sistema y \( {p}_{i} \) es la probabilidad de acceder a la \( i \)-ésima configuración. Sin embargo, sistemas no lineales dinámicos de muchos cuerpos, como los que se encuentran en física de partículas o en plasmas, a menudo no cumplen con las condiciones de \emph{ergodicidad} (que su valor esperado sea igual a su promedio a largo plazo) o \emph{extensividad} (que las propiedades del sistema sean proporcionales al número de partículas). Para estos sistemas, la estadística de \gls{bg} no es adecuada, lo que ha llevado al desarrollo de extensiones como la estadística de \Gls{tsallis}.
 
-La estadística de Tsallis generaliza la entropía de \acrshort{bg} mediante la introducción de un parámetro no extensivo \( q \), definido por:
+La estadística de Tsallis generaliza la entropía de \gls{bg} mediante la introducción de un parámetro no extensivo \( q \), definido por:
 
 \begin{equation}
 {S}_{q} = {k}_{\mathrm{B}} \frac{1-\sum_{i} {p}_{i}^{q}}{q-1} \qquad (q\in \mathbb{R};\; {S}_{q=1} = {S}_{\mathrm{BG}}),
 \end{equation}
 
-El parámetro \( q \) mide el grado de no extensividad del sistema. Para \( q = 1 \), se recupera la estadística de \acrshort{bg}, mientras que valores de \( q \neq 1 \) indican desviaciones de la extensividad, lo que es característico de sistemas con correlaciones de largo alcance, inhomogeneidades o memoria de largo plazo.% \cite{TsallisStatistics}.
+El parámetro \( q \) mide el grado de no extensividad del sistema. Para \( q = 1 \), se recupera la estadística de \gls{bg}, mientras que valores de \( q \neq 1 \) indican desviaciones de la extensividad, lo que es característico de sistemas con correlaciones de largo alcance, inhomogeneidades o memoria de largo plazo.% \cite{TsallisStatistics}.
 
 Bajo esta generalización, en un sistema constituido por dos subsistemas probabilisticamente independientes $A$ y $B$ (i.e., si ${p}_{ij}^{A+B} = {p}_{i}^{A}{p}_{j}^{B}$), entonces
 
@@ -43,14 +43,14 @@ Bajo esta generalización, en un sistema constituido por dos subsistemas probabi
 \frac{{S}_{{q}}(A+B)}{{k}_{\mathrm{B}}} = \frac{{S}_{q}(A)}{{k}_{\mathrm{B}}} + \frac{{S}_{q}(B)}{{k}_{\mathrm{B}}} + (1 - q) \frac{{S}_{q}(A)}{{k}_{\mathrm{B}}}\frac{{S}_{q}(B)}{{k}_{\mathrm{B}}}\footnote{Más adelante se usarán unidades naturales por lo que no aparecerá la constante de Boltzmann, ${k}_{\mathrm{B}}$},
 \end{equation}
 
-de donde se observa claramente que cuando $q=1$ se regresa a la estadística de \acrshort{bg} %[ref Tsallis statistics].
+de donde se observa claramente que cuando $q=1$ se regresa a la estadística de \gls{bg} %[ref Tsallis statistics].
 
 La estadística de Tsallis ha demostrado ser particularmente útil en el estudio de sistemas complejos y fuera del equilibrio, como los que se encuentran en física de altas energías, plasmas o sistemas biológicos. %\cite{TsallisApplications}. 
-En este trabajo, exploraremos cómo esta generalización de la entropía puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más precisa de sistemas que no pueden ser tratados adecuadamente con la estadística de \acrshort{bg}.
+En este trabajo, exploraremos cómo esta generalización de la entropía puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más precisa de sistemas que no pueden ser tratados adecuadamente con la estadística de \gls{bg}.
 
 En el capítulo anterior, se presentó el modelo de bolsa como un marco teórico para entender el confinamiento de quarks dentro de los hadrones. Sin embargo, este modelo tradicional tiene limitaciones en la descripción de sistemas fuera del equilibrio o en condiciones extremas. La estadística de Tsallis, con su parámetro no extensivo \( q \), ofrece una herramienta poderosa para abordar estas limitaciones y proporcionar una descripción más general de sistemas complejos. %\cite{BagModelLimitations}.
 
-% Este capítulo se divide en varias secciones. En la primera, se presenta la entropía de Tsallis y su relación con la entropía de \acrshort{bg}. Posteriormente, se discuten las propiedades clave de la estadística de Tsallis, incluyendo su aplicación a sistemas no extensivos. Finalmente, se explorará cómo esta estadística puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más general de sistemas complejos.
+% Este capítulo se divide en varias secciones. En la primera, se presenta la entropía de Tsallis y su relación con la entropía de \gls{bg}. Posteriormente, se discuten las propiedades clave de la estadística de Tsallis, incluyendo su aplicación a sistemas no extensivos. Finalmente, se explorará cómo esta estadística puede aplicarse al estudio de hadrones y al confinamiento de quarks, proporcionando una descripción más general de sistemas complejos.
 
 % NOTA: En la misma referencia se agrega la obtención de la energía de Tsallis para las masas
 
@@ -68,11 +68,11 @@ En el capítulo anterior, se presentó el modelo de bolsa como un marco teórico
 
 \section{Presión dentro del hadrón}\label{sec-PresTsa}
 
-A partir de la ecuación \eqref{eq-TsallisTwoSystems}, podemos obtener la entropía dentro de un hadrón que consiste en una mezcla de gases de quarks y gluones. Para ello, comenzamos considerando el cálculo de cada contribución: los quarks, vistos como un gas ideal de \acrfull{fd} ultrarrelativista, y los gluones, vistos como un gas ideal de \acrfull{be} ultrarrelativista. Ambos se consideran sin masa y no interactuantes, ya que la interacción se introduce a través del parámetro \( q \) de Tsallis.
+A partir de la ecuación \eqref{eq-TsallisTwoSystems}, podemos obtener la entropía dentro de un hadrón que consiste en una mezcla de gases de quarks y gluones. Para ello, comenzamos considerando el cálculo de cada contribución: los quarks, vistos como un gas ideal de \gls{fd} ultrarrelativista, y los gluones, vistos como un gas ideal de \gls{be} ultrarrelativista. Ambos se consideran sin masa y no interactuantes, ya que la interacción se introduce a través del parámetro \( q \) de Tsallis.
 
 \subsection{Presión de gluones, un gas ideal de Bose - Einstein ultrarelativista}
 
-Los niveles de energía de un bosón en un gas ideal de \acrshort{be} ultrarrelativista están dados por:
+Los niveles de energía de un bosón en un gas ideal de \gls{be} ultrarrelativista están dados por:
 
 \begin{equation}
 {\epsilon}_{k} = cp = \hbar c k,
@@ -257,7 +257,7 @@ Consideramos el protón como un sistema compuesto por:
 La entropía de Tsallis incorpora correlaciones mediante:
 
 \begin{equation}\label{eq-Entropy-Tsallis}
-{S}_{q} = \underbrace{{S}_{1}(Q) + {S}_{1}(G)}_{\text{Estadística de \acrshort{bg}}} + \underbrace{(1-q){S}_{1}(Q){S}_{1}(G)}_{\text{Correlaciones}}
+{S}_{q} = \underbrace{{S}_{1}(Q) + {S}_{1}(G)}_{\text{Estadística de \gls{bg}}} + \underbrace{(1-q){S}_{1}(Q){S}_{1}(G)}_{\text{Correlaciones}}
 \end{equation}
 
 donde los términos individuales, ${S}_{1}(Q)$ y ${S}_{1}(G)$\footnote{\textbf{Nota sobre la elección de ${S}_{1}(Q)$ o ${S}_{1}(G)$}:
@@ -367,7 +367,7 @@ La integración sobre $T$ (ver la derivación completa de $P_q$ se encuentra en 
 
 \begin{equation}\label{eq-Pq-final}
     \begin{split}
-    {P}_q &= \underbrace{\left[\frac{37\pi^2}{90} + \left(\frac{\mu}{T}\right)^2 + \frac{1}{2\pi^2}\left(\frac{\mu}{T}\right)^4\right]T^4}_{\text{Término extensivo (Presión de \acrshort{bg}, $q=1$)}} \\
+    {P}_q &= \underbrace{\left[\frac{37\pi^2}{90} + \left(\frac{\mu}{T}\right)^2 + \frac{1}{2\pi^2}\left(\frac{\mu}{T}\right)^4\right]T^4}_{\text{Término extensivo (Presión de \gls{bg}, $q=1$)}} \\
     &\quad + \underbrace{\frac{256\pi^2}{15}(1-q)V T^7 \left[\frac{{\pi}^{2}}{90} + \frac{1}{30} \left(\frac{\mu}{T} \right)^{2} \right]}_{\text{Término no extensivo}}
     \end{split}
 \end{equation}

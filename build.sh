@@ -5,17 +5,26 @@ set -e
 
 echo "🔨 Compilando tesis (main.tex)..."
 
+# 1. Compilación inicial
 pdflatex main.tex
-bibtex main.aux
+
+# 2. Bibliografía
+bibtex main
+
+# 3. Glosarios y acrónimos
 makeglossaries main
-makeindex nomencl
+
+# 4. Nomenclatura
+makeindex main.nlo -s nomencl.ist -o main.nls
+
+# 5. Compilación final para resolver referencias cruzadas
 pdflatex main.tex
 pdflatex main.tex
 
 echo "✅ ¡Compilación completada exitosamente!"
 echo "📄 Resultado: main.pdf"
 
-# Si se pasa --clean, se limpia después de compilar
+# Limpieza opcional
 if [[ $1 == "--clean" ]]; then
     echo "🧹 Limpiando archivos auxiliares tras la compilación..."
     ./clean.sh
