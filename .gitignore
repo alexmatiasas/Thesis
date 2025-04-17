@@ -1,33 +1,33 @@
+# LaTeX build files
 *.aux
-*.DS_Store
-*.toc
-*.out
-*.lot
-*.nlo
 *.log
-*.lof
-*.ist
-*.idx
+*.out
+*.toc
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
 *.gls
 *.glo
 *.glg
-*.bbl
-*.alg
-*.acr
+*.ist
 *.acn
-*.dvi
+*.acr
+*.alg
+*.idx
+*.ilg
+*.ind
+*.nlo
+*.nls
+*.lof
+*.lot
 *.synctex.gz
 *.ps
-*.ind
-*.ilg
-*.fls
-*.fdb_latexmk
-*.blg
-# *.pdf
-*.DS_Store
-*.nls
-./Outputs/*.
-./Chapters/*.aux
-./Chapters/AuxiliaryFiles/*.
-# ./Images/*.jpg
-# ./Images/*.png
+*.dvi
+
+# MacOS metadata
+.DS_Store
+
+# Optional auxiliary folders
+Chapters/AuxiliaryFiles/
+Outputs/
