@@ -1,4 +1,4 @@
-# LaTeX build files
+# Archivos auxiliares de LaTeX
 *.aux
 *.log
 *.out
@@ -22,12 +22,8 @@
 *.lof
 *.lot
 *.synctex.gz
-*.ps
 *.dvi
+*.ps
 
-# MacOS metadata
+# MacOS
 .DS_Store
-
-# Optional auxiliary folders
-Chapters/AuxiliaryFiles/
-Outputs/
