@@ -199,13 +199,13 @@
 }
 
 % === Entorno personalizado para resumen de capítulo ===
-\newtcolorbox{chaptersummary}{
+\newtcolorbox{chaptersummary}[1][Resumen del capítulo]{
     enhanced,
     colback=gray!5,
     colframe=gray!60,
     coltitle=black,
     fonttitle=\bfseries,
-    title=Resumen del capítulo,
+    title=\textbf{#1},
     boxrule=0.8pt,
     arc=2mm,
     left=6pt,

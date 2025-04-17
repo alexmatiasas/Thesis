@@ -1,560 +1,65 @@
 \chapter{Modelo de bolsa}
 \label{ch-BagModel}
 
-\fancyhf{} % clear all header fields
+\pagestyle{fancy}
+\fancyhf{}
 \fancyhead[LE]{\nouppercase{\textbf{\leftmark}\hfill\textit{\rightmark}}}
 \fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{\leftmark}}}
-\fancyfoot[LE]{\nouppercase{\thepage\hfill {Pressure Distribution Inside Nucleons in a
-Tsallis-MIT Bag Model}}}
-\fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a
-Tsallis-MIT Bag Model} \hfill \thepage}}
+\fancyfoot[LE]{\nouppercase{\thepage\hfill Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model}}
+\fancyfoot[RO]{\nouppercase{Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model \hfill \thepage}}
 
-\begin{chaptersummary}
-Este cap
+\begin{chaptersummary}[Resumen del capítulo \thechapter: Modelo de bolsa]
+    Este capítulo introduce el modelo de bolsa del \gls{mit} como marco fenomenológico para el confinamiento de quarks. Se parte de los fundamentos físicos provistos por la \gls{qcd} y se justifica el modelo desde la libertad asintótica, la inclusión de gluones y la estructura relativista-invariante. Se desarrolla formalmente la versión esférica del modelo, derivando sus ecuaciones de movimiento, condiciones de frontera y soluciones modales, que constituyen la base sobre la cual se construye la extensión no extensiva que proponemos.
 \end{chaptersummary}
 
+Comprender cómo los quarks se confinan dentro de los hadrones ha sido uno de los desafíos más importantes de la física de partículas. Aunque la \gls{qcd} provee el marco teórico fundamental para describir las interacciones fuertes, su naturaleza no perturbativa a bajas energías hace difícil una solución exacta para sistemas ligados como los bariones. Bajo este contexto, los modelos fenomenológicos como el modelo de bolsa del \gls{mit} ofrecen una herramienta útil para capturar aspectos esenciales de la dinámica hadrónica.
 
-%\section{Introducción. Sobre QCD}
-%
-%La teoría moderna de interacción fuerte, \emph{\gls{qcd}}, es una teoría ``radicalmente conservativas'' en sentido de Wheeler. Extrapolamos unos pocos principios fundamentales tan lejos como podamos, aceptando ``paradojas'' que no alcanzan las contradicciones reales que resultó de tomar tales principios generales como localidad, causalidad, y renormalizabilidad muy seriamente y reconciliarlas con unos pocos hechos experimentales sobresalientes.\\
-%
-%La teoría moderna de la interacción fuerte empezó en 1963 con la introducción independiente del concepto de quarks por Gell-Mann (1964) y Zweig (1964). Originalmente los quarks fueron introducidos como una racionalización de espectroscopía de hadrones; el espectro observado de mesones y bariones podría ser fácil de entender como estados ligados de quark-antiquark ($\bar{q}q$) y tres quarks ($qqq$). La existencia de tres diferentes especies o ``sabores'' ($u, d, s$) de quarks de espín-$ \dfrac{1}{2}$ con diferentes números cuánticos (carga eléctrica, isoespín, extrañeza) pero aproximadamente la misma interacción fuerte racionalizada la existosa simetría de ``vía óctuple'' introducida antes por Gell-Mann. Aunque los quarks aislados no fueron, y no han sido observados hasta el día de hoy, Dalitz (1969) y otros desarrollaron una fenomenología muy exitosa basada en modelos simples de hadrones como estados ligados de quarks espín-$ \dfrac{1}{2}$ localizados pero esencialmente no interactuantes y sin estructura.\\
-%
-%Existen tres ideas fundamentales en la teoría de \gls{qcd}:
-%
-%\renewcommand{\labelenumi}{\Roman{enumi})}
-%\begin{enumerate}
-%\item \textit{Los quarks sin estructura podrían formar una base \emph{fundamental} para la descripción de los hadrones}
-%\item \textit{Cada sabor de quark debería existir en tres colores.}\\
-%Los modelos de quarks indican que las funciones de onda de bariones $qqq$ deberían ser simétricas en el intercambio de números cuánticos espacial, de espín y sabor de los quarks.
-%\item \textit{El modelo de partones introducido por Feynmann}.\\
-%El modelo de partones sugería que hadrones contenían constituyentes puntuales con propiedades simples (quarks)
-%\end{enumerate}
-%
-%\subsection{Modelos semifenomenológicos y sus relaciones con QCD}
-%
-%Existen modelos semifenomenológicos en interacción fuerte física como lo son
-%
-%\renewcommand{\labelenumi}{\arabic{enumi}.-}
-%
-%\begin{enumerate}
-%\item el modelo de bolsa,
-%\item modelos de potencial de quarkonium,
-%\item el modelo de cuerdas,
-%\item el modelo de partones.
-%\end{enumerate}
-%%
-%%\subsection{Formulación de QCD y sus consecuencias generales}
-%%
-%%\subsubsection{Invariancia de norma local}
-%%
-%%La electrodinámica cuántica (\gls{qed}) y la cromodinámica cuántica pueden ambas ser derivadas de tales principios generales como invariancia relativistica y renormalizabilidad más el principio de invariancia local de norma. Visto de esta forma, \gls{qcd} es una muy simple generalización de \gls{qed}.
-%%
-%%En mecánica cuántica, la conseración de la carga es expresada como la conmutación del operador carga y el operador de desarrollo temporal (Hamiltoniano):
-%%
-%%\begin{equation}
-%%[H, Q] = 0
-%%\end{equation}
-%%
-%%Las transformaciones unitarias $\mathrm{exp}(iQ\theta)$ dejan las ecuaciones de movimiento sin cambio.
-%%
-%%Aplicado a un campo $\psi(x)$, que crea cuanto de carga $q$ (y destruye cuanto de carga $-q$), la simetría de norma actúa como una fase:
-%%
-%%\begin{equation}\label{transfgauge}
-%%{\psi}' (x) = \mathrm{exp}(iQ\theta) \psi(x) \mathrm{exp}(-iQ\theta) =  \mathrm{exp}(iq\theta) \psi(x)
-%%\end{equation}
-%%
-%%o
-%%
-%%\begin{equation}\label{conmcharge}
-%%[Q,\psi(x)] = q \psi(x).
-%%\end{equation}
-%%
-%%Así, la simetría de norma es equivalente a la conservación de carga; tal que una interacción
-%%
-%%\begin{equation}
-%%\Delta \mathscr{L} = {\psi}_{1}(x){\psi}_{2}(x)\dots {\psi}_{n}(x)
-%%\end{equation}
-%%
-%%sea invariante bajo simetría de norma, es necesario y suficiente en ambos sentidos que
-%%
-%%\begin{equation}
-%%\sum_{i=1}^{n}{q}_{i} = 0
-%%\end{equation}
-%%
-%%tal que la carga se conserva.
-%%
-%%Para la simetría de color consideramos que $\psi(x)$ sea un vector de tres componentes y generalizar la ecuación \eqref{transfgauge} tal qye transformaciones unitarias arbitrarias en este espacio son permitidas. Para cada transformación unitaria $\Omega$ en espacio de color tenemos un operador hermitiano correspondiente $\omega$ tal que
-%%
-%%\begin{equation}\label{transfgauge2}
-%%{\psi}'(x) \equiv \mathrm{exp}(i\omega) \psi(x) \mathrm{exp}(-i\omega) = \Omega \psi(x).
-%%\end{equation}
-%%
-%%El espacio SU(3) de transformaciones unitarias en espacio de color es generado por ocho transformaciones infinitesimales; una elección de vases convencional es el conjunto $\lambda^{a}/2$, con $a=1,\dots, 8$ introducidas por Gell-Mann. En términos de estos, podemos escribir
-%%
-%%\[
-%%\Omega = \mathrm{exp}\left( ig \frac{\lambda^{a}}{2} {\theta}^{a}\right)
-%%\]
-%%
-%%y $\omega= \mathrm{exp}(i{T}^{a}{\theta}^{a})$; entonces el análogo de la ecuación \eqref{conmcharge} es
-%%
-%%\begin{equation}
-%%[{T}^{a}, \psi(x)] = g \frac{{\lambda}^{a}}{2} {\psi}(x) 
-%%\end{equation}
-%%
-%%El paso para una simetría local es hecho postulando que $\theta$ en la ecuación \eqref{transfgauge} o $\omega$ y $\Omega$ en la ecuación \eqref{transfgauge2} pueden depender de la posición espacio-temporal $x$. Esto requiere algo de ajustes, debido a que las derivadas se transforman inhomogéneamente:
-%%
-%%\begin{fleqn}
-%%\begin{equation}
-%%\begin{split}
-%%\mathrm{QED}: \; {\partial}_{\mu} {\psi}'(x) &= \mathrm{exp}[iq\theta(x)][{\partial}_{\mu}\psi (x) + i q {\partial}_{\mu} \theta(x) \psi]\\
-%%\mathrm{QCD}: \; {\partial}_{\mu} {\psi}'(x) &= \Omega(x)[{\partial}_{\mu} {\psi}(x) + {\Omega}^{-1}(x) {\partial}_{\mu} \Omega(x)\psi(x)]
-%%\end{split}
-%%\end{equation}
-%%\end{fleqn}
-%%
-%%Necesitamos derivadas para construir un Lagrangiano razonable; de otra forma, las ecuaciones de movimiento darán sólo constricciones, no dinámica interesante. Para esto, la derivada es modificada por un término de corrección tal que $D'{\psi}'$ tengan la misma ley de transformación. En ecuaciones:
-%%
-%%\begin{fleqn}
-%%\begin{equation}
-%%\begin{split}\label{qedeqs}
-%%\mathrm{QED}: 
-%%{D'}_{\mu} {\psi}'(x) &= \mathrm{exp}[iq\theta(x)]{D}_{\mu}\psi(x)\\
-%%{D}_{\mu} &\equiv \partial_{\mu} + iq{A}_{\mu}(x)\\
-%%{A'}_{\mu}(x) &= {A}_{\mu}(x) + {\partial}_{\mu} \theta(x);
-%%\end{split}
-%%\end{equation}
-%%\end{fleqn}
-%%
-%%\begin{fleqn}
-%%\begin{equation}
-%%\begin{split}\label{qcdeqs}
-%%\mathrm{QCD}:
-%%{D'}_{\mu} {\psi}'(x) =& \Omega(x){D}_{\mu} \psi(x) \\
-%%{D}_{\mu} =& {\partial}_{\mu} + i g {B}_{\mu}(x) \\
-%%{B'}_{\mu}(x) =& {\Omega}(x){B}_{\mu}(x){\Omega}^{-1}(x) + \frac{1}{i g}[{\partial}_{\mu}\Omega(x)]\Omega(x)^{-1}.
-%%\end{split}
-%%\end{equation}
-%%\end{fleqn}
-%%
-%%${D}_{\mu}$ es llamada la derivada covariante. En el caso de \gls{qed},  ${A}_{\mu}(x)$ es un campo vectorial de números reales (el potencial cuadrivectorial usual); en el caso de \gls{qcd}, ${B}_{\mu}(x)$ es un campo vectorial de matrices $3 \times 3$, sin traza, Hermitianas. La parte de traza de ${B}_{\mu}(x)$ corresponde a una transformación de fase general de $\psi$. Como esta transformación conmuta con las otras transfformaciones unitarias en espacio de color, la `carga'' correspondiente es independiente del acoplamiento $g$.
-%%
-%%Ahora podemos construir la energía cinética invariante para el campo de materia $\psi$; si es un campo espinorial de Dirac, por ejemplo
-%%
-%%\begin{equation}\label{kinEn}
-%%{\mathrm{L}}_{\mathrm{kin}} = \bar{\psi} \overleftrightarrow{D}_{\mu}{\gamma}_{\mu} \psi
-%%\end{equation}
-%%
-%%Aún quedamos con el problema de construir un término de energía cinética para ${A}_{\mu}$ que se transforma inhomogéneamente. En electromagnetismo es familiar que en el campo de fuerza
-%%
-%%\begin{equation}
-%%{F}_{\mu \nu} = {\partial}_{\mu} {A}_{\nu} - {\partial}_{\nu} {A}_{\mu}
-%%\end{equation}
-%%
-%%tal que
-%%
-%%\begin{equation}
-%%\mathscr{L}_{\mathrm{campo}} = - \frac{1}{4} {F}_{\mu \nu} {F}_{\mu \nu}
-%%\end{equation}
-%%
-%%es una energía cinética invariante ajustable.
-%%
-%%El conmutador de dos derivadas covariantes contiene derivadas de ${B}_{\mu}$, y es garantizada a transformarse homogeneamente. En ecuaciones tenemos que
-%%
-%%\begin{eqnarray}\label{conmx2}
-%%[{D}_{\mu}, {D}_{\nu}] \psi &= i g [{B}_{\mu}, {B}_{\nu}] \\
-%%{G}_{\mu \nu} &= {\partial}_{\mu}{B}_{\nu} - {\partial}_{\nu} {B}_{\mu} + ig[{B}_{\mu}, {B}_{\nu}]
-%%\end{eqnarray}
-%%
-%%y combinando las ecuaciones \eqref{conmx2} y \eqref{qedeqs}, encontramos la ley de transformación para ${G'}_{\mu \nu}$:
-%%
-%%\begin{equation}
-%%{G'}_{\mu \nu} (x) = {\Omega}(x) {G}_{\mu \nu} (x) {\Omega}(x)^{-1}.
-%%\end{equation}
-%%
-%%Por lo tanto
-%%
-%%\begin{equation}
-%%\mathscr{L}_{\mathrm{campo}} = - \frac{1}{4} \Tr({G}_{\mu \nu} {G}_{\mu \nu} {G}_{\mu \nu})
-%%\end{equation}
-%%
-%%es la energía cinética invariante para ${B}_{\mu}$.
-%%
-%%\subsubsection{Lagrangiano de QCD: Renormalizabilidad y forma canónica}
-%%
-%%Ahora podemos construir Lagransgianos para las interacciones de quarks colorados con simetría de color local. 
-%%
-%%Las posibilidades son mucho más limitadas, sin embargo, si insistimos que nuestra teoría sea renormalizable. Heurísticamente, este requerimiento puede ser establecido como sigue. En unidades naturales para acción y velocidad $\hbar=c=1$, la acción
-%%
-%%\begin{equation}
-%%S = \int {\mathrm{d}^{4} x} \mathscr{L} (x)
-%%\end{equation}
-%%
-%%es adimensional, tal que $\mathscr{L}(x)$ tiene unidades de $(\mathrm{masa})^{4}$. La forma de la energía cinética en la ecuación \eqref{kinEn} indica que el campo fermiónico $\psi$ tiene unidades de $(\mathrm{masa})^{3/2}$; las energías cinéticas expresadas con anterioridad indican que los potenciales ${A}_{\mu}$, ${B}_{\mu}$ tienen unidades de $(\mathrm{masa})^{1}$; finalmente las constantes de acoplamiento son adimensionales. Un término $\mu \bar{\psi} \psi$ en $\mathscr{L}$ aparece con un coeficiente $\mu$ con unidades $(\mathrm{masa})^{1}$ (este término representa la masa para el fermión), un término $K \tr({G}_{\mu \nu} {G}_{\mu \nu})^{2}$ requeriría que las unidades de $K$ sean $(\mathrm{masa})^{-4}$, y así sucesivamente.
-%%
-%El Lagrangiano contiendo los términos de las ecuaciones 28 ---- 33 se puede traer en una forma canónica simple por los siguientes pasos:
-%
-%\renewcommand{\labelenumi}{\arabic{enumi})}
-%
-%\begin{enumerate}
-%\item El campo de norma ${B}_{\mu}^{\mathrm{viejo}}$ es reemplazado por ${B}_{\mu}^{\mathrm{nuevo}} \equiv {Z}^{1/2} {B}_{\mu}^{\mathrm{viejo}}$, y similarmente 
-%\item Similarmente
-%\item Sin 
-%\end{enumerate}
-%
-%Con estas redefiniciones, el Lagrangiano supone la forma canónica
-%
-%\begin{equation}
-%\mathscr{L}_{\mathrm{QCD}} = - \frac{1}{4} \tr ({G}_{\mu \nu} {G}_{\mu \nu}) + \sum_{j} \bar{\psi}_{j} (i \overleftrightarrow{D}_{\mu} {\gamma}_{\mu} - {M}_{j}) {\psi}_{j} + (\mathrm{t\acute{e}rminos} \; \theta)
-%\end{equation}
+El modelo de bolsa parte de tres principios motivados por la \gls{qcd}:
 
+\begin{enumerate}[a)]
+\item \textbf{Confinamiento y libertad asintótica:} Los quarks están confinados a una región finita de espacio, pero se mueven libremente dentro de ella debido a la debilidad de las interacciones a corta distancia.
+\item \textbf{Inclusión de gluones:} Aunque no siempre se introducen explícitamente, las correcciones debidas al intercambio de gluones son esenciales para describir propiedades del espectro hadrónico.
+\item \textbf{Condición de singlete de color:} Solo estados globalmente neutros (singletes de color) son permitidos, lo cual es consistente con la ley de Gauss aplicada a campos de color confinados.
+\end{enumerate}
+
+A partir de estas ideas, se construye un modelo donde los quarks están confinados dentro de una “bolsa” esférica, cuyo tamaño y energía total resultan del equilibrio entre presión interna y presión de vacío externo, modelada por una constante \( B \) conocida como presión de bolsa.
+
+\section{Formulación del modelo en cavidad esférica}
+
+El enfoque formal del modelo parte de la acción para un campo de quarks sin masa en una cavidad esférica, dada por:
+
+\begin{equation}
+W = \int dt \left[ \int_{V} d^3x \left( \frac{i}{2} \bar{\psi} \overleftrightarrow{\partial}_{\mu} \gamma^{\mu} \psi - B \right) - \frac{1}{2} \int_{S} d^2x \bar{\psi} \psi \right]
+\end{equation}
+
+Este modelo asume:
+
+\begin{enumerate}[i.]
+\item Los quarks se comportan como partículas libres dentro de la cavidad.
+\item Fuera de la cavidad, el vacío tiene menor energía, impidiendo la propagación de los campos.
+\item Las condiciones de frontera imponen confinamiento y cuantizan las soluciones posibles.
+\end{enumerate}
+
+A partir de esta acción se derivan las ecuaciones de movimiento (la ecuación de Dirac) y condiciones de frontera que aseguran el confinamiento de quarks y el equilibrio de presiones. Las soluciones modales resultantes definen una base completa para construir estados hadrónicos dentro del modelo.
 
 \section{Modelo de bolsa: descripción preliminar}
 
-El modelo de bolsa es una extensión del modelo de quarks que incorpora un tratamiento relativista de los quarks. En este enfoque, se introduce explícitamente un grado de libertad asociado a la \emph{bolsa}, lo que establece una distinción clara entre la física dentro y fuera de la bolsa.
+El modelo de bolsa del \gls{mit} ofrece una descripción fenomenológica del confinamiento de quarks, en la cual estos se encuentran libres en el interior de una región finita del espacio —la bolsa— y no pueden escapar debido a una presión negativa que actúa como barrera. En este esquema, los quarks se tratan como partículas relativistas sin masa dentro de la bolsa, mientras que el vacío exterior se modela como un medio con energía más baja.
 
-Dentro de la bolsa, los quarks se comportan como partículas sin masa, mientras que fuera de ella se consideran infinitamente masivos. Además, existe una diferencia finita en la densidad de energía entre el interior y el exterior: el \emph{vacío de bolsa} tiene una energía más alta que el vacío normal. Este desequilibrio energético es fundamental para entender la formación de hadrones, ya que el tamaño de la bolsa está determinado por un balance entre:
+Esta diferencia energética entre el interior y el exterior se modela mediante la llamada \emph{presión de bolsa} \( B \), que actúa como un parámetro fundamental para estabilizar el sistema. El tamaño de la bolsa queda entonces determinado por el equilibrio entre:
+
 \begin{itemize}
-    \item[$\bullet$] La \emph{energía cinética} necesaria para localizar los quarks dentro de la bolsa (debido al principio de incertidumbre).
-    \item[$\bullet$] La \emph{energía volumétrica} asociada al vacío de bolsa.
-\end{itemize}  %\cite{Chodos1974}. [ref bag model]
-
-En este marco teórico \cite{Chodos_1974}, es posible calcular propiedades hadrónicas como las masas de mesones y bariones, así como sus momentos magnéticos y otras cantidades estáticas. Los resultados obtenidos son generalmente satisfactorios, aunque se ha observado que las masas de los mesones pseudoescalares tienden a ser sobreestimadas. %\cite{DonoghueJohnson1979}.
-
-La \gls{qcd} aporta dos contribuciones esenciales al modelo de bolsa \cite{Chodos_1974}:
-
-\begin{enumerate}
-\item \textbf{Singlete de color:} Los campos gluónicos, al igual que los quarks, deben anularse fuera de la bolsa. De acuerdo con la ley de Gauss, esto solo es posible si el contenido de la bolsa forma un singlete de color. Esta condición explica por qué los hadrones están compuestos por estados de quarks-antiquarks  ($\bar{q}q$) o tres quarks ($qqq$)
-\item \textbf{Intercambio de gluones:} La inclusión del intercambio de gluones como una corrección a la propagación libre de los quarks dentro de la bolsa mejora la descripción del espectro de mesones y bariones.
-\end{enumerate}
-
-Además, la libertad asintótica de \gls{qcd} respalda la suposición del modelo de bolsa de que los quarks se propagan casi libremente a distancias cortas. Esta propiedad es crucial para entender el comportamiento de los quarks dentro de la bolsa y su confinamiento en hadrones.
-
-\subsection{Motivación y fundamentos del modelo de bolsa}
-
-En las primeras etapas del desarrollo del modelo de quarks, los hadrones ligeros se describían como estados ligados de quarks que se movían de manera no relativística dentro de un potencial confinante. Sin embargo, en sistemas no relativísticos, las energías de excitación suelen ser pequeñas en comparación con las masas de sus componentes. En el caso de los hadrones, estas energías son comparables a las masas de los quarks, lo que sugiere que un tratamiento no relativístico no es suficiente para describir adecuadamente su espectroscopía y estructura. %\cite{DeTarDonoghue}.
-
-Aunque inicialmente se esperaba que la espectroscopía, la estructura y las interacciones de los hadrones pudieran deducirse directamente a partir de primeros principios, las complejidades de la \gls{qcd} llevaron al desarrollo de modelos aproximados. Entre estos modelos destacan el modelo de bolsa del \gls{mit} %\cite{Chodos1974}
-, el modelo de bolsa del \gls{slac} y el modelo de bolsa de solitón. Estos modelos buscan incorporar tres características clave de la estructura hadrónica que no estaban presentes en los enfoques no relativísticos iniciales:
-
-\renewcommand{\labelenumi}{\alph{enumi})}
-
-\begin{enumerate}
-\item \textbf{Libertad asintótica:} Una propiedad fundamental de la \gls{qcd} que permite el uso de la teoría de perturbaciones para describir las interacciones quark-gluón a distancias cortas. Al mismo tiempo, esta propiedad prohíbe la propagación de campos de color a grandes distancias, lo que explica el confinamiento de los quarks dentro de los hadrones. %\cite{DeTarDonoghue}.
-\item \textbf{Inclusión de gluones:}  A diferencia de los modelos no relativísticos, los modelos de bolsa incorporan los gluones como constituyentes hadrónicos y mediadores de las interacciones a corta distancia entre quarks. Esto permite una descripción más completa de las interacciones fuertes. %\cite{DeTarDonoghue}.
-\item \textbf{Marco relativístico e invariante de norma:} Los modelos de bolsa proporcionan un marco teórico que es tanto relativístico como invariante bajo transformaciones de norma, lo que los hace consistentes con los principios fundamentales de la \gls{qcd}. %\cite{DeTarDonoghue}.
-
-\end{enumerate}
-
-\begin{wrapfigure}{l}{0.55\textwidth}
-    \centering
-    \includegraphics[width=0.5\textwidth]{./Images/Bag model BC.png}
-    \caption[Diagrama de bolsa con condiciones de frontera]{\emph{Dentro de la bolsa se encuentran los quarks encerrados por la presión de la bolsa.}}
-    \label{fig: Bolsa BC}
-\end{wrapfigure}
-
-Además, algunas variantes del modelo de bolsa, como el modelo de bolsa quiral híbrido, intentan incorporar la simetría quiral, una característica de la \gls{qcd} que no está presente en los modelos de bolsa tradicionales.% \cite{DeTarDonoghue}.
-
-Y a pesar de que el modelo de bolsa ha sido fundamental para entender el confinamiento de quarks, presenta limitaciones en la descripción de sistemas fuera del equilibrio o en condiciones extremas. En este trabajo, proponemos un modelo alternativo que sustituye la presión de bolsa $B$ y las contribuciones de quarks y gluones por un parámetro de Tsallis $q$, lo que permite una descripción más general de sistemas complejos.
-
-En resumen, el modelo de bolsa proporciona un marco teórico para entender el confinamiento de quarks dentro de los hadrones y calcular propiedades hadrónicas como masas y momentos magnéticos. Las contribuciones esenciales de la \gls{qcd}, como el singlete de color y el intercambio de gluones, son fundamentales para una descripción precisa de las interacciones fuertes.
-
-\section{La aproximación de la cavidad esférica}
-
-La aproximación de la cavidad esférica es una simplificación del modelo de bolsa que permite estudiar el comportamiento de los quarks dentro de un hadrón asumiendo que están confinados en una región esférica de radio ${R}_{0}$. En este enfoque, la dinámica de los quarks se describe mediante la ecuación de Dirac, y las condiciones de frontera en la superficie de la bolsa garantizan que los quarks no puedan escapar de la región confinada. Esta aproximación es fundamental en la física de partículas, ya que proporciona un marco teórico para entender el confinamiento de quarks dentro de los hadrones y calcular propiedades hadrónicas como masas y momentos magnéticos.
-
-La figura \ref{fig: Bolsa BC} muestra un diagrama esquemático de la bolsa, donde los quarks están confinados dentro de una región esférica debido a la \emph{presión de bolsa}.
-
-La acción que describe este sistema está dada por:
-
-\begin{equation}\label{eq-action}
-W = \int \, \mathrm{d}t \left[ \int_{V} \mathrm{d}^{3} x \, \left( \frac{i}{2} \bar{\psi} \overleftrightarrow{\partial}_{\mu} {\gamma}^{\mu} \psi - \bar{\psi} m \psi - B \right) - \frac{1}{2} \int_{S} \mathrm{d}^{2} x \bar{\psi} \psi\right]
-\end{equation}
-
-donde:
-\begin{itemize}
-    \item[$\bullet$] $V$ es el \emph{volumen ocupado en la bolsa},
-    \item[$\bullet$] $S$ es la \emph{superficie que encierra al volumen},
-    \item[$\bullet$] $\psi$ es el \emph{espinor de campo de quark} (${\gamma}^{\mu}$ son las \gls{gamma_matrices}),
-    \item[$\bullet$] $\overleftrightarrow{\partial}_{\mu}$ es la \emph{derivada sobre lo de la derecha menos la derivada sobre lo de la izquierda},
-    \item[$\bullet$] $m$ es la \emph{masa de los quarks} que se mueven en la cavidad esférica que es la bolsa,
-    \item[$\bullet$] $B$ es \emph{presión de bolsa}.
+    \item[$\bullet$] La \emph{energía cinética} asociada al confinamiento cuántico de los quarks,
+    \item[$\bullet$] y la \emph{energía volumétrica} proporcional a \( B \), que penaliza el crecimiento del volumen.
 \end{itemize}
 
-La acción \eqref{eq-action} describe la dinámica de los quarks dentro de la bolsa. Cada término tiene un significado físico específico:
-\begin{itemize}
-    \item[$\bullet$] El primer término, \( \frac{i}{2} \bar{\psi} \overleftrightarrow{\partial}_{\mu} {\gamma}^{\mu} \psi \), representa la \emph{energía cinética} de los quarks. Este término describe el movimiento relativista de los quarks dentro de la bolsa.
-    
-    \item[$\bullet$] El segundo término, \( \bar{\psi} m \psi \), corresponde a la \emph{energía de masa}  de los quarks. Este término tiene en cuenta la contribución de la masa de los quarks a la energía total del sistema.
-    
-    \item[$\bullet$] El término \( B \) introduce la \emph{presión de bolsa}, que actúa como una energía de confinamiento que mantiene a los quarks dentro de la región esférica. Este término simula la energía necesaria para mantener a los quarks confinados.
-    
-    \item[$\bullet$] Finalmente, el término superficial \( \frac{1}{2} \int_{S} \mathrm{d}^{2} x \bar{\psi} \psi \) garantiza que los quarks no puedan escapar de la bolsa, imponiendo una  \emph{condición de frontera efectiva} efectiva para simular que los quarks se comporten como si tuvieran una masa infinita fuera de la bolsa, lo que impide su escape.
-\end{itemize} % \gls{mit}. %\cite{MITBagModel}.
+Este modelo fue originalmente formulado por el grupo del MIT \cite{Chodos_1974} y ha sido extensamente utilizado para estimar propiedades de los hadrones ligeros, tales como sus masas, radios y momentos magnéticos.
 
-Las ecuaciones de movimiento y las condiciones de frontera se obtienen al extremizar la acción, ecuación \eqref{eq-action}, bajo variaciones en $\psi$ y $V$. Este proceso se realiza aplicando el principio de mínima acción, donde se varía la acción con respecto a los campos y se imponen las condiciones necesarias para que la acción sea estacionaria.
-
-\paragraph{Ecuaciones de movimiento:}
-La ecuación de Dirac dentro de la bolsa se obtiene al variar la acción \eqref{eq-action} con respecto al campo de quarks $\psi$. Esto conduce a:
-
-\begin{equation}\label{eq-deq}
-( i \slashed{\partial} - m) \psi= 0 \quad \mathrm{en} \, V,
-\end{equation}
-
-donde $\slashed{\partial} = {\partial}_{\mu} {\gamma}^{\mu}$. Esta ecuación describe la dinámica de los quarks dentro de la bolsa.
-
-\paragraph{Condiciones de frontera:}
-Las condiciones de frontera en la superficie $S$ se obtienen al variar la acción \eqref{eq-action} con respecto a la superficie que encierra el volumen $V$. Estas condiciones garantizan que los quarks no puedan escapar de la bolsa y que la presión externa se equilibre con la \emph{presión de bolsa} $B$. Las condiciones de frontera son:
-
-\begin{subequations}\label{eq-bc-deq}
-    \begin{empheq}[right=\empheqrbrace \quad \text{sobre} \, S \text{,}]{align}
-        i {n}^{\mu} {\gamma}_{\mu} \psi &= \psi \label{eq-bc-deq-a} \\
-        \frac{1}{2} {n}_{\mu} {\partial}^{\mu}(\bar{\psi} \psi) &= B \label{eq-bc-deq-b}
-    \end{empheq}
-\end{subequations}
-
-donde ${n}_{\mu}$ es la normal interior covariante a la superficie. La primera condición de frontera, ecuación \eqref{eq-bc-deq-a}, requiere que la componente normal del vector corriente ${J}_{\mu}=\bar{\psi}{\gamma}^{\mu}{\psi}$ se anule en la superficie, lo que conserva la corriente. La segunda condición, ecuación \eqref{eq-bc-deq-b}, requiere que la presión externa del campo de quarks se equilibre con la \emph{presión de bolsa} $B$. %[referencia MIT BM]. 50 Years of Quantum Chromodynamics
-
-La solución general a las ecuaciones \eqref{eq-deq} y \eqref{eq-bc-deq-a} es una superposición de modos normales, cada uno caracterizado por un conjunto de números cuánticos $n$, $\kappa$, $j$, y $m$. 
-
-\begin{equation}\label{eq-general-sol}
-{\psi}_{\alpha}(x,t) = \sum_{n \kappa j m} N ({\omega}_{n \kappa j}) {a}_{\alpha} (n \kappa j m) {\psi}_{n \kappa j m} (x, t).
-\end{equation}
-
-donde:
-
-\begin{itemize}
-    \item[$\bullet$] $n$ es el número cuántico principal,
-    \item[$\bullet$] $\kappa = \pm (j + \frac{1}{2})$ es el número cuántico de Dirac,
-    \item[$\bullet$] $j$ y $m$ etiquetan el modo del momento angular y su componente $z$, respectivamente,
-    \item[$\bullet$] $N({\omega}_{n \kappa j})$ es una constante de normalización,
-    \item[$\bullet$] ${a}_{\alpha} (n \kappa j m)$ son los coeficientes de expansión que determinan la contribución de cada modo,
-    \item[$\bullet$] y ${\psi}_{n \kappa j m} (x, t)$ son los modos normales de la ecuación de Dirac:
-    \begin{equation}\label{eq-normal-modes}
-        \psi_{n \kappa j m}(x, t) = \begin{pmatrix}
-        f_{n \kappa j}(r) \, \Omega_{\kappa j m}(\theta, \phi) \\
-        i g_{n \kappa j}(r) \, \Omega_{-\kappa j m}(\theta, \phi)
-        \end{pmatrix} e^{-i \omega_{n \kappa j} t},
-    \end{equation}
-\end{itemize}
-
-donde $f_{n \kappa j}(r)$ y $g_{n \kappa j}(r)$ son las funciones radiales, y $\Omega_{\kappa j m}(\theta, \phi)$ son las funciones angulares \cite{Chodos_1974}. %\cite{Chodos1974, "Relativistic Quantum Mechanics" por Bjorken y Drell, "Quantum Field Theory" por Itzykson y Zuber,"Introduction to Quantum Field Theory" por Peskin y Schroeder.}
-Las frecuencias ${\omega}_{n \kappa j}$ se definen a partir de la expresión
-
-\begin{equation}\label{eq-omega}
-{\omega}_{n \kappa j} = \sqrt{{m}^{2} + {R}_{0}^{-2} {x}_{n \kappa j}^{2}},
-\end{equation}
-
-donde ${x}_{n \kappa j}$ son las soluciones de la ecuación trascendental a la que llegamos a partir de  \eqref{eq-bc-deq}.
-La  condición de frontera cuadrática, la que está igualada a la \emph{presión de bolsa} $B$ en \eqref{eq-bc-deq-b}, restringe los modos que pueden ser excitados. Entre otras cosas, permite sólo soluciones para la ecuación de Dirac. Para el caso de los quarks, $j = \frac{1}{2}$, ya sea $\kappa = - 1$,
-
-\begin{equation}\label{eq-deq-sol-k=-1}
-{\psi}_{n \, -1 \, \frac{1}{2} \, m} (x,t) = \frac{1}{\sqrt{4 \pi}} 
-\left( 
-\begin{array}{c}
-i {j}_{0} ({\omega}_{n, \, -1} r / {R}_{0}) {U}_{m} \\
-- {j}_{1} ({\omega}_{n, \, -1} r / {R}_{0}) \sigma \cdot \hat{r}{U}_{m} 
-\end{array}
-\right) \times {e}^{- i {\omega}_{n, \, -1} t / {R}_{0}}
-\end{equation}
-
-o ${\kappa} = 1$
-
-\begin{equation}\label{eq-deq-sol-k=1}
-{\psi}_{n \, 1 \, \frac{1}{2} \, m} (x,t) = \frac{1}{\sqrt{4 \pi}} 
-\left( 
-\begin{array}{c}
-i{j}_{1} ({\omega}_{n, \, 1} r / {R}_{0}) \sigma \cdot \hat{r} {U}_{m} \\
-{j}_{0} ({\omega}_{n, \, 1} r / {R}_{0}) {U}_{m} 
-\end{array}
-\right) \times {e}^{- i {\omega}_{n, \, 1} t / {R}_{0}}
-\end{equation}
-
-${U}_{m}$ es un espinor de Pauli bidimensional y ${j}_{\ell}(z)$ son las funciones de Bessel esféricas. Hemos omitido los índices $j$ sobre ${\omega}_{n \kappa}$ ya que solo $j = \frac{1}{2}$ es de interés en el presente (pues tratamos con partículas de \textit{espín} $\frac{1}{2}$, la cual es la componente angular total de los quarks). $N({\omega}_{n \kappa})$ es una constante de normalización escogida como
-
-\begin{equation}
-N({\omega}_{n \kappa}) \equiv \left( \frac{{\omega}_{n \kappa}^{\phantom{n \kappa} 3}}{2 {R}_{0}^{\phantom{0} 3} ({\omega}_{n \kappa} + \kappa) \sin^{2} {\omega}_{n \kappa}} \right)^{1/2}
-\end{equation}
-
-a partir de la restricción de normalización de \eqref{eq-general-sol} y la imposición de ortogonalidad sobre los modos normales, ecuación \eqref{eq-normal-modes}, es decir
-
-\begin{equation}
-    \int_{V} \mathrm{d}^{3} x \, \bar{\psi}_{n \kappa j m} (x) \psi_{n' \kappa' j' m'} (x) = \delta_{n n'} \delta_{\kappa \kappa'} \delta_{j j'} \delta_{m m'}.
-\end{equation}
-
-La condición de frontera lineal, ecuación \eqref{eq-bc-deq-a}, genera una condición eigenvalor para los modos de frecuencias ${\omega}_{n \kappa}$
-
-\[
-j_{0}(\omega_{n \kappa}) = - \kappa \, j_{1} (\omega_{n \kappa}),\footnote{
-    Las funciones \( j_0(x) \) y \( j_1(x) \) son los armónicos esféricos de orden 0 y 1, respectivamente. Sus expresiones son:
-    \[
-    j_0(x) = \frac{\sin x}{x}, \quad j_1(x) = \frac{\sin x}{x^2} - \frac{\cos x}{x}.
-    \]
-}
-\]
-
-o 
-
-\begin{equation}\label{eq-condeigenval}
-\tan {\omega}_{n \kappa} = \frac{{\omega}_{n \kappa}}{{\omega}_{n \kappa} + \kappa}
-\end{equation}
-
-Por convención escogemos $n$ positiva (o negativa en dado caso que se escogieran modos de antipartículas, por ejemplo) secuencialmente para etiquetar las raíces positivas (o negativas) de la ecuación \eqref{eq-condeigenval} Las primeras soluciones a \eqref{eq-condeigenval} son 
-
-\begin{equation}\label{eq-deq-sols}
-\begin{array}{ccc}
-\kappa = - 1: & {\omega}_{1 \, -1} = 2.04; & {\omega}_{2 \, -1} = 5.40 \\
-\kappa = + 1: & {\omega}_{1 \, 1} = 3.81; & {\omega}_{2 \, 1} = 7.00.
-\end{array}
-\end{equation}
-
-En resumen, la aproximación de la cavidad esférica proporciona un marco teórico para estudiar el confinamiento de quarks dentro de los hadrones. A través de la acción \eqref{eq-action}, hemos derivado las ecuaciones de movimiento y las condiciones de frontera que describen la dinámica de los quarks dentro de la bolsa. La solución general, dada por la superposición de modos normales \eqref{eq-general-sol}, permite calcular propiedades hadrónicas como masas y momentos magnéticos. Este enfoque es fundamental para entender la estructura y las interacciones de los hadrones en el contexto del modelo de bolsa.
-
-\subsubsection*{Conclusiones relevantes del modelo de bolsa}
-
-Basándonos en el trabajo de \cite{Chodos_1974}, podemos resumir algunas conclusiones clave del modelo de bolsa que son relevantes para nuestro estudio:
+Desde el punto de vista de la \gls{qcd}, el modelo incorpora dos elementos fundamentales:
 
 \begin{enumerate}
-    \item \textbf{Relación entre energía y volumen:} El volumen promediado en el tiempo de una bolsa es proporcional a su energía:
-    \begin{equation}
-        E = 4B \langle V \rangle.
-    \end{equation}
-    Esta relación destaca el papel central de la \emph{presión de bolsa} \( B \) en el modelo tradicional. En nuestro enfoque, proponemos sustituir \( B \) y las contribuciones de quarks y gluones por un parámetro de Tsallis, lo que permite una descripción más general del sistema.
-
-    \item \textbf{Temperatura de la bolsa:} En el límite termodinámico, la bolsa tiene una temperatura fija \( T_0 \), independiente de su energía. \( T_0 \) es de orden \( B^{-1/4} \). Esto implica que:
-    \begin{itemize}
-        \item[$\bullet$] La energía cinética promedio de los partones es de orden \( T_0 \), independiente de la energía de la bolsa \( E \), siempre que \( E \gg T_0 \).
-        \item[$\bullet$] La densidad de niveles asintótica \( \zeta(E) \) del sistema es una función exponencial de \( E \):
-        \[
-        \zeta \sim e^{E/T_0}.
-        \]
-    \end{itemize}
-    Estas conclusiones son relevantes para entender cómo la \emph{presión de bolsa} \( B \) influye en las propiedades termodinámicas del sistema, lo que proporciona un contexto teórico para nuestro modelo alternativo.
+    \item \textbf{Singlete de color:} Las condiciones de frontera del modelo requieren que el estado confinado sea un singlete de color, en consistencia con el principio de confinamiento.
+    \item \textbf{Intercambio de gluones:} Aunque el modelo en su forma más simple no incluye campos gluónicos explícitamente, se pueden incorporar como correcciones que contribuyen al espectro de energía de los estados ligados.
 \end{enumerate}
 
-% La condición de frontera cuadrática \eqref{eq-bc-deq-a} requiere que $\sum_{\alpha} (\partial / \partial r) \bar{\psi}_{\alpha} (x) {\psi}_{\alpha}(x)$ sea independiente de tiempo y dirección para $r={R}_{0}$ (lo que significa sobre la superficie de la bolsa). La independencia angular requiere que $j = \frac{1}{2}$. Para obtener independencia temporal, ajustamos
-
-% \begin{equation}\label{eq-condortogon}
-% \sum_{\alpha} {a}_{\alpha}^{*} (n \, \kappa \, j= \frac{1}{2} \, m) {a}_{\alpha} (n' \, \kappa' \, j= \frac{1}{2} \, m') = 0,
-% \end{equation}
-
-% a menos que $n = n'$, $\kappa = \kappa'$ o $n = -n'$, $\kappa = -\kappa'$, en cuyo caso no hay restricción, ya que los términos dependientes del tiempo se cancelan. La ecuación anterior es una restricción severa sobre los modos que deben ser ocupados. Deberíamos implementar la ecuación anterior requiriendo que, para cada grado de libertad interno $\alpha$, sólo un modo normal, ${a}_{\alpha}(n \, \kappa \, j = \frac{1}{2} \, m)$, sea excitado. Esto automáticamente será el caso para bariones de tres quarks si se requiere que sean singletes de color.
-
-% Una vez que \eqref{eq-condortogon} es satisfecho, los términos independientes del tiempo en \eqref{eq-deq-sol-k=1} pueden ser coleccionados,
-
-% \begin{equation}
-% \sum_{\alpha \, n \, \kappa \, m} {\omega}_{n \kappa} {a}_{\alpha}^{*}(n \, \kappa \, \frac{1}{2} \, m) {a}_{\alpha}(n \, \kappa \, \frac{1}{2} \, m) = 4 \pi B {R}_{0}^{4},
-% \end{equation}
-
-% \begin{equation}
-% xd
-% \end{equation}
-
-
-% \subsubsection*{Conclusiones}
-
-% \begin{enumerate}
-
-% \item El campo en la bolsa se comporta sobre el promedio como un gas relativista perfecto; que es, la traza del tensor energía momento asociado con el campo, cuando es promediado sobre tiempo y espacio, es cero:
-% \begin{equation}
-% \left\langle \int_{R} {\mathrm{d}}^{3} x ({\Theta}_{\mu}^{\mu})_{\mathrm{campo}} \right\rangle = 0
-% \end{equation}
-% \item El volumen promediado en el tiempo de una bolsa es proporcional a su energía:
-% \begin{equation}
-% E = 4B \langle V \rangle
-% \end{equation}
-% \item El estado base y estados excitados más bajos de la bolsa contienen pocos partones de momento promedio de orden ${B}^{1/4}$ encerrados en un volumen de orden ${B}^{-3/4}$. [$B$ tiene la dimensión $(\mathrm{longitud})^{-4}$ con $\hbar=c=1$]
-% \item En el límite termodinámico la bolsa tiene una temperatura fija, ${T}_{0}$, independiente de su energía. ${T}_{0}$ es de orden ${B}^{-1/4}$. Esto es equivalente a las siguientes declaraciones
-% \begin{itemize}
-% \item La energía cinética promedio de los partones es de orden ${T}_{0}$ independiente de la energía de bolsa $E$ proporcionado el último es más grande que ${T}_{0}$: ${E} \gg {T}_{0}$.
-% \item La densidad de nivel asintótico ${\zeta(E)}$ del sistema es una función exponencial de $E$:
-% \[
-% \zeta \sim {e}^{E/{T}_{0}}
-% \]
-% \item El número, $N$, de partones más antipartones presente en el hadrón es proporcional a su energía:
-% \[
-% N \propto E/{T}_{0}
-% \]
-% \end{itemize}
-% \item Si la dinámica clásica es tal que hay un máximo momento angular del hadrón en una energía total dada $E$, ese máximo debe ser 
-% \[
-% {J}_{\mathrm{m\acute{a}x}} = \kappa {B}^{-1/3} {E}^{4 / 3},
-% \]
-% donde ${\kappa}$ es una constante adimensional determinada por la dinámica detallada. Si el límite clásico $({\hbar} \rightarrow 0)$ existe, las correcciones cuánticas a esta fórmula se reducirían por potencias de $E$. Si no hay trayectoria clásica a seguir, un argumento plausible sugiere que la trayectoría guía podría ser (para un gran $E$)
-% \[
-% {J}_{\mathrm{m\acute{a}x}} = {\kappa}' {B}^{-1/2} {E}^{2} \quad ({\hbar = 1}).
-% \]
-% \item El momento angular más probable para una $E$ grande está dada por 
-% \[
-% \bar{J} \propto ({B}^{-1/4} E)^{5/6}
-% \]
-% \end{enumerate}
-
-%\subsection{Refinamientos que corrigen el movimiento del centro de masa}
-%
-%Una de las características incómodas de la aproximación de cavidad que es compartida por modelos de caparazón en general es que el centro de masa (c.m.) del estado de muchos cuerpos es en movimiento, y la energía cinética de movimiento es inevitablemente incluida en la energía orbital total. Esta contribución debería ser removida de la energía de bolsa para obtener la masa. En el modelo de caparazón nuclear es posible proyectar estados no relativistico de  momento definito de centro de masa. El Hamiltoniano cuántico invariante traslacionalmente subyacente es conocido, y la energía corregida del estado puede ser determinada (53). En la aproximación de cavidad, sin embargo, el Hamiltoniano cuántico es definido sólo con respecto a una cavidad particular y no es traslacionalmente invariante. No existe proyección sobre eigenestados de momento. 
-%
-%No hay procedimientos unívoco para corregir el movimiento de centro de masa. Sin embargo, varias aproximaciones han sido intentadas. En el método de Donoghue \& Johnson, el estado de bolsa con números cuánticos de nucleones no es precisamente identificado con el núcleon; en vez de eso, es considerado más generalmente como un paquete de ondas de estados de momentos de nucleones con un momento generalizado promedio $\langle \vb{p} \rangle = 0$ pero $\langle {p}^{2} \rangle \neq 0$. La energía de bolsa no es entonces precisamente la masa de la partícula, sino
-%
-%\begin{equation}
-%{E}_{\mathrm{bolsa}} = \langle H \rangle =  \langle \sqrt{{p}^{2} + {m}^{2}} \rangle.
-%\end{equation}
-%
-%Para la mayoría de estados (esos con $m \gg 1 / R$), la expansión no relativistica es posible: ${E}_{\mathrm{bolsa}}$. La corrección podría ser estimada en varias formas. 
-%
-%\section{Other models}
-%
-%\begin{equation}
-%6
-%\end{equation}
-
-%
-%\section{Una variedad de estados de bolsa}
-%
-%\subsection{Cuerdas}
-%
-%Las partículas de estado base han sido asumidas que corresponden a una bolsa esférica.
-%
-
-%\section{Interacciones}
-%
-%\subsection{Interacciones electrodébiles}
-%
-%El modelo de bolsa ha sido extensivamente usada como una herramienta en el estudio de las propiedades débiles y electromagnéticas de hadrones. No somos capaces de describir todas las aplicaciones, pero en vez de eso concentrar sobre las propiedades estáticas de los bariones (25, 34, 43, 86). Primero describimos los resultados no corregidos de (43). Cuatro tipos de corrección han sido estudiadas: 
-%
-%\begin{enumerate}
-%\item retroceso del centro de masa
-%\item intercambio de gluones
-%\end{enumerate}
-%
-%Para el radio de carga del protón  DeGrand et al(43) obtiene
-%
-%$$
-%\langle {r}^{2} \rangle_{\mathrm{EM}} = 0.55 {R}^{2} = (0.73 \; \mathrm{\unit{\femto\meter}})^{2}
-%$$
-%
-%$$
-%[\mathrm{experimento:} \quad \langle {r}^{2} \rangle_{\mathrm{EM}} = (0.90 \; \mathrm{\unit{\femto\meter}})^{2}]
-%$$
-%
-%para quarks sin masa. [Para los valores de esta y otras cantidades en masa de quark no cero, ver (34, 86).] Este resultado es significante debido a que significa que el modelo de bolsa predice muy correctamente cercano el tamaño del protón. Tal conexión entre la masa y radio es no trivial. De hecho, usando el radio apropiado es a menudo más importante que tener la masa correcta, porque es el radio el que determina la escala de la mayoría de los elementos de matriz.
-%
-%El momento magnético de un estado puede ser calculado por el elemento de matriz del primer momento de corriente electromagnética
-%
-%\begin{equation}
-%\langle \vb{\mu} \rangle = \langle \int \mathrm{d}^{3} x \frac{1}{2} \vb{x} \times \vb{J} (x) \rangle.
-%\end{equation}
-%
-%Esta definición del momento incluye las contribuciones debida a ambas el flujo de carga y el espín del quark. En el límite no relativistíco, se reduce al usual
-%
-%\begin{equation}
-%\vb{\mu} = \sum_{i} \frac{{Q}_{i} {\vb{\sigma}}_{i}}{2 {m}_{i}},
-%\end{equation}
-%
-%mientras que para quarks sin masa en el protón, es
-%
-%\begin{equation}
-%\vert {\mu}_{\mathrm{p}} \vert = 0.20 R e.
-%\end{equation}
-%
-%Los parámetros de DeGrand et al llevan a una muy pequeña razón giromagnética (${g}_{\mathrm{p}} = 2{m}_{\mathrm{p}} {\mu}_{\mathrm{p}} / e = 1.9$)
+A pesar de su simplicidad, el modelo ha mostrado ser efectivo al capturar ciertas características de los hadrones. En esta tesis, extendemos este marco incorporando conceptos de la estadística no extensiva de \gls{tsallis}, con el objetivo de explorar nuevas formas de describir la energía, temperatura y presión internas del protón.
