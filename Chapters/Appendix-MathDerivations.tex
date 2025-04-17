@@ -1063,40 +1063,36 @@ donde $N_G$ contiene $\zeta(3)$, pero \textbf{no contribuye} a $\mathcal{F}(r)$ 
 % Como una primera aproximación, usamos una presión de bolsa que es finita al centro del hadron y se desvanece a grandes distancias. Para este propósito, hemos determinado que una aproximación ajustable para la presión de bolsa es una exponencial de la forma \eqref{eq-B(r)-gluonssorrounding}, esta expresión, contiene el comportamiento que deseamos y esperamos para lo que sucede en el centro del hadrón, que en el centro la presión de la bolsa sea finita pero para grandes distancias se desvanezca.
 
 ----
+\section{Derivación de la presión de quarks}\label{app:quark-pressure}
 
-\section{Derivaciones Matemáticas del Capítulo \ref{ch: TotalPandGluons}} % Usa \ref para referencia cruzada
-
-\subsection{Solución de la ecuación integral para $P_Q(r)$}
-Partiendo de \eqref{eq:d1-integral}, aplicamos:
-
-\begin{equation}
-p(r) = -\frac{1}{2\pi^2 r}\frac{d}{dr}\int_0^\infty x\,d_1(-x^2)\sin(rx)\,dx
-\end{equation}
-
-Sustituyendo $d_1(t) = d_0(1-t/M^2)^{-3}$ obtenemos \cite{Burkert_2018}:
+\subsection{Solución de la ecuación integral}
+Aplicando la transformada inversa a \eqref{eq:d1-integral}:
 
 \begin{equation}
-P_Q(r) = \frac{M^6 d_0}{16\pi k_p} \left[ \underbrace{3e^{-Mr}}_{\text{término dominante}} - \underbrace{Mr e^{-Mr}}_{\text{corrección}} \right]
+p(r) = -\frac{k_p}{2\pi^2 r}\frac{d}{dr}\int_0^\infty x\,d_1(-x^2)\sin(rx)\,dx
 \end{equation}
 
-\subsection{Calibración de parámetros}
+Sustituyendo \eqref{eq:d1-param}:
+
+\begin{equation}
+p(r) = \frac{k_p M^6 d_1(0)}{16\pi} e^{-Mr}\left(3 - Mr\right)
+\end{equation}
+
+\subsection{Normalización}
+La constante $k_p$ se determina imponiendo \eqref{eq:stability}:
+
+\begin{equation}
+\int_0^\infty e^{-Mr}(3 - Mr)r^2 dr = 0 \quad \text{(Se cumple idénticamente)}
+\end{equation}
+
+El valor $k_p = 55$ se fija para reproducir:
 \begin{itemize}
-    \item $M=\qty{5}{fm^{-1}}$: Escala típica de QCD para $r < \qty{0.2}{fm}$
-    \item $d_0=-2.04$: Valor central de \cite{Burkert_2018}
+    \item El pico de presión $p(0) \approx \qty{0.35}{GeV/\femto\meter\cubed}$ de \cite{Burkert_2018}
+    \item La transición a $p(r) < 0$ en $r \approx \qty{0.6}{fm}$
 \end{itemize}
 
-\subsection{Normalización de $k_p$}
-El factor $k_p=55$ se determina imponiendo:
-
-\begin{equation}
-\int_0^\infty P_Q(r) r^2 dr = \qty{0.5}{GeV/fm} \quad \text{(Energía de confinamiento)}
-\end{equation}
-
-\begin{tabular}{cccc}
-    \toprule
-    $r$ (fm) & $P_Q$ (GeV/fm$^3$) & $P_G$ (GeV/fm$^3$) & $P_q$ (GeV/fm$^3$) \\
-    \midrule
-    0.2 & 0.35 & 0.05 & 0.40 \\
-    0.6 & -0.10 & -0.02 & -0.12 \\
-    \bottomrule
-\end{tabular}
+El factor $k_p \approx 55$ encapsula:
+\begin{itemize}
+    \item Efectos de orden superior no incluidos en $d_1(t)$
+    \item Correlaciones quark-quark residuales
+\end{itemize}

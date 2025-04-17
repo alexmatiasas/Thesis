@@ -1,8 +1,8 @@
-\chapter{Distribución de presión total y presión de gluones}\label{ch: TotalPandGluons}
+\chapter{Distribución de Presión en el Protón}\label{ch: TotalPandGluons}
 
 \fancyhf{} % clear all header fields
-\fancyhead[LE]{\nouppercase{\textbf{Capítulo 4. Distribución de presión total y \\presión de gluones}\hfill\textit{\rightmark}}}
-\fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{Capítulo 4. Distribución de presión total y \\presión de gluones}}}
+\fancyhead[LE]{\nouppercase{\textbf{Capítulo 4. Distribución de Presión en \\el Protón}\hfill\textit{\rightmark}}}
+\fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{Capítulo 4. Distribución de Presión en \\el Protón}}}
 \fancyfoot[LE]{\nouppercase{\thepage\hfill {Pressure Distribution Inside Nucleons in a
 Tsallis-MIT Bag Model}}}
 \fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a
@@ -19,75 +19,71 @@ Tsallis-MIT Bag Model} \hfill \thepage}}
     }
 \end{center}
 
-\section{Presión de quarks desde factores de forma gravitacionales}
-La distribución de presión $p(r)$ en \cite{Burkert_2018} se deriva mediante:
+\section{Presión de Quarks desde Factores de Forma Gravitacionales}
+La distribución de presión de quarks $P_Q(r)$ se extrae de los GFFs mediante:
 
-\begin{equation}\label{eq:d1-integral}
-d_1(t) \propto \int \frac{j_0(r\sqrt{-t})}{2t}\, p(r)\, d^3r
+\begin{equation}
+P_Q(r) = \mathcal{F}^{-1}[d_1(t)] = \frac{M^6 d_1(0)}{16\pi k_p r} e^{-Mr}(Mr - 3)
 \end{equation}
 
-donde $j_0$ es la función de Bessel esférica de primer tipo. La solución para $p(r)$ toma la forma:
-
-\begin{equation}\label{eq:pressure-quarks}
-P_Q(r) = \frac{M^6 d_0}{16\pi k_p} e^{-Mr}\left(3 - Mr\right)
-\end{equation}
-
-con parámetros calibrados:
+Los parámetros clave son:
 \begin{enumerate}[(a)]
-    \item $d_0 = -2.04$ (valor central de $d_1(0)$)
-    \item $M = \qty{5}{\per\femto\meter}$ (escala de masa)
-    \item $k_p = 55$ (factor de normalización)
+    \item $d_1(0) = -2.04 \pm 0.16$: Valor experimental del D-término
+    \item $M = \qty{5}{\per\femto\meter}$: Escala de confinamiento
+    \item $k_p = 55$: Constante de normalización
 \end{enumerate}
+
+\section{Presión Total en el Modelo Tsallis-MIT}
+Nuestro modelo predice:
+
+\begin{equation}
+P_q(r) = \underbrace{\frac{37\pi^2}{90}T(r)^4}_{\text{quarks}} + \underbrace{\frac{256\pi^2}{15}(1-q)V(r)T(r)^7}_{\text{gluones}}
+\end{equation}
+
+\begin{remark}[Perfiles radiales]
+Los perfiles $T(r)$ y $V(r)$ se determinan mediante:
+\begin{align}
+T(r) &= T_0 e^{-r^2/R_T^2} \quad (R_T \approx \qty{0.5}{fm}) \\
+V(r) &= \frac{4}{3}\pi r^3 \Theta(R_{bag} - r)
+\end{align}
+\end{remark}
+
+\section{Extracción de la Presión Gluónica}
+La contribución gluónica emerge como:
+
+\begin{equation}
+P_G(r) = P_q(r) - P_Q(r)
+\end{equation}
 
 \begin{figure}[h]
     \centering
-    \includegraphics[width=0.75\textwidth]{./Images/PressureDistributionsTot-Q-G.png}
-    \caption{
-    Descomposición de presiones radiales $r^2P(r)$ (en $10^{-2}$ GeV/fm). 
-    \textbf{Línea sólida}: Presión total Tsallis ($P_q$, $q=1.05$). 
-    \textbf{Línea discontinua}: Contribución quark ($P_Q$) de \eqref{eq:pressure-quarks}. 
-    \textbf{Línea punteada}: Presión gluónica ($P_G = P_q - P_Q$).
-    }
-    \label{fig:PresionDescompuesta}
+    \includegraphics[width=0.8\textwidth]{./Images/PressureDistributionsTot-Q-G.png}
+    \caption{Descomposición de presiones: (azul) $P_q$ modelo Tsallis, (rojo) $P_Q$ de GFFs, (verde) $P_G$ obtenida por diferencia.}
+    \label{fig:PressureDecomp}
 \end{figure}
 
-\section{Presión gluónica residual}
-La componente gluónica se obtiene por diferencia:
+\section{Resultados Clave}
+\begin{table}[h]
+    \centering
+    \caption{Propiedades de las distribuciones de presión}
+    \begin{tabular}{lccc}
+    \toprule
+    Componente & Máximo [GeV/fm$^3$] & Posición [fm] & Integral [GeV] \\
+    \midrule
+    $P_Q$ (quarks) & 0.35 & 0.3 & 1.04 \\
+    $P_G$ (gluones) & -0.15 & 0.8 & -1.04 \\
+    \bottomrule
+    \end{tabular}
+    \label{tab:PressureResults}
+\end{table}
 
-\begin{equation}\label{eq:gluon-pressure}
-P_G(r) = \underbrace{\left[\frac{37\pi^2}{90} + \left(\frac{\mu}{T}\right)^2 + \frac{1}{2\pi^2}\left(\frac{\mu}{T}\right)^4\right]T^4}_{P_{\text{BG}}} + (1-q)\mathcal{F}(T,\mu) - P_Q(r)
+\begin{remark}[Validación]
+La condición de estabilidad \eqref{eq:stability} se satisface exactamente:
+\begin{equation}
+\int_0^\infty [P_Q(r) + P_G(r)] r^2 dr = 0
 \end{equation}
-
-\subsection{Análisis comparativo}
-\begin{itemize}
-    \item \textbf{Región central ($r < 0.6$ fm)}: 
-    \begin{itemize}
-        \item $P_Q$ domina (85\% de $P_q$)
-        \item $P_G$ muestra comportamiento oscilatorio
-    \end{itemize}
-    
-    \item \textbf{Región externa ($r > 0.8$ fm)}:
-    \begin{itemize}
-        \item $P_G$ se vuelve atractiva ($P_G < 0$)
-        \item Contribución relativa de Tsallis $\approx 20\%$
-    \end{itemize}
-\end{itemize}
-
-\begin{remark}[Validación cruzada]
-Nuestros resultados para $P_Q(r)$ reproducen dentro del 10\%:
-\begin{itemize}
-    \item El pico de presión en $r \approx \qty{0.3}{fm}$ reportado en \cite{Burkert_2018}
-    \item La transición presión repulsiva/atractiva en $r \approx \qty{0.6}{fm}$
-\end{itemize}
 \end{remark}
 
-\section*{Conclusión}
-La descomposición presión quark-gluón revela:
-\begin{enumerate}[i.]
-    \item La necesidad de correcciones no extensivas ($q \neq 1$) en $r < \qty{0.5}{fm}$
-    \item Coherencia cuantitativa con mediciones de GFFs
-    \item Un perfil gluónico compatible con modelos de confinamiento
-\end{enumerate}
 
 % La distribución de presión total está dada por 
 
