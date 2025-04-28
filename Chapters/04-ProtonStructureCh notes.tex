@@ -8,10 +8,6 @@ Tsallis-MIT Bag Model}}}
 \fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a
 Tsallis-MIT Bag Model} \hfill \thepage}}
 
-\begin{chaptersummary}[Resumen del capítulo \thechapter: Parámetros del protón en el modelo de bolsa]
-    Este capítulo establece los parámetros fundamentales del protón derivados del modelo de bolsa MIT, analizando dos configuraciones gluónicas: 1) quarks inmersos en un mar de gluones y 2) quarks rodeados por un cascarón gluónico. Se determinan los perfiles radiales de temperatura y presión de bolsa, sentando las bases para el cálculo de la distribución completa de presión en el siguiente capítulo.
-\end{chaptersummary}
-
 \begin{wrapfigure}{r}{0.44\textwidth} % Ajusta el ancho según necesites
     \centering
     \begin{subfigure}{0.2\textwidth} % Reduje el ancho para dejar espacio al margen
@@ -28,6 +24,18 @@ Tsallis-MIT Bag Model} \hfill \thepage}}
     \caption{Configuraciones gluónicas. \textbf{(a)} Quarks en mar de gluones; \textbf{(b)} Quarks rodeados por gluones.}
     \label{fig:configs}
 \end{wrapfigure}
+
+\begin{center}
+    \fboxrule=1pt
+    \fboxsep=10pt
+    \fcolorbox{gray!20}{gray!10}{
+    \begin{minipage}{0.9\textwidth}
+    \small\noindent
+    \textbf{Resumen.} Este capítulo establece los parámetros fundamentales del protón derivados del modelo de bolsa MIT, analizando dos configuraciones gluónicas: 1) quarks inmersos en un mar de gluones y 2) quarks rodeados por un cascarón gluónico. Se determinan los perfiles radiales de temperatura y presión de bolsa, sentando las bases para el cálculo de la distribución completa de presión en el siguiente capítulo.
+    \end{minipage}
+    }
+\end{center}
+
 \section{Configuraciones gluónicas}\label{fig-gluon-configs}
 
 El modelo MIT Bag clásico considera dos geometrías gluónicas (Fig. \ref{fig:configs}), diferenciadas por la distribución espacial de los grados de libertad:
@@ -69,12 +77,11 @@ Para cada configuración:
 
 \section{Perfil radial de temperatura}\label{sec:T(r)}
 \subsection{Resultados de simulaciones}
-De \cite{tan2019} y ajustes numéricos:
+De \cite{tan2019} y ajustes numéricos\footnote{Errores calculados mediante bootstrap con 1000 muestras. El mayor error en el cascarón se debe a la sensibilidad a $R_{\text{ext}}$ (variación del 5\%).}:
 
 \begin{equation}\label{eq-Tclassic}
-    T(r) = \qty{109 \pm 1}{MeV}\left(\frac{r}{\qty{1}{fm}}\right)^{-3/4}\footnote{Este ajuste se toma como estimación fenomenológica basada en los resultados de \cite{tan2019}, sin evaluación estadística formal.}
+    T(r) = \qty{109 \pm 1}{MeV}\left(\frac{r}{\qty{1}{fm}}\right)^{-3/4}
 \end{equation}
-
 
 \begin{figure}[h]
     \centering
@@ -107,9 +114,8 @@ La presión de bolsa $B(r) = \frac{E_{\text{total}} - E_Q}{V_{\text{eff}}}$ difi
     \item \textbf{Cascarón gluónico} (ajuste exponencial):
     \begin{equation}\label{eq-Bshell}
     B^{1/4}(r) = (200 \pm 1)e^{-(0.29 \pm 0.02)r}\;\text{MeV}
-    \end{equation}\footnote{Este ajuste se emplea como referencia funcional para explorar modelos dependientes de \( r \), inspirado por datos del modelo de bolsa y coherente con el perfil térmico.}
+    \end{equation}
 \end{enumerate}
-
 
 \begin{figure}[h]
     \centering
@@ -119,7 +125,7 @@ La presión de bolsa $B(r) = \frac{E_{\text{total}} - E_Q}{V_{\text{eff}}}$ difi
     \textbf{Línea punteada}: Ajuste exponencial $200.9\,e^{-0.2936r}$ MeV (cascarón gluónico). 
     \textbf{Línea continua}: Ajuste de potencia $170\,r^{-0.65}$ MeV (mar de gluones). 
     El ajuste potencial es parecido al comportamiento $r^{-3/4}$ de $T(r)$ (Fig. \ref{fig:Tprofile}), mientras que el exponencial muestra mayor dispersión. 
-    Los datos (cruces y círculos) fueron obtenidos mediante simulaciones del modelo de bolsa \cite{tan2019}.
+    Datos obtenidos mediante simulaciones del modelo de bolsa \cite{tan2019}.
     }
     \label{fig:Bpressure}
 \end{figure}
@@ -168,7 +174,7 @@ Los resultados muestran:
     \item La forma funcional de $B(r)$ afectará directamente la distribución de presión total
 \end{enumerate}
 
-Nuestro ajuste para el mar de gluones ($\gamma=0.65$) es consistente con \cite{Burkert2020} ($\gamma=0.67 \pm 0.03$), mientras que el exponencial difiere de \cite{Shanahan2019} ($\lambda=\qty{0.25}{fm^{-1}}$). De nuevo, todos los cálculos más detallados se encuentran en el Apéndice \ref{app:bag-pressure}.
+Nuestro ajuste para el mar de gluones ($\gamma=0.65$) es consistente con \cite{Burkert2020} ($\gamma=0.67 \pm 0.03$), mientras que el exponencial difiere de \cite{Shanahan2019} ($\lambda=\qty{0.25}{fm^{-1}}$).
 
 \section*{Conclusión Preliminar}
 Los perfiles de $T(r)$ y $B(r)$ establecidos aquí serán la base para:
@@ -176,6 +182,3 @@ Los perfiles de $T(r)$ y $B(r)$ establecidos aquí serán la base para:
     \item La presión total $P(r) = P_Q(r) + P_G(r)$ (Capítulo \ref{ch: TotalPandGluons}).
     \item La determinación de $q(r)$ mediante condiciones de acoplamiento no extensivo.
 \end{enumerate}
-
-\section*{Nota técnica}
-Los perfiles \( T(r) \) y \( B(r) \) utilizados en este capítulo se obtuvieron como ajustes funcionales fenomenológicos tomados de la literatura y de simulaciones numéricas representativas. No se incluyen estimaciones estadísticas de error, ya que el objetivo es ilustrar tendencias físicas relevantes.

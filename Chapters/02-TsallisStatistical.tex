@@ -23,6 +23,7 @@
     En este capítulo se introduce el marco teórico de la estadística no extensiva de Tsallis, una generalización de la estadística de Boltzmann-Gibbs. Se presentan las definiciones fundamentales de entropía, energía interna y temperatura en el formalismo \( q \)-generalizado, así como su relación con las funciones de partición y distribuciones de probabilidad. 
 \end{chaptersummary}
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Fundamentos de la estadística de Tsallis}
 
 La estadística no extensiva de Tsallis fue propuesta en 1988 como una generalización del marco tradicional de Boltzmann-Gibbs, con el objetivo de describir sistemas complejos que exhiben correlaciones de largo alcance, inestabilidad caótica o estructuras no ergódicas \cite{Tsallis1988, Tsallis2009, Tsallis_2009}.
@@ -53,10 +54,11 @@ de donde se observa claramente que cuando $q=1$ se regresa a la estadística de 
 
 En este capítulo, emplearemos esta generalización para explorar la termodinámica de un sistema de quarks y gluones confinado, extendiendo el modelo de bolsa del MIT mediante distribuciones \( q \)-generalizadas, lo cual permitirá caracterizar presiones internas y densidades de energía con mayor generalidad.
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Presión dentro del hadrón}
 \label{sec-PresTsa}
 
-A partir de la ecuación \eqref{eq-TsallisTwoSystems}, es posible obtener la entropía y presión dentro de un hadrón considerado como una mezcla de gases de quarks y gluones \cite{Greiner2001}. Para ello, analizamos por separado las contribuciones de cada componente, asumiendo que:
+A partir de la ecuación \eqref{eq-TsallisTwoSystems}, es posible obtener la entropía y presión dentro de un hadrón considerado como una mezcla de gases de quarks y gluones\ \cite{Greiner2001}. Para ello, analizamos por separado las contribuciones de cada componente, asumiendo que:
 
 \begin{enumerate}[i.]
     \item Los \emph{quarks} se comportan como un gas ideal ultrarrelativista de Fermi-Dirac sin masa.
@@ -65,6 +67,7 @@ A partir de la ecuación \eqref{eq-TsallisTwoSystems}, es posible obtener la ent
 
 Ambos gases se consideran libres y no interactuantes de forma explícita, ya que la interacción efectiva se introduce mediante el parámetro de no extensividad \( q \) de Tsallis.
 
+% ------------------------------------------------------------------------------------------------ %
 \subsection{Presión de gluones: gas ideal ultrarrelativista de Bose-Einstein}
 
 Los niveles de energía de los gluones, como bosones sin masa, se describen por:
@@ -76,20 +79,20 @@ Los niveles de energía de los gluones, como bosones sin masa, se describen por:
 donde \( p \) es el momento y \( k \) el número de onda del modo. La función de partición canónica para este sistema es:
 
 \begin{equation}\label{eq-partfunc}
-\Xi^{\mathrm{BE}}(T,V,\mu) = \prod_k \frac{1}{1 - \xi e^{-\beta \epsilon_k}},
+\Xi^{\mathrm{BE}}(T,V,\mu) = \prod_j \frac{1}{1 - \xi e^{-\beta \epsilon_j}},
 \end{equation}
 
-con \( \beta = (k_{\mathrm{B}} T)^{-1} \) y fugacidad \( \xi = e^{\beta \mu} \). El número promedio de partículas por estado es:
+con \( \beta = ({k}_{\mathrm{B}} T)^{-1} \) y fugacidad \( \xi = e^{\beta \mu} \). El número promedio de partículas por estado es:
 
 \begin{equation}
-\langle n_k \rangle = \frac{1}{\xi^{-1} e^{\beta \epsilon_k} - 1}.
+\langle n_j \rangle = \frac{1}{\xi^{-1} e^{\beta \epsilon_j} - 1}.
 \end{equation}
 
 Las cantidades termodinámicas fundamentales se obtienen sumando sobre todos los estados:
 
 \begin{align}
-N(T,V,\mu) &= \sum_k \langle n_k \rangle = \sum_k \frac{1}{\xi^{-1} e^{\beta \epsilon_k} - 1}, \label{eq-BE-Ntotal} \\
-E(T,V,\mu) &= \sum_k \epsilon_k \langle n_k \rangle = \sum_k \frac{\epsilon_k}{\xi^{-1} e^{\beta \epsilon_k} - 1}. \label{eq-BE-Etotal}
+N(T,V,\mu) &= \sum_j \langle n_j \rangle = \sum_j \frac{1}{\xi^{-1} e^{\beta \epsilon_j} - 1}, \label{eq-BE-Ntotal} \\
+E(T,V,\mu) &= \sum_j \epsilon_j \langle n_j \rangle = \sum_j \frac{\epsilon_j}{\xi^{-1} e^{\beta \epsilon_j} - 1}. \label{eq-BE-Etotal}
 \end{align}
 
 \break
@@ -103,22 +106,22 @@ En el límite termodinámico, estas sumas se reemplazan por integrales utilizand
 lo que permite reescribir:
 
 \begin{align}
-N(T,V,\mu) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 \, d\epsilon}{\xi^{-1} e^{\beta \epsilon} - 1}, \label{eq-BE-Ntotalint} \\
-E(T,V,\mu) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 \, d\epsilon}{\xi^{-1} e^{\beta \epsilon} - 1}. \label{eq-BE-Etotalint}
+{N}_{G}(T,V,\mu) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 \, d\epsilon}{\xi^{-1} e^{\beta \epsilon} - 1}, \label{eq-BE-Ntotalint} \\
+{E}_{G}(T,V,\mu) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 \, d\epsilon}{\xi^{-1} e^{\beta \epsilon} - 1}. \label{eq-BE-Etotalint}
 \end{align}
 
 En el caso particular de los gluones, se tiene \( \mu = 0 \), ya que su número no está conservado, y la fugacidad se vuelve \( \xi = 1 \). Las expresiones anteriores se simplifican a:
 
 \begin{align}
-N(T,V) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 \, d\epsilon}{e^{\beta \epsilon} - 1}, \label{eq-BE-Ntotalintnofug} \\
-E(T,V) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 \, d\epsilon}{e^{\beta \epsilon} - 1}. \label{eq-BE-Etotalintnofug}
+{N}_{G}(T,V) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^2 \, d\epsilon}{e^{\beta \epsilon} - 1}, \label{eq-BE-Ntotalintnofug} \\
+{E}_{G}(T,V) &= \frac{4\pi V}{(hc)^3} \int_0^\infty \frac{\epsilon^3 \, d\epsilon}{e^{\beta \epsilon} - 1}. \label{eq-BE-Etotalintnofug}
 \end{align}
 
 Mediante el cambio de variable \( x = \beta \epsilon \), estas integrales toman la forma:
 
 \begin{align}
-N(T,V) &= \frac{4\pi V}{(hc)^3 \beta^3} \int_0^\infty \frac{x^2 dx}{e^x - 1}, \label{eq-BE-Ntotalintnofug-x} \\
-E(T,V) &= \frac{4\pi V}{(hc)^3 \beta^4} \int_0^\infty \frac{x^3 dx}{e^x - 1}. \label{eq-BE-Etotalintnofug-x}
+{N}_{G}(T,V) &= \frac{4\pi V}{(hc)^3 \beta^3} \int_0^\infty \frac{x^2 dx}{e^x - 1}, \label{eq-BE-Ntotalintnofug-x} \\
+{E}_{G}(T,V) &= \frac{4\pi V}{(hc)^3 \beta^4} \int_0^\infty \frac{x^3 dx}{e^x - 1}. \label{eq-BE-Etotalintnofug-x}
 \end{align}
 
 Estas integrales se evalúan con funciones especiales:
@@ -128,7 +131,7 @@ Estas integrales se evalúan con funciones especiales:
 \int_0^\infty \frac{x^3 dx}{e^x - 1} &= \Gamma(4)\zeta(4) = \frac{\pi^4}{15}. \label{eq-sol-int-E}
 \end{align}
 
-Finalmente, considerando la degeneración de gluones \( g_G = 16 \) (8 tipos de gluones con 2 polarizaciones), y trabajando en unidades naturales \( \hbar = c = k_{\mathrm{B}} = 1 \), obtenemos:
+Finalmente, considerando la degeneración de gluones \( g_G = 16 \) (8 tipos de gluones con 2 polarizaciones), y trabajando en unidades naturales \( \hbar = c = {k}_{\mathrm{B}} = 1 \), obtenemos:
 
 \begin{equation}\label{eq-BE-Etotalgluons}
 E_G = g_G \frac{\pi^2}{30} V T^4,
@@ -143,3 +146,261 @@ La entropía asociada al sistema de gluones se expresa como:
 \begin{equation}\label{eq-BE-Sgluons}
 S_G = \frac{4}{3} \frac{E_G}{T} = g_G \frac{4\pi^2}{90} V T^3.
 \end{equation}
+
+% ------------------------------------------------------------------------------------------------ %
+\subsection{Presión de quarks: gas ideal ultrarrelativista de Fermi-Dirac}
+\label{sec-Pquarks}
+
+Consideramos ahora la contribución de los quarks y antiquarks, modelados como un sistema mixto de fermiones sin masa en el régimen ultrarrelativista. Bajo esta aproximación, la energía de una partícula se reduce a \( \epsilon = |\vec{p}| c \)\footnote{Resultado obtenido al tomar el límite \( m \to 0 \) en la relación relativista \( \epsilon = \sqrt{p^2 c^2 + m^2 c^4} \).}.
+
+\paragraph{Características del sistema:}
+\begin{itemize}
+    \item[$\triangleright$] Se trata de un gas compuesto por quarks y antiquarks en equilibrio termodinámico.
+    \item[$\triangleright$] Se impone simetría entre partículas y antipartículas: \( \mu_+ = -\mu_- = \mu \).
+    \item[$\triangleright$] Factor de degeneración: \( g_Q = 12 \) (2 espines × 3 colores × 2 sabores \( u,d \)).
+\end{itemize}
+
+% .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.%
+
+\subsubsection*{Función de partición}
+
+La función de partición total para el sistema combinado es el producto de las funciones de quarks y antiquarks:
+
+\begin{equation}
+\Xi(T, V, \mu) = \prod_j \left(1 + e^{-\beta(\epsilon_j - \mu)}\right)
+\prod_j \left(1 + e^{-\beta(\epsilon_j + \mu)}\right),
+\end{equation}
+
+donde el índice \( j \) recorre todos los estados energéticos posibles.
+
+% .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.%
+
+\subsubsection*{Número de partículas y exceso neto}
+
+La población media de partículas en cada estado se expresa como:
+
+\begin{equation}
+N_\pm = \sum_j \frac{1}{e^{\beta(\epsilon_j \mp \mu)} + 1},
+\end{equation}
+
+y el número neto de quarks (exceso sobre antiquarks) es:
+
+\begin{equation}\label{eq-FD-Excedente}
+{N}_{Q} = N_+ - N_- = \frac{g_Q V}{6 \pi^2} \left( \pi^2 \mu T^2 + \mu^3 \right),
+\end{equation}
+
+resultado obtenido tras pasar al límite termodinámico e integrar sobre la densidad de estados.
+
+% .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.%
+
+\subsubsection*{Energía total y presión}
+
+La energía total se calcula a partir de la suma de contribuciones energéticas de quarks y antiquarks:
+
+\begin{equation}\label{eq-FD-Energy}
+E_Q = g_Q V T^4 \left[
+\frac{7 \pi^2}{120} + \frac{1}{4} \left( \frac{\mu}{T} \right)^2 + \frac{1}{8 \pi^2} \left( \frac{\mu}{T} \right)^4
+\right].
+\end{equation}
+
+Dado que se trata de un gas ultrarrelativista, la presión asociada satisface \( P_Q = E_Q / (3V) \), por lo que:
+
+\begin{equation}
+P_Q = \frac{g_Q T^4}{3} \left[
+\frac{7 \pi^2}{120} + \frac{\mu^2}{4 T^2} + \frac{\mu^4}{8 \pi^2 T^4}
+\right].
+\end{equation}
+
+% .-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-..-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.-.%
+
+\subsubsection*{Entropía}
+
+Aplicando la relación termodinámica:
+
+\[
+S = \frac{{E}_{Q} + P V - \mu {N}_{Q}}{T},
+\]
+
+se obtiene la entropía total del sistema:
+
+\begin{equation}\label{eq-FD-Entropy}
+S_Q = g_Q V T^3 \left[
+\frac{7 \pi^2}{90} + \frac{1}{6} \left( \frac{\mu}{T} \right)^2
+\right].
+\end{equation}
+
+\paragraph{Nota:} Las derivaciones completas de estas expresiones pueden consultarse en el Apéndice~\ref{app:math_derivations}.
+
+
+\section{El protón en el modelo de Tsallis}
+\label{sec-proton-tsallis}
+
+Una vez obtenidas las propiedades termodinámicas de los gases de gluones y quarks en el marco de la estadística de Boltzmann-Gibbs (BG), es posible extender este análisis al contexto de la estadística de Tsallis, considerando al protón como un sistema compuesto por ambos componentes correlacionados.
+
+\paragraph{Configuración del sistema}
+
+El modelo no extensivo considera al protón como una mezcla compuesta por:
+
+\begin{enumerate}[i.]
+    \item Un gas de quarks y antiquarks sin masa, regido por la estadística de Fermi-Dirac.
+    \item Un gas de gluones, bosones sin masa, obedeciendo estadística de Bose-Einstein.
+\end{enumerate}
+
+Ambos sistemas se consideran independientes a nivel de estado, pero correlacionados globalmente mediante una formulación no extensiva.
+
+\subsection{Entropía generalizada de Tsallis}
+
+La entropía total del sistema se describe mediante la expresión de Tsallis para dos subsistemas independientes \( A \) y \( B \):
+
+\begin{equation}
+S_q(A+B) = S_q(A) + S_q(B) + (1 - q) S_q(A) S_q(B),
+\end{equation}
+
+donde \( q \in \mathbb{R} \) es el parámetro de no extensividad. Aplicado al sistema hadrónico:
+
+\begin{equation}\label{eq-Entropy-Tsallis}
+S_q = S_1(Q) + S_1(G) + (1 - q) S_1(Q) S_1(G),
+\end{equation}
+
+donde \( S_1(Q) \) y \( S_1(G) \) son las entropías de quarks y gluones calculadas bajo la estadística estándar de Boltzmann-Gibbs.
+
+\paragraph{Interpretación física del parámetro \( q \):}
+\begin{itemize}
+    \item[$\triangleright$] \( q = 1 \): Recupera la estadística extensiva estándar.
+    \item[$\triangleright$] \( q > 1 \): Describe correlaciones negativas (efectos de exclusión o repulsión).
+    \item[$\triangleright$] \( q < 1 \): Describe correlaciones positivas (agrupamiento o efectos de atracción).
+\end{itemize}
+
+Este parámetro ha sido empleado exitosamente para describir sistemas como plasmas cuánticos, colisiones hadrónicas y materia nuclear a altas energías \cite{Tsallis_2014, Bhattacharyya_2018, Barboza_Mendoza_2019}.
+
+\subsubsection*{Límite extensivo \( q \to 1 \)}
+
+En el caso límite de \( q = 1 \), la expresión \eqref{eq-Entropy-Tsallis} se reduce a:
+
+\begin{equation}\label{eq-BG-limit}
+S_{q \to 1} = S_{Q+G} = S_1(Q) + S_1(G),
+\end{equation}
+
+cuyas formas explícitas, con degeneraciones \( g_Q = 12 \), \( g_G = 16 \), son:
+
+\begin{align}
+S_1(Q) &= g_Q V T^3 \left[ \frac{7 \pi^2}{90} + \frac{1}{6} \left( \frac{\mu}{T} \right)^2 \right], \\
+S_1(G) &= g_G V T^3 \frac{4 \pi^2}{90}.
+\end{align}
+
+\subsubsection*{Forma explícita general para \( S_q \)}
+
+Sustituyendo en \eqref{eq-Entropy-Tsallis}:
+
+\begin{equation}\label{eq-Tsallis-Entropy-final}
+\begin{split}
+S_q &= \left[ \frac{74 \pi^2}{45} + 2 \left( \frac{\mu}{T} \right)^2 \right] V T^3 \\
+&\quad + \frac{128 \pi^2}{15} (1 - q) \left[ \frac{7 \pi^2}{90} + \frac{1}{6} \left( \frac{\mu}{T} \right)^2 \right] V^2 T^6,
+\end{split}
+\end{equation}
+
+donde el primer término corresponde a la suma extensiva y el segundo a la corrección cuadrática en volumen derivada de las correlaciones no extensivas.
+
+\subsection{Presión generalizada en el marco de Tsallis}
+\label{subsec-Tsallis-pressure}
+
+Aplicando la relación termodinámica de Maxwell para sistemas con entropía generalizada:
+
+\begin{equation}\label{eq-Maxwell-Tsallis}
+\left( \frac{\partial S_q}{\partial V} \right)_{T, \mu} = \left( \frac{\partial P_q}{\partial T} \right)_{V, \mu},
+\end{equation}
+
+y considerando la forma explícita de \( S_q \) obtenida en \eqref{eq-Tsallis-Entropy-final}, se obtiene (ver derivación completa en el Apéndice \ref{app:Tsallis-pressure}):
+
+\begin{equation}\label{eq-Pq-final}
+\begin{split}
+P_q &= \underbrace{T^4 \left[ \frac{37 \pi^2}{90} + \left( \frac{\mu}{T} \right)^2 + \frac{1}{2 \pi^2} \left( \frac{\mu}{T} \right)^4 \right]}_{\text{Componente extensiva}} \\
+&\quad + \underbrace{\frac{256 \pi^2}{15} (1 - q) V T^7 \left[ \frac{\pi^2}{90} + \frac{1}{30} \left( \frac{\mu}{T} \right)^2 \right]}_{\text{Corrección no extensiva}}.
+\end{split}
+\end{equation}
+
+\paragraph{Análisis de los términos:}
+\begin{itemize}
+    \item El término \( \sim T^4 \) es la presión total bajo estadística BG.
+    \item La corrección \( \sim V T^7 (1-q) \) revela el impacto de las correlaciones no extensivas, particularmente dominante a altas temperaturas.
+    \item Se preserva la simetría \( \mu \leftrightarrow -\mu \).
+\end{itemize}
+
+\subsubsection*{Comparación entre estadística BG y Tsallis}
+
+\begin{table}[h]
+    \centering
+    \caption{Comparación entre resultados termodinámicos en BG y Tsallis}
+    \begin{tabular}{lcc}
+        \toprule
+        \textbf{Propiedad} & \textbf{BG (\( q = 1 \))} & \textbf{Tsallis (\( q \neq 1 \))} \\
+        \midrule
+        Entropía & Aditiva & No aditiva (correlaciones) \\
+        Presión & \( \sim T^4 \) & \( \sim T^4 + (1 - q) V T^7 \) \\
+        \bottomrule
+    \end{tabular}
+    \label{tab:BG-vs-Tsallis}
+\end{table}
+
+
+\begin{figure}[!h]
+    \centering
+    \begin{tikzpicture}[
+        node distance=1.5cm,
+        concept/.style={rectangle, draw, rounded corners=3pt, fill=blue!10, minimum width=4cm, text width=3.8cm, align=center},
+        interaction/.style={ellipse, draw, fill=green!20, minimum width=3cm, align=center},
+        result/.style={rectangle, draw, fill=red!10, minimum width=4cm, text width=3.8cm, align=center},
+        arrow/.style={->, >=stealth, thick},
+        dashedarrow/.style={->, >=stealth, thick, dashed}
+    ]
+    
+    % Nodos principales
+    \node[concept] (q) {Parámetro de Tsallis \\ $q$};
+    \node[interaction, below left=2cm and 0.5cm of q] (interpretation) {
+        \textbf{Interpretación:} \\
+        $q=1$: BG estándar \\
+        $q>1$: Correlaciones negativas \\
+        $q<1$: Correlaciones positivas
+    };
+    \node[concept, below right=2cm and 0.5cm of q] (entropy) {
+        \textbf{Entropía no extensiva} \\
+        $S_q = S_1(Q) + S_1(G)$ \\
+        $+ (1-q)S_1(Q)S_1(G)$
+    };
+    \node[result, below=2cm of entropy] (pressure) {
+        \textbf{Presión generalizada} \\
+        $P_q = P_{\text{BG}}$ \\
+        $+ \frac{256\pi^2}{15}(1-q)V T^7$
+    };
+    
+    % Conexiones principales
+    \draw[arrow] (q) -- node[left, near start] {Controla} (entropy);
+    \draw[arrow] (entropy) -- node[right] {Determina} (pressure);
+    
+    % Conexiones de interpretación (ajustadas)
+    \draw[dashedarrow] (q) -- node[above, sloped, pos=0.6] {Describe} (interpretation.north);
+    \draw[dashedarrow] (interpretation.east) -- ++(0.5,0) |- node[pos=0.55, above] {Afecta} (entropy.west);
+    
+    % Leyenda explicativa reposicionada
+    \node[below=0.8cm of interpretation, text width=5cm, align=left, font=\small] {
+        \textbf{Relaciones físicas:} \\
+        \begin{enumerate}
+            \item[$\triangleright$] El parámetro $q$ modifica la entropía
+            \item[$\triangleright$] La entropía generalizada afecta la presión
+            \item[$\triangleright$] Todo converge a BG cuando $q=1$
+        \end{enumerate}
+    };
+    \end{tikzpicture}
+    \caption[Diagrama de relaciones Tsallis]{Jerarquía de relaciones en el modelo: (1) El parámetro $q$ controla la entropía no extensiva $S_q$; (2) Las interpretaciones físicas de $q$ (caja verde) justifican su uso; (3) La entropía modificada determina la presión generalizada $P_q$. Las flechas punteadas indican relaciones secundarias.}
+    \label{fig:Tsallis-flow-complete}
+\end{figure}
+
+Como muestra la Figura \ref{fig:Tsallis-flow-complete}, el parámetro $q$ no solo controla la entropía del sistema (Ec. \ref{eq-Entropy-Tsallis}), sino que a través de su interpretación como medidor de correlaciones (recuadro verde), afecta directamente las propiedades termodinámicas como la presión (Ec. \ref{eq-Pq-final}).
+
+\begin{remark}[Relevancia física del parámetro \( q \)]
+El parámetro \( q \) funciona como cuantificador de correlaciones a largo alcance, acoplamientos residuales o desviaciones del equilibrio térmico. Su valor en sistemas de QCD típicamente se encuentra en el rango \( q \approx 1.1 - 1.2 \), según se ha observado en colisiones hadrónicas y sistemas de materia nuclear \cite{Bhattacharyya_2018, Tsallis_2014}.
+\end{remark}
+
+
+\section*{Conclusiones del capítulo}
+Este capítulo ha establecido una base termodinámica sólida para describir la presión y la entropía en sistemas de quarks y gluones mediante el formalismo no extensivo de Tsallis. La generalización obtenida permite capturar efectos de correlación entre los constituyentes, que serán explorados más adelante en contextos fenomenológicos o comparaciones con datos experimentales.
