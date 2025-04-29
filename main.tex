@@ -29,7 +29,7 @@
 
 \section*{Resumen (Español)}
 \selectlanguage{spanish}
-Aquí va el resumen en español...
+En esta tesis se propone una extensión del modelo de bolsa del MIT mediante el uso de la estadística no extensiva de Tsallis, con el objetivo de describir la distribución radial de presión dentro del protón. A partir de un enfoque termodinámico efectivo, se incorporan perfiles espaciales para la temperatura y la presión de bolsa, y se analiza el efecto del parámetro q de Tsallis como descriptor de las correlaciones internas del sistema. El modelo resultante, denominado Tsallis-MIT Bag Model, permite estudiar cómo la presión total, y en particular su descomposición en componentes quark y gluónica, se ve afectada por el potencial químico y la no extensividad. Los resultados se comparan con cálculos recientes de Lattice QCD y funciones de forma gravitacionales (GFFs), mostrando una concordancia cualitativa con datos extraídos de dispersión profundamente virtual (DVCS). Además, se propone una reinterpretación física del parámetro q como una manifestación del confinamiento, a partir de su relación funcional con la presión de bolsa. Finalmente, se discute la posibilidad de reconstruir perfiles de q(r) y su potencial como variable dinámica en modelos autoconfinantes.
 
 \vspace{1em}
 \hrule
@@ -37,7 +37,7 @@ Aquí va el resumen en español...
 
 \section*{Abstract (English)}
 \selectlanguage{english}
-Here goes the abstract in English...
+This thesis proposes an extension of the MIT bag model by introducing Tsallis non-extensive statistics, aimed at describing the radial pressure distribution inside the proton. Using an effective thermodynamic framework, spatial profiles for temperature and bag pressure are incorporated, and the role of the Tsallis parameter q is analyzed as a descriptor of internal correlations within the system. The resulting model, referred to as the Tsallis-MIT Bag Model, enables the study of how total pressure—particularly its quark and gluon components—varies under changes in the chemical potential and non-extensivity. The results are compared with recent Lattice QCD computations and gravitational form factors (GFFs), showing qualitative agreement with data extracted from deeply virtual Compton scattering (DVCS). Furthermore, a physical reinterpretation of the parameter q is proposed, framing it as a manifestation of confinement through its functional relationship with the bag pressure. The work concludes with the possibility of reconstructing q(r) profiles, highlighting its potential as a dynamic variable in self-confining models.
 
 \newpage
 \thispagestyle{empty}
@@ -46,10 +46,20 @@ Here goes the abstract in English...
 \chapter*{Agradecimientos}
 \addcontentsline{toc}{chapter}{Agradecimientos}
 \label{ch: Agradecimientos}
-\begin{flushright}
-CONAHCYT, CINVESTAV, Dr Gerardo H. C.
 
-Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1)%3A_Basic_Structure}{Josh Cassidy} por la plantilla de la portada de mi tésis.
+\noindent
+Agradezco profundamente al \textbf{Dr. Gerardo Herrera Corral} por su guía, paciencia y confianza durante el desarrollo de esta tesis. Su visión crítica y su entusiasmo por la física fueron fundamentales para llevar este trabajo a buen puerto. 
+
+Agradezco al \textbf{CINVESTAV} y al \textbf{CONAHCYT} por brindarme el apoyo institucional y financiero necesario para realizar mis estudios de posgrado. Su respaldo hizo posible esta etapa formativa de mi vida.
+
+También agradezco a todos mis profesores y colegas del Departamento de Física por las conversaciones, preguntas, correcciones y discusiones que enriquecieron mi perspectiva científica.
+
+A mi familia, gracias por su amor incondicional y su apoyo silencioso en cada paso. Su presencia ha sido el sostén emocional detrás de cada página escrita.
+
+A mis amistades más cercanas, que supieron escuchar mis frustraciones y celebraron mis avances como propios, les debo una parte importante de este logro.
+
+\begin{flushright}
+Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a_Thesis_in_LaTeX_(Part_1)%3A_Basic_Structure}{Josh Cassidy} por la plantilla de la portada de esta tesis.
 \end{flushright}
 
 \newpage
@@ -63,8 +73,8 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 
 \newpage
 \thispagestyle{empty}
-\renewcommand{\listtablename}{Lista de Tablas}
-\listoftables
+% \renewcommand{\listtablename}{Lista de Tablas}
+% \listoftables
 
 \newpage
 \thispagestyle{empty}
@@ -113,7 +123,7 @@ Agradezco y acredito a \href{https://www.overleaf.com/learn/latex/How_to_Write_a
 \printglossary[
     title=Acrónimos, 
     toctitle=Acrónimos, 
-    type=\acronymtype
+    type=\acronymtype,
 ]
 
 % List of terms

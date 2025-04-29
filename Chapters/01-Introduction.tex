@@ -32,27 +32,30 @@ Por otro lado, técnicas numéricas como la \gls{lqcd} permiten resolver las ecu
 
 La colaboración \gls{alice}, en el \gls{lhc}, ha contribuido significativamente al estudio experimental de las interacciones hadrón-hadrón, complementando cálculos teóricos con datos de correlaciones entre bariones \cite{Collaboration2020,Collaboration2021}. Estos estudios, combinados con avances en \glspl{gpd} y \glspl{gff}, han permitido acceder a cantidades como la distribución radial de presión dentro del protón \cite{Burkert_2018}.
 
-En este contexto, modelos fenomenológicos permiten aproximar el comportamiento de los hadrones sin resolver completamente la \gls{qcd}. En esta tesis se explora una extensión del \gls{bm} mediante el uso de la estadística de \gls{tsallis}, una generalización de la estadística de \gls{bg}, ampliamente utilizada en física de altas energías para describir distribuciones de momento transversal \cite{Tsallis1988,Beck_2003,Tsallis2009,Tsallis_2009,Marques_2015}.
-
-Esta estadística introduce un parámetro $q$ que captura desviaciones del comportamiento extensivo, lo cual podría reflejar efectos no triviales en la interacción de quarks y gluones. Su aplicación en el contexto del \gls{bm} da lugar al modelo \gls{t-mitbm}, el cual permite estudiar la distribución interna de presión y energía del protón desde una perspectiva termodinámica efectiva.
-
-\begin{wrapfigure}{l}{0.45\textwidth}
+\begin{wrapfigure}{o}{0.45\textwidth}
     \centering
     \includegraphics[width=0.4\textwidth]{./Images/Bag model.png}
     \caption[Diagrama de bolsa]{\emph{Diagrama que ilustra el modelo de bolsa. En el interior, la presión es generada por un plasma de quarks y gluones, mientras que la presión externa mantiene confinados estos componentes dentro del hadrón.} Fuente: Adaptado de The MIT bag-model Glueball mass spectrum using the MIT bag-model (2015).}
     \label{fig:Bolsa }
 \end{wrapfigure}
 
+En este contexto, modelos fenomenológicos permiten aproximar el comportamiento de los hadrones sin resolver completamente la \gls{qcd}. En esta tesis se explora una extensión del \gls{bm} mediante el uso de la estadística de \gls{tsallis}, una generalización de la estadística de \gls{bg}, ampliamente utilizada en física de altas energías para describir distribuciones de momento transversal \cite{Tsallis1988,Beck_2003,Tsallis2009,Tsallis_2009,Marques_2015}.
+
+Esta estadística introduce un parámetro $q$ que captura desviaciones del comportamiento extensivo, lo cual podría reflejar efectos no triviales en la interacción de quarks y gluones. Su aplicación en el contexto del \gls{bm} da lugar al modelo \gls{t-mitbm}, el cual permite estudiar la distribución interna de presión y energía del protón desde una perspectiva termodinámica efectiva.
+
 El objetivo principal de este trabajo es analizar la distribución de presión dentro del protón mediante simulaciones computacionales basadas en el modelo \gls{t-mitbm}. Se comparan los resultados obtenidos con estimaciones experimentales basadas en \gls{dvcs} y \gls{gpd}, y se discuten posibles interpretaciones del parámetro $q$ en este contexto.
+
+Además, como parte de las exploraciones preliminares, se consideró la posibilidad de extender el modelo \gls{t-mitbm} para el estudio de masas hadrónicas, utilizando una reformulación de la energía interna basada en la estadística de Tsallis. Aunque este análisis permanece en una etapa inicial, abre una interesante perspectiva para futuros desarrollos del modelo, integrando cálculos de masas directamente con un tratamiento no extensivo de las energías de bolsa.
 
 La organización del documento es la siguiente:
 \begin{enumerate}[i.]
     \item En el Capítulo~\ref{ch-BagModel}, se describe el \gls{bm} y su extensión en este trabajo.
     \item En el Capítulo~\ref{ch-Tsallis}, se presenta el formalismo de la estadística de \gls{tsallis} y sus aplicaciones relevantes.
-    \item En el Capítulo~\ref{ch-ProtonStructureCh}, se analiza la estructura interna del protón y se discuten resultados relevantes.
+    \item En el Capítulo~\ref{ch-ProtonBagParameters}, se analiza la estructura interna del protón y se discuten resultados relevantes.
+    \item En el Capítulo~\ref{ch:TotalPandGluons}, se obtiene la presion de quarks y gluones en el interior del protón y su relacion con la presion de Tsallis.
     \item En el Capítulo~\ref{ch-PhysicalMeaningQ}, se propone una interpretación física del parámetro $q$.
-    \item En el Capítulo~\ref{ch-TotalPandGluons}, se presentan los resultados de las simulaciones y su análisis.
     \item Finalmente, el Capítulo~\ref{ch-ResultsAndConclusions} resume las conclusiones y lineamientos para trabajos futuros.
+    \item Al final de los capítulos se encuentra un apéndice~\ref{app:math_derivations} con todos los desarrollos matemáticos utilizados en el trabajo.
 \end{enumerate}
 
 % Entender la estructura interna de los hadrones es fundamental para descifrar las interacciones fuertes descritas por la \gls{qcd}. Este conocimiento no solo es crucial para la física de partículas, sino que también tiene implicaciones en la comprensión de la materia en condiciones extremas, como las que existieron en los primeros momentos del universo. Según el modelo de \gls{qcd}, las partículas hadrónicas están compuestas por quarks, los cuales permanecen confinados dentro de los hadrones. Este confinamiento es una de las características fundamentales de la \gls{qcd} y explica por qué no se han observado quarks libres en la naturaleza.
