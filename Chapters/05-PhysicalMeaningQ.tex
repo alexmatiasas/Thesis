@@ -1,33 +1,46 @@
-\chapter{Significado físico del parámetro q de Tsallis}\label{ch-PhysicalMeaningQ}
-%\addcontentsline{toc}{chapter}{Introduction}
+\chapter{Significado F\'isico del Par\'ametro \( q \) de Tsallis}\label{ch-PhysicalMeaningQ}
 
+\fancyhf{} % clear all header fields
+\fancyhead[LE]{\nouppercase{\textbf{Cap\'itulo 5. Significado f\'isico del \\par\'ametro \( q \) \hfill\textit{\rightmark}}}}
+\fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{Cap\'itulo 5. Significado f\'isico del \\par\'ametro \( q \)}}}
+\fancyfoot[LE]{\nouppercase{\thepage\hfill {Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model}}}
+\fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model} \hfill \thepage}}
 
-En el modelo de bolsa, los quarks están confinados en una región por el intercambio de gluones, y el volumen está caracterizado por la presión que previene a los quarks de escapar.
+\begin{chaptersummary}
+Este cap\'itulo analiza el significado f\'isico del par\'ametro de no extensividad \( q \) en el contexto del modelo de bolsa. Se argumenta que \( q \) encapsula de manera natural la f\'isica del confinamiento de quarks y gluones, eliminando la necesidad expl\'icita de introducir una presi\'on de bolsa fija \( B \). As\'i, se establece una relaci\'on entre \( q \) y \( B \), sugiriendo una reinterpretaci\'on del confinamiento en t\'erminos de correlaciones estad\'isticas no extensivas.
+\end{chaptersummary}
 
-La densidad Lagrangiana puede ser expresada como
-
-\begin{equation}
-{L}_{\mathrm{bag}} = \left({L}_{\mathrm{QCD}} - B\right){\theta}_{\mathrm{V}}
-\end{equation}
-
-donde ${\theta}_{\mathrm{V}}$ es la función paso definiendo el interior de la bolsa que contiene quarks y gluones. Tiene valor nulo fuera de esta región.
-
-El modelo describe la interacción entre quarks y gluone a pequeñas escalas, reflejando la libertad asintotica del QCD. A mayores escalas, sobre el orden de 1 fermi, los quarks y gluones se vuelven confinados a estados ligados de color neutro. La presión de bolsa, denotada por $B$, representa la densidad de energía asociada con fluctuaciones de vacío de los campos QCD dentro de la bolsa.
-
-En el análisis presentado aquí, no asumimos la presión de bolsa constante a través de la región. El concepto de presión de bolsa es de alguna forma, artificial. Se introduce como un parámetro fenomenológico para describir confinamiento y se entiende como la energía por unidad de volumen de las fluctuaciones de vació dentro de la bolsa. Podemos conceptualizar el mecanismo como un mar de gluones empujando a los quarks o como un mar de quarks y gluones interactuando.
-
-Ahora, exploramos una razón fundamental para la existencia de la presión de bolsa y encontramos que introduciendo una correlación determinada por el $q$ parámetro proporciona la posibilidad de eliminar la presión de bolsa $B$ de las ecuaciones. Así, podemos entender al confinamiento sin introducir artificialmente un parámetro de presión de bolsa.
-
-El parámetro de Tsallis $q$ aparece encapsular la física involucrada en confinamiento como lo hace la presión de bolsa. Podemos omitir la presión de bolsa de este modelo considerando que a un dado ${q}_{0}$ (parámetro de Tsallis inicial), la presión de bolsa puede ser expresada para un sistema hadrónico general.
+\section{Confinamiento y Presi\'on de Bolsa}
+En el modelo de bolsa tradicional, los quarks est\'an confinados dentro de una regi\'on espacial debido a una presi\'on de vac\'io \( B \) que evita su escape. La densidad Lagrangiana correspondiente se expresa como:
 
 \begin{equation}
-{P}_{{q}_{0}} (T,\mu) - B(r) \rightarrow {P}_{q} (T,\mu)
+{L}_{\mathrm{bag}} = \left( {L}_{\mathrm{QCD}} - B \right) \theta_V
 \end{equation}
 
-Donde $q$ es el parámetro de Tsallis que describe la correlación, ${q}_{0}$ considera para la presión total estimada dentro de los nucleones arriba, con las condiciones iniciales dadas. Después de la extracción a partir de los datos ${q}_{0}$ está fija. De esta manera, vemos que el parámetro de Tsallis puede recrear la presión de bolsa en tal forma que $B$ no se necesita más. Después de algo de álgebra, uno puede obtener una relación entre ambos parámetros de Tsallis y la presión de bolsa como sigue
+donde \( \theta_V \) es la funci\'on escal\'on de Heaviside que define el interior de la bolsa.
 
-\begin{equation}\label{eq-qasBagPress}
-q = {q}_{0} + \frac{B(r)}{\frac{256{\pi}^{2}}{15} \left[\frac{{\pi}^{2}}{90}  + \frac{1}{30} \left( \frac{\mu}{T} \right)^{2}\right] V{T}^{7}}
+\section{Interpretaci\'on Alternativa mediante \( q \)}
+La presi\'on de bolsa \( B \) es un par\'ametro fenomenol\'ogico que modela la energ\'ia de las fluctuaciones del vac\'io QCD. Sin embargo, al considerar correlaciones estad\'isticas no extensivas, el par\'ametro \( q \) puede reinterpretarse como una medida de dichas correlaciones, evitando la necesidad de introducir un \( B \) expl\'icito.
+
+\section{Relaci\'on entre \( q \) y la Presi\'on de Bolsa}
+Bajo esta perspectiva, la presi\'on total en el modelo de bolsa puede reescribirse como:
+
+\begin{equation}
+P_q(T,\mu) = P_{q_0}(T,\mu) - B(r)
 \end{equation}
 
-El parámetro de Tsallis se vuelve dependiente del radio debido a su relación con r de la presión de bolsa. La posibilidad de desarrollar un modelo de bolsa de hadrones sin la necesidad de una presión de bolsa será explorada en trabajo futuro. Actualmente, hemos notado que la correlación que surge de los sistemas de quarks y gluones como componentes de nucleones representan la presión de bolsa.
+o alternativamente, aislando \( q \):
+
+\begin{equation}
+q(r) = q_0 + \frac{B(r)}{\dfrac{256 \pi^2}{15} \left( \dfrac{\pi^2}{90} + \dfrac{1}{30} \left( \dfrac{\mu}{T} \right)^2 \right) V T^7}
+\label{eq:q-bag-relation}
+\end{equation}
+
+donde \( V \) es el volumen efectivo de la bolsa y \( (T, \mu) \) representan la temperatura y potencial qu\'imico locales.
+
+\section{Implicaciones F\'isicas}
+Esta relaci\'on implica que el confinamiento puede interpretarse como una consecuencia natural de las correlaciones entre part\'iculas en un sistema fuertemente acoplado, caracterizado por \( q > 1 \). En consecuencia, el modelo estad\'istico de Tsallis proporciona una descripci\'on m\'as fundamental del confinamiento en t\'erminos de la termodin\'amica de sistemas no extensivos.
+
+\begin{remark}[Trabajo Futuro]
+La posibilidad de desarrollar modelos de bolsa que prescindan expl\'icitamente de \( B \) y dependan \'unicamente de \( q \) ser\'a investigada en futuras extensiones de este trabajo.
+\end{remark}

@@ -420,3 +420,89 @@ B(r) = \frac{E_{\text{total}} - E_Q}{V},
 siendo \( E_{\text{total}} \) la energía de la cavidad completa a temperatura \( T(r) \).
 
 Esta expresión es la base para determinar la función \( B(r) \) a partir de simulaciones numéricas, como se presenta en la Fig.~\ref{fig:Bpressure}.
+
+
+\section{Reconstrucci\'on de la Presi\'on de Quarks \( P_Q(r) \)}
+
+La distribuci\'on de presi\'on de quarks se obtiene a partir del t\'ermino \( D \) de los factores de forma gravitacionales (GFFs). Partimos de la parametrizaci\'on fenomenol\'ogica:
+
+\begin{equation}
+d_1(t) = d_1(0) \left( 1 - \frac{t}{M^2} \right)^{-\alpha}
+\end{equation}
+
+El t\'ermino \( d_1(t) \) se conecta a la distribuci\'on radial de presi\'on mediante una transformada de Bessel:
+
+\begin{equation}
+d_1(t) \propto \int \frac{j_0(r \sqrt{-t})}{2t} p(r) r^2 dr
+\end{equation}
+
+donde \( j_0 \) es la funci\'on de Bessel esf\'erica de primer tipo.
+
+Al invertir esta relaci\'on, se obtiene:
+
+\begin{equation}
+p(r) = -\frac{1}{k_p \pi^2} \int_0^\infty x^4 j_0(r x) d_1(-x^2) dx
+\end{equation}
+
+Evaluando explícitamente la integral para el ansatz de \( d_1(t) \), se llega a una forma cerrada:
+
+\begin{equation}
+P_Q(r) = \frac{M^6 d_1(0)}{16\pi k_p r} e^{-M r} (M r - 3)
+\end{equation}
+
+donde los parámetros son:
+\begin{itemize}
+\item \( d_1(0) = -2.04 \),
+\item \( M = 5\,\mathrm{fm}^{-1} \),
+\item \( \alpha = 3 \),
+\item \( k_p = 55 \).
+\end{itemize}
+
+Esta soluci\'on reproduce correctamente el comportamiento observado experimentalmente en~\cite{Burkert_2018}.
+
+\section{Modelo de Presi\'on Total \( P_q(r) \) en el Tsallis-MIT Bag Model}
+
+En el marco del modelo Tsallis-MIT, la presi\'on total se compone de dos contribuciones:
+
+\begin{enumerate}
+    \item Presi\'on de quarks: proporcional a \( T(r)^4 \),
+    \item Correcci\'on glu\'onica Tsallis: proporcional a \( (1-q) T(r)^7 \).
+\end{enumerate}
+
+La expresi\'on completa es:
+
+\begin{equation}
+P_q(r) = \frac{37\pi^2}{90} T(r)^4 + \frac{256\pi^2}{15}(1-q) V T(r)^7
+\end{equation}
+
+donde:
+\begin{itemize}
+    \item \( T(r) = T_0 e^{-r^2/R_T^2} \) es el perfil de temperatura radial,
+    \item \( V = \frac{4}{3} \pi R_{bag}^3 \) es el volumen fijo de la bolsa,
+    \item \( q \) es el par\'ametro de no extensividad.
+\end{itemize}
+
+Este modelo permite interpolar entre el comportamiento extensivo de Boltzmann-Gibbs (\( q \to 1 \)) y correcciones no extensivas importantes para sistemas densos o con fuertes correlaciones.
+
+\section{Unidades y Factores de Conversi\'on}
+
+En todo el trabajo se han empleado \textbf{unidades naturales} donde \( \hbar = c = 1 \). En estas unidades:
+
+\begin{equation}
+1\,\mathrm{fm} = \frac{1}{197.3269804}\,\mathrm{MeV}^{-1}
+\end{equation}
+
+De esta manera:
+\begin{itemize}
+    \item \( \mathrm{MeV}^4 \) puede convertirse en \( \mathrm{MeV/fm}^3 \) mediante un factor de \( (1/\hbar c)^3 \).
+    \item \( \mathrm{MeV}^7 \) necesita conversi\'on distinta debido al volumen adicional (el t\'ermino \( T^7 \) incluye ya \( V \)).
+\end{itemize}
+
+Los factores utilizados fueron:
+
+\begin{align}
+\mathrm{CONVERSION}_{T^4} &= \left( \frac{1}{\hbar c} \right)^3 \\
+\mathrm{CONVERSION}_{T^7} &= \left( \frac{1}{\hbar c} \right)^6
+\end{align}
+
+Este tratamiento asegura que todas las presiones estén expresadas en unidades consistentes de \( \mathrm{MeV/fm^3} \).

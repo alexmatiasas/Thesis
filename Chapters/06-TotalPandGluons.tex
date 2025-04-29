@@ -1,48 +1,57 @@
-\chapter{Distribución de Presión en el Protón}\label{ch: TotalPandGluons}
+\chapter{Distribuci\'on de Presi\'on en el Prot\'on}\label{ch:TotalPandGluons}
 
 \fancyhf{} % clear all header fields
-\fancyhead[LE]{\nouppercase{\textbf{Capítulo 4. Distribución de Presión en \\el Protón}\hfill\textit{\rightmark}}}
-\fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{Capítulo 4. Distribución de Presión en \\el Protón}}}
-\fancyfoot[LE]{\nouppercase{\thepage\hfill {Pressure Distribution Inside Nucleons in a
-Tsallis-MIT Bag Model}}}
-\fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a
-Tsallis-MIT Bag Model} \hfill \thepage}}
+\fancyhead[LE]{\nouppercase{\textbf{Cap\'itulo 4. Distribuci\'on de Presi\'on en \\el Prot\'on}\hfill\textit{\rightmark}}}
+\fancyhead[RO]{\nouppercase{\textit{\rightmark}\hfill\textbf{Cap\'itulo 4. Distribuci\'on de Presi\'on en \\el Prot\'on}}}
+\fancyfoot[LE]{\nouppercase{\thepage\hfill {Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model}}}
+\fancyfoot[RO]{\nouppercase{{Pressure Distribution Inside Nucleons in a Tsallis-MIT Bag Model} \hfill \thepage}}
 
 \begin{chaptersummary}
-    Este capítulo descompone la presión protónica en contribuciones quark ($P_Q$) y gluón ($P_G$), combinando resultados de factores de forma gravitacionales \cite{Burkert_2018} con el modelo Tsallis-MIT. Se muestra cómo la componente gluónica emerge como diferencia $P_G = P_q - P_Q$, revelando su perfil radial característico.
+Este cap\'itulo desarrolla la extracci\'on de las distribuciones radiales de presi\'on dentro del prot\'on, combinando resultados de factores de forma gravitacionales (GFFs) con predicciones del modelo estad\'istico Tsallis-MIT. Se reconstruye la presi\'on de quarks $P_Q(r)$ a partir de datos fenomenol\'ogicos, se modela la presi\'on total $P_q(r)$ en un plasma no extensivo, y finalmente se extrae la contribuci\'on glu\'onica $P_G(r)$ por diferencia.
 \end{chaptersummary}
 
-\section{Presión de Quarks desde Factores de Forma Gravitacionales}
-La distribución de presión de quarks $P_Q(r)$ se extrae de los GFFs mediante:
+\section{Presi\'on de Quarks desde Factores de Forma Gravitacionales}
+La presi\'on interna de quarks $P_Q(r)$ se reconstruye a partir del t\'ermino $D$ de los factores de forma gravitacionales (GFFs), siguiendo:
 
 \begin{equation}
-P_Q(r) = \mathcal{F}^{-1}[d_1(t)] = \frac{M^6 d_1(0)}{16\pi k_p r} e^{-Mr}(Mr - 3)
+d_1(t) = d_1(0) \left( 1 - \frac{t}{M^2} \right)^{-\alpha}
 \end{equation}
 
-Los parámetros clave son:
-\begin{enumerate}[(a)]
-    \item $d_1(0) = -2.04 \pm 0.16$: Valor experimental del D-término
-    \item $M = \qty{5}{\per\femto\meter}$: Escala de confinamiento
-    \item $k_p = 55$: Constante de normalización
-\end{enumerate}
+con $d_1(0) = -2.04$, $M = 5\,\mathrm{fm}^{-1}$ y $\alpha = 3$.
 
-\section{Presión Total en el Modelo Tsallis-MIT}
-Nuestro modelo predice:
+La relaci\'on entre $d_1(t)$ y la distribuci\'on de presi\'on radial es:
 
 \begin{equation}
-P_q(r) = \underbrace{\frac{37\pi^2}{90}T(r)^4}_{\text{quarks}} + \underbrace{\frac{256\pi^2}{15}(1-q)V(r)T(r)^7}_{\text{gluones}}
+P_Q(r) = -\frac{1}{k_p \pi^2} \int_0^\infty x^4 j_0(r x) d_1(-x^2) \, dx
 \end{equation}
 
-\begin{remark}[Perfiles radiales]
-Los perfiles $T(r)$ y $V(r)$ se determinan mediante:
-\begin{align}
-T(r) &= T_0 e^{-r^2/R_T^2} \quad (R_T \approx \qty{0.5}{fm}) \\
-V(r) &= \frac{4}{3}\pi r^3 \Theta(R_{bag} - r)
-\end{align}
-\end{remark}
+donde $j_0$ es la funci\'on de Bessel esf\'erica de primer tipo, y $k_p = 55$.
 
-\section{Extracción de la Presión Gluónica}
-La contribución gluónica emerge como:
+La soluci\'on anal\'itica es:
+
+\begin{equation}
+P_Q(r) = \frac{M^6 d_1(0)}{16\pi k_p r} e^{-M r}(M r - 3)
+\end{equation}
+
+Esta presi\'on quark es consistente con resultados experimentales recientes~\cite{Burkert_2018}.
+
+\section{Presi\'on Total en el Modelo Tsallis-MIT}
+La presi\'on total en el modelo estad\'istico Tsallis-MIT se calcula como:
+
+\begin{equation}
+P_q(r) = \frac{37\pi^2}{90} T(r)^4 + \frac{256\pi^2}{15}(1-q) V T(r)^7
+\end{equation}
+
+donde:
+\begin{itemize}
+\item $T(r) = T_0 e^{-r^2/R_T^2}$ es el perfil de temperatura radial,
+\item $V = \frac{4}{3}\pi R_{bag}^3$ es el volumen fijo de la bolsa (\( R_{bag} \approx 0.8\,\mathrm{fm} \)).
+\end{itemize}
+
+Se asume que fuera de la bolsa la presi\'on glu\'onica se anula debido a la estructura de frontera.
+
+\section{Extracci\'on de la Presi\'on Glu\'onica}
+La contribuci\'on de gluones a la presi\'on se obtiene como la diferencia:
 
 \begin{equation}
 P_G(r) = P_q(r) - P_Q(r)
@@ -51,17 +60,20 @@ P_G(r) = P_q(r) - P_Q(r)
 \begin{figure}[h]
     \centering
     \includegraphics[width=0.8\textwidth]{./Images/PressureDistributionsTot-Q-G.png}
-    \caption{Descomposición de presiones: (azul) $P_q$ modelo Tsallis, (rojo) $P_Q$ de GFFs, (verde) $P_G$ obtenida por diferencia.}
+    \caption{Distribuciones radiales de presi\'on en el prot\'on: presi\'on total $P_q(r)$ (l\'inea continua), presi\'on glu\'onica $P_G(r)$ (l\'inea discontinua larga) y presi\'on de quarks $P_Q(r)$ (l\'inea discontinua corta) reconstruida de datos experimentales~\cite{Burkert_2018}.}
     \label{fig:PressureDecomp}
 \end{figure}
 
+\break
+
 \section{Resultados Clave}
+
 \begin{table}[h]
     \centering
-    \caption{Propiedades de las distribuciones de presión}
+    \caption{Propiedades de las distribuciones de presi\'on}
     \begin{tabular}{lccc}
     \toprule
-    Componente & Máximo [GeV/fm$^3$] & Posición [fm] & Integral [GeV] \\
+    Componente & M\'aximo [GeV/fm$^3$] & Posici\'on del M\'aximo [fm] & Integral Total [GeV] \\
     \midrule
     $P_Q$ (quarks) & 0.35 & 0.3 & 1.04 \\
     $P_G$ (gluones) & -0.15 & 0.8 & -1.04 \\
@@ -70,11 +82,17 @@ P_G(r) = P_q(r) - P_Q(r)
     \label{tab:PressureResults}
 \end{table}
 
-\begin{remark}[Validación]
-La condición de estabilidad \eqref{eq:stability} se satisface exactamente:
+\section{Validaci\'on de la Condici\'on de Estabilidad}
+Se verifica la condici\'on de estabilidad mec\'anica:
+
 \begin{equation}
-\int_0^\infty [P_Q(r) + P_G(r)] r^2 dr = 0
+\int_0^\infty [P_Q(r) + P_G(r)] r^2 \, dr = 0
 \end{equation}
+
+lo cual garantiza el equilibrio interno del prot\'on. El cumplimiento de esta condici\'on constituye una prueba importante de consistencia para el modelo propuesto.
+
+\begin{remark}[Detalles matemáticos]
+    La deducci\'on completa de la expresi\'on de \( P_Q(r) \) a partir del t\'ermino \( d_1(t) \), as\'i como las consideraciones sobre unidades y constantes f\'isicas, se encuentran en el Ap\'endice~\ref{app:math_derivations}.
 \end{remark}
 
 

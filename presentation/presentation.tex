@@ -5,22 +5,24 @@
 \usepackage{booktabs}
 \usepackage{amsmath}
 \usepackage{siunitx}
+\usepackage[sort&compress,numbers]{natbib} % Citas bibliográficas
 \usepackage{hyperref}
 
 % Logo en la esquina inferior derecha (ajusta el path si tienes un logo)
 \setbeamertemplate{footline}{
   \leavevmode%
+  \vspace{0.3cm}
   \hbox{%
   \hspace*{0.5cm}
-%   \includegraphics[height=0.5cm]{figures/logo-universidad.png}\hspace*{0.5cm}%
+  \includegraphics[height=0.5cm]{images_link/Cinvestav-logo.jpg}\hspace*{0.5cm}%
   \insertframenumber{} / \inserttotalframenumber\hspace*{0.5cm}
   }%
 }
 
 % Acrónimos (opcional)
-\usepackage[acronym]{glossaries}
-\makeglossaries
-\newacronym{qcd}{QCD}{Quantum Chromodynamics}
+% \usepackage[acronym]{glossaries}
+% \makeglossaries
+% \newacronym{qcd}{QCD}{Quantum Chromodynamics}
 
 \graphicspath{{figures/}{images_link/}}
 
@@ -28,7 +30,7 @@
 \subtitle{Defensa de Tesis Doctoral}
 \author{Manuel Alejandro Matías Astorga}
 \date{\today}
-\institute{Universidad XYZ}
+\institute{CINVESTAV IPN}
 
 \begin{document}
 
@@ -43,19 +45,21 @@
 \begin{frame}{Motivación}
   \begin{itemize}
     \item ¿Qué es un protón?
-    \item Motivación del estudio: entender estructura interna.
+    \item Motivación del estudio: entender estructura interna del protón.
   \end{itemize}
 \end{frame}
 
-\section{Marco teorico }
+\section{Marco teorico}
 
 \begin{frame}{Bag Model}
-    En la referencia principal como esta de aquí a
+    En la referencia principal como esta \cite{Barboza_Mendoza_2019} tenemos que desar
 \end{frame}
 
-% \renewcommand\bibname{Bibliografía}
-% \bibliographystyle{unsrtnat}
-% \bibliography{../Bibliography/Thesis_unified}
+
+\appendix
+\renewcommand\bibname{Bibliografía}
+\bibliographystyle{unsrtnat}
+\bibliography{../Bibliography/Thesis_unified}
 
 
 \end{document}

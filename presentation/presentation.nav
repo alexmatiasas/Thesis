@@ -11,13 +11,24 @@
 \headcommand {\beamer@framepages {4}{4}}
 \headcommand {\beamer@sectionpages {3}{4}}
 \headcommand {\beamer@subsectionpages {3}{4}}
-\headcommand {\sectionentry {2}{Marco teorico }{5}{Marco teorico }{0}}
+\headcommand {\sectionentry {2}{Marco teorico}{5}{Marco teorico}{0}}
 \headcommand {\slideentry {2}{0}{1}{5/5}{}{0}}
 \headcommand {\beamer@framepages {5}{5}}
 \headcommand {\slideentry {2}{0}{2}{6/6}{}{0}}
 \headcommand {\beamer@framepages {6}{6}}
+\headcommand {\gdef \insertmainframenumber {3}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
 \headcommand {\beamer@partpages {1}{6}}
-\headcommand {\beamer@subsectionpages {5}{6}}
 \headcommand {\beamer@sectionpages {5}{6}}
-\headcommand {\beamer@documentpages {6}}
+\headcommand {\beamer@subsectionpages {5}{6}}
+\headcommand {\beamer@appendixpages {7}}
+\headcommand {\beamer@sectionpages {7}{6}}
+\headcommand {\beamer@subsectionpages {7}{6}}
+\headcommand {\sectionentry {3}{\translate {References}}{7}{\translate {References}}{1}}
+\headcommand {\slideentry {3}{0}{1}{7/7}{}{1}}
+\headcommand {\beamer@framepages {7}{7}}
+\headcommand {\beamer@partpages {7}{8}}
+\headcommand {\beamer@subsectionpages {7}{8}}
+\headcommand {\beamer@sectionpages {7}{8}}
+\headcommand {\beamer@documentpages {8}}
 \headcommand {\gdef \inserttotalframenumber {3}}
