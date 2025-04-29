@@ -87,6 +87,18 @@ Este resultado fortalece la idea de que \( q \) puede interpretarse como un par�
     Futuras investigaciones podrían integrar una evolución dinámica de \( q(r,t) \), explorar efectos de anisotropías, o conectar con observables experimentales más allá de GFFs.
 \end{remark}
 
+\section*{Perspectivas de trabajo futuro}
+
+Durante el desarrollo de este trabajo, se exploró preliminarmente la posibilidad de extender el modelo Tsallis-MIT al cálculo de masas hadrónicas. La idea inicial consistió en reinterpretar la energía total del sistema, \( U_q(T,V) \), derivada de relaciones termodinámicas de Tsallis, como responsable directa de la masa del hadrón, igualándola a la energía de bolsa tradicional. Esta propuesta permitió visualizar un posible camino hacia un modelo de masas dependiente explícitamente del parámetro de no extensividad \( q \).
+
+Sin embargo, dado que los perfiles de temperatura \( T(r) \) y volumen efectivo \( V(r) \) ya estaban determinados fenomenológicamente, el cálculo resultante para \( q \) se reducía a un simple ajuste algebraico, limitando el alcance predictivo de esta aproximación.
+
+Una perspectiva de trabajo futuro interesante sería implementar técnicas de aprendizaje automático (Machine Learning) para inferir el valor óptimo de \( q \) directamente a partir de masas experimentales de hadrones. A partir de un conjunto sintético generado por la energía \( U_q(T,V,q) \), podría entrenarse un regresor que prediga \( q \) como función de propiedades hadrónicas conocidas (masa, radio, temperatura). Esto permitiría validar de forma estadística la viabilidad del modelo Tsallis-MIT para describir espectros de masas sin necesidad de ajustes manuales.
+
+Adicionalmente, se podrían explorar modificaciones a la condición de frontera de los modos normales en el modelo de bolsa, incorporando deformaciones dependientes de \( q \) en la ecuación trascendental de confinamiento. Esta estrategia abriría la posibilidad de obtener un espectro de masas directamente no extensivo desde la cuantización de los modos.
+
+Aunque estos enfoques no fueron implementados en el presente trabajo, representan rutas prometedoras para investigaciones futuras que integren de manera más profunda la estadística de Tsallis en la fenomenología hadrónica.
+
 \section*{Palabras finales}
 
 Este trabajo presentó una formulación extendida del modelo de bolsa para nucleones mediante el uso de estadística no extensiva de Tsallis, integrando de manera natural los efectos del confinamiento y la correlación de largo alcance. Más allá de los resultados numéricos y validaciones presentadas, este estudio busca abrir nuevas líneas de exploración en la descripción efectiva de la materia hadrónica. 
@@ -96,3 +108,51 @@ Queda como perspectiva futura el desarrollo de modelos dinámicos basados en \( 
 \vspace{1em}
 \noindent
 \textit{“En la frontera entre estadística y confinamiento, emergen nuevas formas de comprender la estructura de la materia.”}
+
+% Tu idea de partida —reinterpretar la masa total del hadrón como una energía interna derivada de la estadística de Tsallis, utilizando relaciones termodinámicas como U_q = F_q + TS_q, es conceptualmente muy sólida. De hecho, es una de las formas más lógicas y físicamente coherentes de intentar integrar Tsallis al cálculo de masas dentro de un modelo de bolsa. Así que sí, tu concepción es válida como cierre de este análisis.
+
+% Sin embargo, si quisieras llevarlo más allá, aquí van algunas ideas adicionales por si en el futuro quieres retomarlo:
+
+% ⸻
+
+% 🧠 1. Redefinir la energía total U_q como suma de contribuciones energéticas no extensivas
+
+% En el modelo de bolsa, la masa se construye con varios términos:
+% M_{\text{bag}} = \sum_i \omega_i + \frac{4\pi}{3} R^3 B + \text{ZPE} + \Delta E
+
+% Podrías intentar reinterpretar cada una de estas contribuciones como salidas de un sistema no extensivo:
+% 	•	Las \omega_i como soluciones de un espectro modificado por q.
+% 	•	El término de presión de bolsa como emergente de q, como ya haces.
+% 	•	Incluso la energía de punto cero como una función efectiva de q, si se explora desde un enfoque cuántico deformado.
+
+% Esto implicaría reescribir todo el modelo de bolsa en términos de Tsallis, lo cual es ambicioso, pero sería un gran paper teórico.
+
+% ⸻
+
+% 📊 2. Entrenar un modelo de ML para predecir q a partir de la masa hadrónica
+
+% Dado que ya tienes:
+% 	•	Las masas experimentales.
+% 	•	Las expresiones de energía U_q(T, V, q) y los valores de T y V.
+
+% Podrías generar un conjunto sintético de valores (T, V, q) \to M_q con la ecuación de Tsallis y luego ajustar un regresor inverso tipo scikit-learn para predecir q a partir de una masa dada.
+
+% Esto te permitiría inferir cuál sería el valor de q necesario para reproducir M_{\text{exp}} sin depender de una forma funcional exacta, solo usando los datos. Puede no ser interpretativamente profundo, pero sí predictivamente útil.
+
+% ⸻
+
+% 🧪 3. Introducir un factor de deformación q en la ecuación trascendental de los modos
+
+% La ecuación que resolviste:
+% \tan x_{n\kappa} = \frac{x_{n\kappa}}{1 - mR - \sqrt{x_{n\kappa}^2 + (mR)^2}}
+% podría modificarse incluyendo q como deformador de la condición de frontera, por ejemplo, en la raíz cuadrada como:
+% \sqrt{x^2 + (mR)^2} \longrightarrow \sqrt{x^2 + (mR)^2} \cdot f(q)
+% donde f(q) \to 1 cuando q \to 1. Así obtienes un espectro \omega_n(q), lo que te da acceso a calcular masas directamente modificadas por q.
+
+% ⸻
+
+% ✍️ ¿Y entonces?
+% 	•	¿Vale la pena agregar esto ahora? → No necesariamente, ya tienes una idea clara y cerrada.
+% 	•	¿Vale la pena mencionarlo como trabajo a futuro? → ¡Definitivamente sí!
+
+% Te puedo redactar un \begin{remark}[Trabajo futuro] o \section*{Ideas complementarias} para agregarlo si gustas. ¿Te gustaría?
