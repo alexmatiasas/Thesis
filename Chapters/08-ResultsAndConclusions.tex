@@ -48,7 +48,7 @@ Este comportamiento refleja cómo el confinamiento se refuerza a mayores densida
 
 El modelo Tsallis-MIT logra capturar esta dinámica sin necesidad de ajustes adicionales, destacando su versatilidad para describir la estructura interna del protón bajo diferentes condiciones.
 
-\section{Extracción de la presión de gluones y validación de \( q \)}
+\section{Extracción de la presión de gluones y validación de q}
 
 La figura~\ref{fig:PressureDecompResult} muestra nuevamente las tres contribuciones a la presión radial ponderada \( r^2 P(r) \): la presión total \( P_q(r) \), la presión de quarks \( P_Q(r) \) extraída desde GFFs, y la presión de gluones \( P_G(r) = P_q(r) - P_Q(r) \). Este gráfico ya había sido presentado en el Capítulo~\ref{ch:TotalPandGluons} como parte del método de extracción, pero aquí lo utilizamos para validar el valor adoptado para el parámetro no extensivo \( q = 1.05 \).
 
@@ -61,3 +61,38 @@ Se observa que el valor \( q = 1.05 \) permite ajustar la presión total de form
     \label{fig:TotalPressureTsallis}
 \end{figure}
 
+\section{Reconstrucción de presiones equivalentes con distintos \( q \)}
+
+Como se analizó en el Capítulo~\ref{ch-PhysicalMeaningQ}, es posible reconstruir perfiles de presión efectivos sin una presión de bolsa explícita, mediante la variación funcional del parámetro \( q \). En la figura~\ref{fig:B_reconstructed_combined}, se comparan dos distribuciones \( r^2 P(r) \) calculadas con valores distintos de \( q \) y sus correspondientes formas funcionales para \( B(r) \), mostrando que ambos enfoques reproducen perfiles similares.
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.75\textwidth]{./Images/Comparacion_B_old_new_combined.png}
+    \caption[Comparación de perfiles con distintos \( q \)]{\emph{Comparación entre distribuciones \( r^2 P(r) \) obtenidas con \( q = 1.002 \) y una forma tradicional de \( B(r) \), y con \( q = 0.9 \) usando una forma funcional reconstruida. Ambos perfiles son compatibles en forma general, lo que respalda la hipótesis de que \( q \) puede absorber el efecto de confinamiento.}}
+    \label{fig:B_reconstructed_combined}
+\end{figure}
+
+Este resultado fortalece la idea de que \( q \) puede interpretarse como un parámetro dinámico que encapsula la física del confinamiento, y no solo como un modificador estadístico.
+
+\section{Conclusiones generales}
+
+\begin{itemize}
+    \item Se construyó un modelo efectivo basado en la estadística de Tsallis acoplado al modelo de bolsa MIT, capaz de reproducir distribuciones de presión hadrónica consistentes con QCD en el retículo.
+    \item La dependencia radial del parámetro \( q(r) \) permite reinterpretar el confinamiento como un fenómeno emergente asociado a correlaciones no extensivas, prescindiendo potencialmente de la presión de bolsa fija.
+    \item La validez del modelo se verificó frente a resultados de Lattice QCD y mediante reconstrucción inversa de perfiles de presión.
+    \item La sensibilidad del modelo al potencial químico sugiere posibles aplicaciones en materia densa o escenarios de transición de fase (neutron stars, heavy-ion collisions, etc.).
+\end{itemize}
+
+\begin{remark}[Perspectivas]
+    Futuras investigaciones podrían integrar una evolución dinámica de \( q(r,t) \), explorar efectos de anisotropías, o conectar con observables experimentales más allá de GFFs.
+\end{remark}
+
+\section*{Palabras finales}
+
+Este trabajo presentó una formulación extendida del modelo de bolsa para nucleones mediante el uso de estadística no extensiva de Tsallis, integrando de manera natural los efectos del confinamiento y la correlación de largo alcance. Más allá de los resultados numéricos y validaciones presentadas, este estudio busca abrir nuevas líneas de exploración en la descripción efectiva de la materia hadrónica. 
+
+Queda como perspectiva futura el desarrollo de modelos dinámicos basados en \( q(r,t) \), así como su contraste directo con datos experimentales provenientes de dispersión profunda y colisiones de alta energía.
+
+\vspace{1em}
+\noindent
+\textit{“En la frontera entre estadística y confinamiento, emergen nuevas formas de comprender la estructura de la materia.”}
