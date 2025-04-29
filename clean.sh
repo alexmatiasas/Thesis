@@ -2,11 +2,15 @@
 
 echo "🧹 Limpiando archivos generados por LaTeX..."
 
-# Archivos comunes de compilación
-rm -f *.aux *.log *.out *.toc *.bbl *.blg *.fdb_latexmk *.fls *.gls *.glo *.glg
-rm -f *.ist *.acn *.acr *.alg *.idx *.ilg *.ind *.nlo *.nls *.lof *.lot *.synctex.gz *.dvi *.ps
+# Archivos auxiliares principales
+rm -f *.aux *.log *.out *.toc *.bbl *.blg *.fdb_latexmk *.fls *.synctex.gz *.dvi *.ps
+rm -f *.lof *.lot *.idx *.ilg *.ind *.ist *.nlo *.nls *.nlg
+rm -f *.glo *.gls *.glg *.acn *.acr *.alg
 
-# También limpiar .aux dentro de Chapters
+# Archivos de Beamer (si usas)
+rm -f *.nav *.snm
+
+# Archivos temporales en subdirectorios
 find ./Chapters -name "*.aux" -type f -delete
 
 echo "✅ Limpieza completa."

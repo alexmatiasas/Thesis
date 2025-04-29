@@ -1,32 +1,32 @@
 #!/bin/bash
-# build.sh — Compilación completa del proyecto LaTeX
+# build.sh — Compilación completa del proyecto LaTeX con bibliografía, glosarios y nomenclatura
 
 set -e
 
-echo "🔨 Compilando tesis (main.tex)..."
+echo "🔨 Iniciando compilación de tesis (main.tex)..."
 
-# 1. Compilación inicial
-pdflatex main.tex
+# Primera pasada para generar .aux y .toc
+pdflatex -interaction=nonstopmode main.tex
 
-# 2. Bibliografía
+# Bibliografía
 bibtex main
 
-# 3. Glosarios y acrónimos
+# Glosarios y acrónimos
 makeglossaries main
 
-# 4. Nomenclatura
+# Nomenclatura (si tienes archivo nomencl.ist)
 makeindex main.nlo -s nomencl.ist -o main.nls
 
-# 5. Compilación final para resolver referencias cruzadas
-pdflatex main.tex
-pdflatex main.tex
+# Dos pasadas adicionales para referencias cruzadas, glosarios y nomenclatura
+pdflatex -interaction=nonstopmode main.tex
+pdflatex -interaction=nonstopmode main.tex
 
 echo "✅ ¡Compilación completada exitosamente!"
-echo "📄 Resultado: main.pdf"
+echo "📄 Archivo generado: main.pdf"
 
-# Limpieza opcional
+# Limpieza auxiliar opcional
 if [[ $1 == "--clean" ]]; then
-    echo "🧹 Limpiando archivos auxiliares tras la compilación..."
+    echo "🧹 Ejecutando limpieza post-compilación..."
     ./clean.sh
     echo "✅ Proyecto limpio."
 fi
