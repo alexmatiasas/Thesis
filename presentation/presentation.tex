@@ -737,9 +737,179 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
 
 \section[La presión dentro del hadrón]{4. La presión dentro del hadrón}
 
+\subsection{Presión de quarks a partir de DVCS}
+\begin{frame}{Presión de quarks dentro del protón}
+  \begin{columns}
+    \column{0.4\textwidth}
+    \only<1>{
+      \includegraphics[width=\linewidth]{figures/nature_article.png}
+    }
+    \only<2-3>{
+      \includegraphics[width=\linewidth]{figures/radial_pressure_quark.png}
+    }
 
+    \column{0.6\textwidth}
+    \only<1>{
+      \begin{itemize}
+        \item Resultados obtenidos a partir de datos de DVCS.
+        \item Uso de la función de distribución \( D(t) \).
+      \end{itemize}
+    }
+    \only<2>{
+      \begin{itemize}
+        \item Reconstrucción del perfil de presión radial \( P_q(r) \).
+        \item Ajuste mediante funciones tipo Bessel modificadas.
+      \end{itemize}
+    }
+    \only<3>{
+      \begin{itemize}
+        \item Presión máxima cerca del centro \( r = 0 \).
+        \item Presión negativa en regiones periféricas.
+      \end{itemize}
+    }
+  \end{columns}
+\end{frame}
 
+\subsection{Modelado interno del hadrón}
+\begin{frame}{Perfil térmico y presión de bolsa}
+  \begin{columns}
+    \column{0.4\textwidth}
+    \only<1>{
+      \includegraphics[width=\linewidth]{figures/some_char_proton_BM.png}\\
+      \includegraphics[width=\linewidth]{figures/thermal_profile.png}
+    }
+    \only<2>{
+      \includegraphics[width=\linewidth]{figures/Bag model-two scenaries.png}
+    }
+    \only<3>{
+      \includegraphics[width=\linewidth]{figures/B(R).png}
+    }
 
+    \column{0.5\textwidth}
+    \only<1>{
+      \begin{itemize}
+        \item Artículo propone distribuciones térmicas dentro del hadrón.
+        \item Simulación en geometría esférica.
+      \end{itemize}
+    }
+    \only<2>{
+      \begin{itemize}
+        \item Quarks dentro de un mar de gluones (izquierda).
+        \item Quarks encerrados por los gluones (derecha)
+      \end{itemize}
+    }
+    \only<3>{
+      \begin{itemize}
+        \item Presión de bolsa \( B(r) \) decrece con el radio.
+        \item Asume un mar de gluones como entorno.
+      \end{itemize}
+    }
+  \end{columns}
+\end{frame}
+
+\subsection{Presiones individuales en el gas de Tsallis}
+\begin{frame}{Presión de quarks en el modelo de Tsallis}
+  \begin{itemize}
+    \item Consideramos un gas de quarks en equilibrio térmico con estadística de Tsallis.
+    \item Presión ultrarrelativista para quarks (Fermi-Dirac generalizado):
+    \[
+    P_Q = g_Q \left[ \frac{7\pi^2}{720} + \frac{1}{24} \left( \frac{\mu}{T} \right)^2 +
+    \frac{1}{48\pi^2} \left( \frac{\mu}{T} \right)^4 \right] T^4
+    \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Presión de gluones en el modelo de Tsallis}
+  \begin{itemize}
+    \item Para los gluones, usamos la estadística de Bose-Einstein no extensiva.
+    \item Presión ultrarrelativista para gluones:
+    \[
+    P_G = g_G \frac{\pi^2}{90} T^4
+    \]
+    \item La contribución gluónica actúa como un "mar de fondo" en el modelo.
+  \end{itemize}
+\end{frame}
+
+\subsection{Obtención de la presión con estadística de Tsallis}
+\begin{frame}{Obtención de la presión usando estadística de Tsallis}
+  \begin{columns}
+    \column{0.55\textwidth}
+    \only<1>{
+      \begin{itemize}
+        \item Los quarks y gluones son gases ideales en principio, pero con interacción.
+        \item Esta interacción se modela mediante el parámetro \( q \) de Tsallis.
+        \item La entropía no extensiva del sistema está dada por:
+        \[
+          S_q = S_Q + S_G + (1 - q) S_Q S_G
+        \]
+      \end{itemize}
+    }
+    \only<2>{
+      \begin{itemize}
+        \item Usamos la relación termodinámica general:
+        \[
+          S = \frac{1}{T} \left( E + PV - \sum_i \mu_i N_i \right)
+        \]
+        \item Las entropías individuales son:
+        \[
+          S_Q = g_Q \left[ \frac{7\pi^2}{90} + \frac{1}{6} \left( \frac{\mu}{T} \right)^2 \right] VT^3
+        \]
+        \[
+          S_G = 4g_G \left[ \frac{\pi^2}{90} \right] VT^3
+        \]
+      \end{itemize}
+    }
+    \only<3>{
+      \begin{itemize}
+        \item Aplicamos la relación de Maxwell:
+        \[
+          \left. \frac{\partial S_q}{\partial V} \right|_{T, \mu} = 
+          \left. \frac{\partial P_q}{\partial T} \right|_{V, \mu}
+        \]
+        \item Al derivar \( S_q \) respecto a \( V \), obtenemos:
+        \[
+          \left. \frac{\partial S_q}{\partial V} \right|_{T, \mu} = 
+          \left[ 7g_Q + 4g_G \right] \frac{\pi^2}{90} T^3 + 
+          \frac{1}{6} g_Q \left( \frac{\mu}{T} \right)^2 T^3 +
+        \]
+        \[
+          + \frac{8\pi^2}{90} g_Q g_G (1 - q) 
+          \left[ \frac{7\pi^2}{90} + \frac{1}{6} \left( \frac{\mu}{T} \right)^2 \right] VT^6
+        \]
+      \end{itemize}
+    }
+    \only<4>{
+      \begin{itemize}
+        \item Integramos la expresión anterior con respecto a \( T \).
+        \item Imponemos \( q = 1 \) para recuperar el caso extensivo.
+        \item La presión total de Tsallis queda:
+        \[
+          P_q = \left[ \frac{7}{4} g_Q + g_G \right] \frac{\pi^2}{90} T^4 + 
+          \frac{1}{3} g_Q \left[ \frac{1}{4} \left( \frac{\mu}{T} \right)^2 +
+          \frac{1}{8\pi^2} \left( \frac{\mu}{T} \right)^4 \right] T^4
+        \]
+        \[
+          + \frac{8\pi^2}{90} g_Q g_G (1 - q) \left[ \frac{\pi^2}{90} +
+          \frac{1}{30} \left( \frac{\mu}{T} \right)^2 \right] VT^7
+        \]
+      \end{itemize}
+    }
+    \only<5>{
+      \begin{itemize}
+        \item Finalmente, la presión total del sistema en el modelo de bolsa es:
+        \[
+          P_{\text{total}}(r) = P_q(r) - B(r)
+        \]
+        \item Esta expresión relaciona la presión efectiva con la presión de bolsa espacialmente dependiente.
+      \end{itemize}
+    }
+
+    \column{0.45\textwidth}
+    \centering
+    \vspace{2cm}
+    \includegraphics[width=0.9\linewidth]{figures/QG-plasma.png} % Puedes poner un ícono si deseas
+  \end{columns}
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Resultados]{5. Resultados}
