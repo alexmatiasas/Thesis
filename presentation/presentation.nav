@@ -4,31 +4,113 @@
 \headcommand {\beamer@framepages {2}{2}}
 \headcommand {\beamer@sectionpages {1}{2}}
 \headcommand {\beamer@subsectionpages {1}{2}}
-\headcommand {\sectionentry {1}{Introducción}{3}{Introducción}{0}}
+\headcommand {\sectionentry {1}{Introducción}{3}{1. Introducción}{0}}
 \headcommand {\slideentry {1}{0}{1}{3/3}{}{0}}
 \headcommand {\beamer@framepages {3}{3}}
-\headcommand {\slideentry {1}{0}{2}{4/4}{}{0}}
-\headcommand {\beamer@framepages {4}{4}}
-\headcommand {\beamer@sectionpages {3}{4}}
-\headcommand {\beamer@subsectionpages {3}{4}}
-\headcommand {\sectionentry {2}{Marco teorico}{5}{Marco teorico}{0}}
-\headcommand {\slideentry {2}{0}{1}{5/5}{}{0}}
-\headcommand {\beamer@framepages {5}{5}}
-\headcommand {\slideentry {2}{0}{2}{6/6}{}{0}}
-\headcommand {\beamer@framepages {6}{6}}
-\headcommand {\gdef \insertmainframenumber {3}}
-\headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{6}}
-\headcommand {\beamer@sectionpages {5}{6}}
-\headcommand {\beamer@subsectionpages {5}{6}}
-\headcommand {\beamer@appendixpages {7}}
-\headcommand {\beamer@sectionpages {7}{6}}
-\headcommand {\beamer@subsectionpages {7}{6}}
-\headcommand {\sectionentry {3}{\translate {References}}{7}{\translate {References}}{1}}
-\headcommand {\slideentry {3}{0}{1}{7/7}{}{1}}
+\headcommand {\slideentry {1}{0}{2}{4/6}{}{0}}
+\headcommand {\beamer@framepages {4}{6}}
+\headcommand {\slideentry {1}{0}{3}{7/7}{}{0}}
 \headcommand {\beamer@framepages {7}{7}}
-\headcommand {\beamer@partpages {7}{8}}
-\headcommand {\beamer@subsectionpages {7}{8}}
-\headcommand {\beamer@sectionpages {7}{8}}
-\headcommand {\beamer@documentpages {8}}
-\headcommand {\gdef \inserttotalframenumber {3}}
+\headcommand {\slideentry {1}{0}{4}{8/8}{}{0}}
+\headcommand {\beamer@framepages {8}{8}}
+\headcommand {\slideentry {1}{0}{5}{9/9}{}{0}}
+\headcommand {\beamer@framepages {9}{9}}
+\headcommand {\slideentry {1}{0}{6}{10/14}{}{0}}
+\headcommand {\beamer@framepages {10}{14}}
+\headcommand {\slideentry {1}{0}{7}{15/15}{}{0}}
+\headcommand {\beamer@framepages {15}{15}}
+\headcommand {\slideentry {1}{0}{8}{16/16}{}{0}}
+\headcommand {\beamer@framepages {16}{16}}
+\headcommand {\slideentry {1}{0}{9}{17/17}{}{0}}
+\headcommand {\beamer@framepages {17}{17}}
+\headcommand {\slideentry {1}{0}{10}{18/18}{}{0}}
+\headcommand {\beamer@framepages {18}{18}}
+\headcommand {\slideentry {1}{0}{11}{19/19}{}{0}}
+\headcommand {\beamer@framepages {19}{19}}
+\headcommand {\slideentry {1}{0}{12}{20/20}{}{0}}
+\headcommand {\beamer@framepages {20}{20}}
+\headcommand {\slideentry {1}{0}{13}{21/21}{}{0}}
+\headcommand {\beamer@framepages {21}{21}}
+\headcommand {\beamer@sectionpages {3}{21}}
+\headcommand {\beamer@subsectionpages {3}{21}}
+\headcommand {\sectionentry {2}{Modelo de Bolsa del MIT}{22}{2. Modelo de Bolsa del MIT}{0}}
+\headcommand {\slideentry {2}{0}{1}{22/22}{}{0}}
+\headcommand {\beamer@framepages {22}{22}}
+\headcommand {\slideentry {2}{0}{2}{23/26}{}{0}}
+\headcommand {\beamer@framepages {23}{26}}
+\headcommand {\slideentry {2}{0}{3}{27/34}{}{0}}
+\headcommand {\beamer@framepages {27}{34}}
+\headcommand {\slideentry {2}{0}{4}{35/39}{}{0}}
+\headcommand {\beamer@framepages {35}{39}}
+\headcommand {\slideentry {2}{0}{5}{40/45}{}{0}}
+\headcommand {\beamer@framepages {40}{45}}
+\headcommand {\slideentry {2}{0}{6}{46/46}{}{0}}
+\headcommand {\beamer@framepages {46}{46}}
+\headcommand {\beamer@sectionpages {22}{46}}
+\headcommand {\beamer@subsectionpages {22}{46}}
+\headcommand {\sectionentry {3}{Extensión con Estadística de Tsallis}{47}{3. Extensión con Estadística de Tsallis}{0}}
+\headcommand {\slideentry {3}{0}{1}{47/47}{}{0}}
+\headcommand {\beamer@framepages {47}{47}}
+\headcommand {\slideentry {3}{0}{2}{48/50}{}{0}}
+\headcommand {\beamer@framepages {48}{50}}
+\headcommand {\slideentry {3}{0}{3}{51/52}{}{0}}
+\headcommand {\beamer@framepages {51}{52}}
+\headcommand {\slideentry {3}{0}{4}{53/55}{}{0}}
+\headcommand {\beamer@framepages {53}{55}}
+\headcommand {\beamer@sectionpages {47}{55}}
+\headcommand {\beamer@subsectionpages {47}{55}}
+\headcommand {\sectionentry {4}{La presión dentro del hadrón}{56}{4. La presión dentro del hadrón}{0}}
+\headcommand {\slideentry {4}{0}{1}{56/56}{}{0}}
+\headcommand {\beamer@framepages {56}{56}}
+\headcommand {\beamer@sectionpages {56}{56}}
+\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\sectionentry {5}{Resultados}{57}{5. Resultados}{0}}
+\headcommand {\slideentry {5}{0}{1}{57/57}{}{0}}
+\headcommand {\beamer@framepages {57}{57}}
+\headcommand {\slideentry {5}{0}{2}{58/58}{}{0}}
+\headcommand {\beamer@framepages {58}{58}}
+\headcommand {\slideentry {5}{0}{3}{59/59}{}{0}}
+\headcommand {\beamer@framepages {59}{59}}
+\headcommand {\beamer@sectionpages {57}{59}}
+\headcommand {\beamer@subsectionpages {57}{59}}
+\headcommand {\sectionentry {6}{Interpretación del parámetro \( q \)}{60}{6. Interpretación del parámetro \( q \)}{0}}
+\headcommand {\slideentry {6}{0}{1}{60/60}{}{0}}
+\headcommand {\beamer@framepages {60}{60}}
+\headcommand {\slideentry {6}{0}{2}{61/61}{}{0}}
+\headcommand {\beamer@framepages {61}{61}}
+\headcommand {\slideentry {6}{0}{3}{62/62}{}{0}}
+\headcommand {\beamer@framepages {62}{62}}
+\headcommand {\beamer@sectionpages {60}{62}}
+\headcommand {\beamer@subsectionpages {60}{62}}
+\headcommand {\sectionentry {7}{Exploraciones adicionales}{63}{7. Exploraciones adicionales}{0}}
+\headcommand {\slideentry {7}{0}{1}{63/63}{}{0}}
+\headcommand {\beamer@framepages {63}{63}}
+\headcommand {\slideentry {7}{0}{2}{64/64}{}{0}}
+\headcommand {\beamer@framepages {64}{64}}
+\headcommand {\slideentry {7}{0}{3}{65/65}{}{0}}
+\headcommand {\beamer@framepages {65}{65}}
+\headcommand {\beamer@sectionpages {63}{65}}
+\headcommand {\beamer@subsectionpages {63}{65}}
+\headcommand {\sectionentry {8}{Conclusiones}{66}{8. Conclusiones}{0}}
+\headcommand {\slideentry {8}{0}{1}{66/66}{}{0}}
+\headcommand {\beamer@framepages {66}{66}}
+\headcommand {\slideentry {8}{0}{2}{67/67}{}{0}}
+\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {8}{0}{3}{68/68}{}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\gdef \insertmainframenumber {26}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{68}}
+\headcommand {\beamer@sectionpages {66}{68}}
+\headcommand {\beamer@subsectionpages {66}{68}}
+\headcommand {\beamer@appendixpages {69}}
+\headcommand {\beamer@sectionpages {69}{68}}
+\headcommand {\beamer@subsectionpages {69}{68}}
+\headcommand {\sectionentry {9}{References}{69}{References}{1}}
+\headcommand {\slideentry {9}{0}{0}{69/69}{}{1}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\beamer@partpages {69}{69}}
+\headcommand {\beamer@subsectionpages {69}{69}}
+\headcommand {\beamer@sectionpages {69}{69}}
+\headcommand {\beamer@documentpages {69}}
+\headcommand {\gdef \inserttotalframenumber {27}}
