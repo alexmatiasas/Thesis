@@ -11,6 +11,8 @@
 \usepackage[utf8]{inputenc}
 \usepackage{fontspec}
 \usepackage{textalpha}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, positioning, shapes.geometric}
 
 \addbibresource{../Bibliography/Thesis_unified.bib}
 
@@ -46,7 +48,7 @@
 
 \maketitle
 
-\begin{frame}{Contenido}
+\begin{frame}[allowframebreaks]{Contenido}
   \tableofcontents
 \end{frame}
 
@@ -738,7 +740,7 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
 \section[La presión dentro del hadrón]{4. La presión dentro del hadrón}
 
 \subsection{Presión de quarks a partir de DVCS}
-\begin{frame}{Presión de quarks dentro del protón}
+\begin{frame}{Perfil radial de presión}
   \begin{columns}
     \column{0.4\textwidth}
     \only<1>{
@@ -768,6 +770,53 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
       \end{itemize}
     }
   \end{columns}
+\end{frame}
+
+\subsection{Reconstrucción empírica desde GFF}
+
+\begin{frame}{La distribución de presión de quarks y gluones}
+  \begin{itemize}
+    \item En \textit{Nature}, se obtiene la presión dentro del protón usando un sistema de quarks aislado (sin gluones).
+    \item Se utiliza el factor de forma gravitacional \( d_1(t) \) con la expresión:
+    \[
+      d_1(t) = d_1(0)\left(1 - \frac{t}{M^2}\right)^{-\alpha}
+    \]
+    \item Esta fórmula proviene de la expansión de Gegenbauer del término \( D(z, t) \)\textsuperscript{2}:
+    \[
+      D(z, t) = (1 - z^2)\left[ d_1(t) C_1^{3/2}(z) + \dots \right]
+    \]
+    {\tiny\textsuperscript{2}componente D del EMT asociada con fuerzas internas.}
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Relación entre \( d_1(t) \) y la presión \( p(r) \)}
+  \begin{itemize}
+    \item \( d_1(t) \) se relaciona con \( p(r) \) mediante la integral de Bessel esférica:
+    \[
+      d_1(t) \propto \int \frac{j_0(r\sqrt{-t})}{2t} p(r) \, d^3r
+    \]
+    \item Aplicando la relación de cerradura:
+    \[
+      p(r) = -\frac{1}{k_p \pi^2} \int_0^\infty x^4 j_0(rx) d_1(-x^2) \, dx
+    \]
+    \item Evaluando para \( \alpha = 3 \), se obtiene una expresión cerrada:
+    \[
+      p(r) = -\frac{M^6 d_1(0)}{16\pi |M| k_p} e^{-|M|r} (-3 + |M|r)
+    \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ajuste y parámetros óptimos}
+  \begin{itemize}
+    \item Se fijó \( d_1(0) = -2.04 \).
+    \item Mediante ajuste numérico, se determinaron los parámetros óptimos:
+    \[
+      k_p = 55, \quad M = 5
+    \]
+    \item Con ello se reconstruyó \( p(r) \), la presión empírica de quarks dentro del protón.
+  \end{itemize}
+  \centering
+  \includegraphics[width=0.6\linewidth]{figures/presion_quark_gff.png}
 \end{frame}
 
 \subsection{Modelado interno del hadrón}
@@ -911,8 +960,209 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
   \end{columns}
 \end{frame}
 
+
+
+\begin{frame}{Resumen metodológico}
+  \begin{itemize}
+    \item \( P_Q^{\text{exp}}(r) \): desde DVCS y GFF.
+    \item \( P_Q^{\text{Tsallis}}(r) \): desde teoría termodinámica.
+    \item \( P_G(r) \): por diferencia, interpretado como mar de gluones.
+    \item \( B(r) \): obtenido desde geometría térmica esférica.
+  \end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Resultados]{5. Resultados}
+\section[Significado físico de \( q \)]{5. Significado físico del parámetro \( q \)}
+\begin{frame}{¿Qué representa el parámetro \( q \)?}
+  \begin{itemize}
+    \item En estadística de Tsallis, \( q \) mide la desviación respecto al equilibrio de Boltzmann-Gibbs.
+    \item En el contexto del protón: representa efectos de interacción, correlación y confinamiento.
+    \item Hipótesis: \( q \) no es constante, sino que varía espacialmente como \( q(r) \).
+    \item Objetivo: vincular \( q(r) \) con el perfil de presión de bolsa \( B(r) \).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Relación entre presión total, \( q \) y \( B \)}
+  \begin{itemize}
+    \item Presión total dada por:
+    \[
+      P_{\text{total}}(r) = P_q(r) - B(r)
+    \]
+    \item Si se desea mantener \( P_{\text{total}}(r) \) constante, cualquier variación de \( q \) debe ser compensada por \( B \).
+    \item Esta idea permite reconstruir \( B \) como función de \( q \) y \( r \).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Relación funcional entre \( B \) y \( q \)}
+  \begin{itemize}
+    \item Suponiendo que:
+    \[
+      P_{\text{total}}^{(q_0)}(r) = P_{\text{total}}^{(q)}(r)
+    \]
+    \item Se obtiene:
+    \[
+      B = B_0 - C(\mu) T^7 (q - q_0)
+    \]
+    \item Donde:
+    \[
+      C(\mu) = \frac{256 \pi^2}{15} V \left[ \frac{\pi^2}{90} + \frac{1}{30} \left( \frac{\mu}{T} \right)^2 \right]
+    \]
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Ejemplo: forma funcional de \( B(q, r) \)}
+  \begin{itemize}
+    \item Para \( \mu = 0 \), \( q_0 = 1.002 \), y \( B_0(r) = \frac{170}{r^{0.65}} \), se deduce:
+    \[
+      B = \frac{1.2225 (1.002 - q)}{r^{5.25}} + \frac{0.1087}{r^{2.6}}
+    \]
+    \item Así, \( B \) depende linealmente de \( q \), pero con coeficientes que dependen de \( r \).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Visualización tridimensional de \( B(q, r) \)}
+  \begin{columns}
+    \column{0.33\textwidth}
+    \includegraphics[width=\linewidth]{figures/B(q,r).png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Superficie \( B(q, r) \)}
+
+    \column{0.33\textwidth}
+    \includegraphics[width=\linewidth]{figures/B(q)-different-r.png}
+
+    \column{0.33\textwidth}
+    \includegraphics[width=\linewidth]{figures/B(q)-different-r-cuts.png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Cortes de \( B \) a distintos valores de \( r \)}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Cortes a valores fijos de \( q \)}
+  \begin{columns}
+    \column{0.48\textwidth}
+    \includegraphics[width=\linewidth]{figures/B(r)-different-q.png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Curvas de \( B(r) \) para distintos \( q \)}
+
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item Se toma \( q \) fijo y se estudia \( B(r) \).
+      \item Al invertir esta relación, se puede obtener \( q(r) \).
+      \item Esto permite reconstruir perfiles dinámicos de \( q \).
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Dependencia lineal de \( B \) con \( q \)}
+  \begin{columns}
+    \column{0.5\textwidth}
+    \includegraphics[width=\linewidth]{figures/B(q)-different-r-cuts.png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Dependencia lineal para distintos \( r \)}
+
+    \column{0.5\textwidth}
+    \begin{itemize}
+      \item Se observa una relación lineal entre \( B \) y \( q \) para valores fijos de \( r \).
+      \item La pendiente depende de \( r \), reflejando la geometría esférica del sistema.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Efecto compensatorio: si \( q \) baja}
+  \begin{columns}
+    \column{0.48\textwidth}
+    \includegraphics[width=\linewidth]{figures/If-q-down.png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Comparación para \( q_{\text{old}} = 1.002 \) y \( q_{\text{new}} = 0.9 \)}
+
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item Si \( q \) disminuye, \( B \) debe aumentar para mantener \( P_{\text{total}} \).
+      \item Este efecto refleja cómo el confinamiento se ajusta a la no extensividad.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Efecto compensatorio: si \( q \) sube}
+  \begin{columns}
+    \column{0.48\textwidth}
+    \includegraphics[width=\linewidth]{figures/If-q-up.png}
+    \vspace{0.1cm}
+    \centering \scriptsize{Comparación para \( q_{\text{new}} = 1.1 \)}
+
+    \column{0.48\textwidth}
+    \begin{itemize}
+      \item Si \( q \) aumenta, \( B \) debe disminuir.
+      \item El sistema reduce el confinamiento para equilibrar la presión.
+    \end{itemize}
+  \end{columns}
+\end{frame}
+
+\begin{frame}{Expresiones explícitas para \( B^{1/4}_{\text{new}} \)}
+  \begin{itemize}
+    \item Si \( q \) baja:
+    \[
+      B^{1/4}_{\text{new}} = B^{1/4}_{\text{old}} \left( 1 + \frac{0.11}{r^{2.65}} \right)^{0.25}
+    \]
+    \item Si \( q \) sube:
+    \[
+      B^{1/4}_{\text{new}} = B^{1/4}_{\text{old}} \left( 1 - \frac{0.11}{r^{2.65}} \right)^{0.25}
+    \]
+    \item Estas expresiones cuantifican la corrección al confinamiento en función de \( q \).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Presión total escrita en función de \( q \) y \( r \)}
+  \begin{itemize}
+    \item Sustituyendo \( B(r) \) en la ecuación de presión total:
+    \[
+      P_{\text{total}}(r) = \left[ \frac{37\pi^2}{90} + \left( \frac{\mu}{T} \right)^2 + \dots \right] T^4
+      - C(\mu) T^7 (q - q_0)
+    \]
+    \item Esta expresión muestra que \( P_{\text{total}} \) puede mantenerse constante si \( q \) y \( B \) están acoplados.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Conclusión: \( q(r) \) como descriptor del confinamiento}
+  \begin{itemize}
+    \item La presión total puede mantenerse constante si \( B(r) \) y \( q(r) \) se ajustan entre sí.
+    \item Esto sugiere que \( q(r) \) encapsula el efecto del confinamiento en la estadística no extensiva.
+    \item En vez de asumir un perfil a priori para \( B(r) \), es posible reconstruirlo a partir de \( q(r) \).
+    \item En este modelo, el confinamiento no es una constante externa, sino una consecuencia del entorno estadístico del sistema.
+  \end{itemize}
+
+  \vspace{0.3cm}
+  \centering
+  \textbf{\Large \( \boxed{\textbf{q(r)} \quad \leftrightsquigarrow \quad \text{Perfil de confinamiento}} \)}
+\end{frame}
+
+\begin{frame}{Diagrama: \( q(r) \), \( B(r) \) y \( P_{\text{total}}(r) \)}
+  \centering
+  \begin{tikzpicture}[
+    node distance=1.1cm and 2.2cm,
+    every node/.style={align=center},
+    box/.style={rectangle, draw, rounded corners, minimum width=2.2cm, minimum height=0.4cm, fill=blue!10, font=\footnotesize},
+    arrow/.style={-{Latex}, thick}
+  ]
+  
+  % Nodes
+  \node[box] (qr) {\( q(r) \)};
+  \node[box, below left=of qr] (Br) {\( B(r) \)};
+  \node[box, below right=of qr] (Pq) {\( P_q(r) \)};
+  \node[box, below=of qr] (Ptotal) {\( P_{\text{total}}(r) = P_q(r) - B(r) \)};
+  
+  % Arrows
+  \draw[arrow] (qr) -- (Br);
+  \draw[arrow] (qr) -- (Pq);
+  \draw[arrow] (Br) -- (Ptotal);
+  \draw[arrow] (Pq) -- (Ptotal);
+\end{tikzpicture}
+  \vspace{0.5cm}
+{\footnotesize \( q(r) \) determina tanto el confinamiento como la presión estadística, dando lugar a la presión total observada.}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section[Resultados]{6. Resultados}
 \begin{frame}{Perfil de presión radial}
   \includegraphics[width=0.8\textwidth]{figures/PressureDistributionsTot-Q-G.png}
   \begin{itemize}
@@ -929,46 +1179,120 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
   \end{itemize}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section[Interpretación del parámetro \( q \)]{6. Interpretación del parámetro \( q \)}
-\begin{frame}{Relación \( q(r) \leftrightarrow B(r) \)}
-  \includegraphics[width=0.7\textwidth]{B_vs_q_vs_r.png}
-  \begin{itemize}
-    \item Superficie reconstruida de \( B(q, r) \)
-    \item Divergencias para \( q < 1 \), interpretables
-  \end{itemize}
-\end{frame}
-
-\begin{frame}{Cortes radiales y visualización}
-  \includegraphics[width=0.75\textwidth]{BvsQcuts.png}
-  \begin{itemize}
-    \item Aproximación lineal entre \( q \) y \( B \) para \( r > 0.6\, \mathrm{fm} \)
-  \end{itemize}
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Exploraciones adicionales]{7. Exploraciones adicionales}
-\begin{frame}{Reconstrucción de \( B(r) \)}
-  \includegraphics[width=0.75\textwidth]{Comparacion_B_old_new_combined.png}
+
+\begin{frame}{Perspectiva futura: masas hadrónicas con estadística de Tsallis}
   \begin{itemize}
-    \item Dos configuraciones \( q = 1.002 \) y \( q = 0.9 \)
-    \item Resultados consistentes en presión
+    \item El modelo de bolsa tradicional (MIT) permite calcular masas hadrónicas mediante:
+    \[
+      M = \sum_i \omega_i + \frac{4}{3} \pi R^3 B + \Delta E_{\text{int}} - \frac{Z_0}{R}
+    \]
+    \item Modelos más recientes (Joseph \& Nair, 1981) proponen que \( B \) depende de la densidad.
+    \item Nuestra propuesta: sustituir las contribuciones energéticas por expresiones derivadas de la estadística de Tsallis.
+    \item Preguntas clave:
+    \begin{itemize}
+      \item ¿Qué valor de \( q \) reproduce la masa del protón?
+      \item \item ¿Qué perfil \( q(r) \) conduce a un mínimo energético compatible con la masa del protón?
+    \end{itemize}
   \end{itemize}
 \end{frame}
 
-\begin{frame}{¿Y si intentamos predecir \( q \)?}
+\begin{frame}{Línea de desarrollo futuro: masas con estadística de Tsallis}
+  \centering
+  \begin{tikzpicture}[
+    node distance=0.8cm and 2.2cm, % Reducido de 1.1cm a 0.8cm
+    every node/.style={align=center},
+    box/.style={rectangle, draw, rounded corners, minimum width=3.7cm, minimum height=0.6cm, fill=green!10, font=\footnotesize}, % altura y fuente más pequeñas
+    arrow/.style={-{Latex}, thick}
+  ]
+
+  \node[box] (MIT) {Modelo MIT clásico \\ (\( B = \text{cte} \))};
+  \node[box, below=of MIT] (JNAIR) {Modelo con \( B(\rho) \) \\ (Joseph \& Nair)};
+  \node[box, below=of JNAIR] (TSALLIS) {Modelo con \( q(r) \) \\ y energía de Tsallis};
+  \node[box, below=of TSALLIS] (MASSES) {Cálculo de masas \\ por minimización de energía};
+
+  \draw[arrow] (MIT) -- (JNAIR);
+  \draw[arrow] (JNAIR) -- (TSALLIS);
+  \draw[arrow] (TSALLIS) -- (MASSES);
+
+\end{tikzpicture}
+\end{frame}
+
+\begin{frame}{Exploración adicional: energía y confinamiento}
   \begin{itemize}
-    \item Intento de cálculo desde energía de Tsallis: limitado
-    \item Propuesta: aprendizaje automático
-    \item Futuro: entrenar con perfiles conocidos
+    \item Se propuso relacionar la masa del hadrón con la energía interna obtenida desde Tsallis:
+    \[
+      U_q = \frac{37 \pi^2}{30} V T^4 + \frac{128 \pi^4}{225} (1 - q) V^2 T^7
+    \]
+    \item Derivada a partir de:
+    \begin{itemize}
+      \item \( F_q \): energía libre de Helmholtz
+      \item \( S_q \): entropía no extensiva del sistema quark-gluón
+    \end{itemize}
+    \item Se intentó igualar \( U_q \approx M_{\text{bag}} \) para despejar \( q \).
+    \item Resultado: despeje trivial, pues \( V \) y \( T \) ya están fijados por la geometría.
   \end{itemize}
 \end{frame}
+
+\begin{frame}{Conclusión de esta exploración}
+  \begin{itemize}
+    \item Intención: reinterpretar la energía de confinamiento como una propiedad emergente del formalismo de Tsallis.
+    \item Dificultades:
+    \begin{itemize}
+      \item Los parámetros \( V \) y \( T \) no permiten libertad para determinar \( q \).
+    \end{itemize}
+    \item Futuro:
+    \begin{itemize}
+      \item Incorporar la estadística de Tsallis en la cuantización de modos.
+      \item Reformular las contribuciones energéticas del modelo de bolsa desde una base no extensiva.
+    \end{itemize}
+  \end{itemize}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Conclusiones]{8. Conclusiones}
-\begin{frame}{Resumen y perspectivas}
+\begin{frame}{Conclusión general del trabajo}
   \begin{itemize}
-    \item \( q \) puede sustituir a \( B \) bajo ciertas condiciones
-    \item Modelo accesible y reproducible computacionalmente
-    \item Futuros trabajos: ML, ajuste directo, exploraciones hadrónicas
+    \item Se propuso una interpretación estadística del confinamiento hadrónico mediante el parámetro \( q \) de Tsallis.
+    \item Se desarrolló un modelo mixto: estadística no extensiva + geometría esférica de bolsa con presión espacialmente dependiente.
+    \item Se introdujo la función \( q(r) \) como descriptor dinámico del confinamiento, en lugar de asumir una constante de bolsa \( B \).
   \end{itemize}
+\end{frame}
+
+\begin{frame}{Resultados principales}
+  \begin{itemize}
+    \item Se obtuvieron perfiles de presión \( P_q(r) \) para quarks y gluones con estadística de Tsallis.
+    \item Se reconstruyó \( B(r) \) desde configuraciones térmicas en cavidades esféricas.
+    \item Se simuló \( B(q, r) \) y se identificó una relación funcional invertible entre \( B \) y \( q \).
+    \item Se justificó físicamente la posibilidad de interpretar \( q(r) \) como medida del confinamiento.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Implicaciones físicas del modelo}
+  \begin{itemize}
+    \item El parámetro \( q \) deja de ser solo un índice de no extensividad abstracto y adquiere significado físico concreto.
+    \item El confinamiento se describe como efecto estadístico emergente, y no como un potencial externo arbitrario.
+    \item El modelo propuesto respeta la termodinámica, la simetría esférica y las condiciones límite del protón.
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Líneas futuras de investigación}
+  \begin{itemize}
+    \item Generalizar el modelo a sistemas tridimensionales sin simetría esférica.
+    \item Explorar la cuantización de modos en cavidades con estadística de Tsallis.
+    \item Calcular las masas hadrónicas a partir de energías obtenidas con el modelo \( q(r) \).
+    \item Extender la formulación a condiciones de temperatura y densidad extremas (plasma QGP).
+  \end{itemize}
+\end{frame}
+
+\begin{frame}{Mensaje final}
+  \centering
+  \Large
+  El confinamiento ya no se describe sólo por una constante, \\[0.3cm]
+  sino por una función estadística que evoluciona radialmente: \\[0.5cm]
+  \textbf{\huge\( \boxed{q(r)} \)} \\[0.5cm]
+  \normalsize
+  Una nueva puerta hacia una estadística del interior hadrónico.
 \end{frame}
 
 \begin{frame}[standout]
