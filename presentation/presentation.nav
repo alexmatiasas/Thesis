@@ -132,49 +132,51 @@
 \headcommand {\beamer@framepages {90}{90}}
 \headcommand {\slideentry {6}{0}{3}{91/91}{}{0}}
 \headcommand {\beamer@framepages {91}{91}}
-\headcommand {\beamer@sectionpages {89}{91}}
-\headcommand {\beamer@subsectionpages {89}{91}}
-\headcommand {\sectionentry {7}{Exploraciones adicionales}{92}{7. Exploraciones adicionales}{0}}
-\headcommand {\slideentry {7}{0}{1}{92/92}{}{0}}
+\headcommand {\slideentry {6}{0}{4}{92/92}{}{0}}
 \headcommand {\beamer@framepages {92}{92}}
-\headcommand {\slideentry {7}{0}{2}{93/93}{}{0}}
+\headcommand {\beamer@sectionpages {89}{92}}
+\headcommand {\beamer@subsectionpages {89}{92}}
+\headcommand {\sectionentry {7}{Exploraciones adicionales}{93}{7. Exploraciones adicionales}{0}}
+\headcommand {\slideentry {7}{0}{1}{93/93}{}{0}}
 \headcommand {\beamer@framepages {93}{93}}
-\headcommand {\slideentry {7}{0}{3}{94/94}{}{0}}
+\headcommand {\slideentry {7}{0}{2}{94/94}{}{0}}
 \headcommand {\beamer@framepages {94}{94}}
-\headcommand {\slideentry {7}{0}{4}{95/95}{}{0}}
+\headcommand {\slideentry {7}{0}{3}{95/95}{}{0}}
 \headcommand {\beamer@framepages {95}{95}}
-\headcommand {\slideentry {7}{0}{5}{96/96}{}{0}}
+\headcommand {\slideentry {7}{0}{4}{96/96}{}{0}}
 \headcommand {\beamer@framepages {96}{96}}
-\headcommand {\beamer@sectionpages {92}{96}}
-\headcommand {\beamer@subsectionpages {92}{96}}
-\headcommand {\sectionentry {8}{Conclusiones}{97}{8. Conclusiones}{0}}
-\headcommand {\slideentry {8}{0}{1}{97/97}{}{0}}
+\headcommand {\slideentry {7}{0}{5}{97/97}{}{0}}
 \headcommand {\beamer@framepages {97}{97}}
-\headcommand {\slideentry {8}{0}{2}{98/98}{}{0}}
+\headcommand {\beamer@sectionpages {93}{97}}
+\headcommand {\beamer@subsectionpages {93}{97}}
+\headcommand {\sectionentry {8}{Conclusiones}{98}{8. Conclusiones}{0}}
+\headcommand {\slideentry {8}{0}{1}{98/98}{}{0}}
 \headcommand {\beamer@framepages {98}{98}}
-\headcommand {\slideentry {8}{0}{3}{99/99}{}{0}}
+\headcommand {\slideentry {8}{0}{2}{99/99}{}{0}}
 \headcommand {\beamer@framepages {99}{99}}
-\headcommand {\slideentry {8}{0}{4}{100/100}{}{0}}
+\headcommand {\slideentry {8}{0}{3}{100/100}{}{0}}
 \headcommand {\beamer@framepages {100}{100}}
-\headcommand {\slideentry {8}{0}{5}{101/101}{}{0}}
+\headcommand {\slideentry {8}{0}{4}{101/101}{}{0}}
 \headcommand {\beamer@framepages {101}{101}}
-\headcommand {\slideentry {8}{0}{6}{102/102}{}{0}}
+\headcommand {\slideentry {8}{0}{5}{102/102}{}{0}}
 \headcommand {\beamer@framepages {102}{102}}
-\headcommand {\slideentry {8}{0}{7}{103/103}{}{0}}
+\headcommand {\slideentry {8}{0}{6}{103/103}{}{0}}
 \headcommand {\beamer@framepages {103}{103}}
-\headcommand {\gdef \insertmainframenumber {53}}
-\headcommand {\partentry {\translate {Appendix}}{1}}
-\headcommand {\beamer@partpages {1}{103}}
-\headcommand {\beamer@sectionpages {97}{103}}
-\headcommand {\beamer@subsectionpages {97}{103}}
-\headcommand {\beamer@appendixpages {104}}
-\headcommand {\beamer@sectionpages {104}{103}}
-\headcommand {\beamer@subsectionpages {104}{103}}
-\headcommand {\sectionentry {9}{References}{104}{References}{1}}
-\headcommand {\slideentry {9}{0}{0}{104/104}{}{1}}
+\headcommand {\slideentry {8}{0}{7}{104/104}{}{0}}
 \headcommand {\beamer@framepages {104}{104}}
-\headcommand {\beamer@partpages {104}{104}}
-\headcommand {\beamer@subsectionpages {104}{104}}
-\headcommand {\beamer@sectionpages {104}{104}}
-\headcommand {\beamer@documentpages {104}}
-\headcommand {\gdef \inserttotalframenumber {54}}
+\headcommand {\gdef \insertmainframenumber {54}}
+\headcommand {\partentry {\translate {Appendix}}{1}}
+\headcommand {\beamer@partpages {1}{104}}
+\headcommand {\beamer@sectionpages {98}{104}}
+\headcommand {\beamer@subsectionpages {98}{104}}
+\headcommand {\beamer@appendixpages {105}}
+\headcommand {\beamer@sectionpages {105}{104}}
+\headcommand {\beamer@subsectionpages {105}{104}}
+\headcommand {\sectionentry {9}{References}{105}{References}{1}}
+\headcommand {\slideentry {9}{0}{0}{105/105}{}{1}}
+\headcommand {\beamer@framepages {105}{105}}
+\headcommand {\beamer@partpages {105}{105}}
+\headcommand {\beamer@subsectionpages {105}{105}}
+\headcommand {\beamer@sectionpages {105}{105}}
+\headcommand {\beamer@documentpages {105}}
+\headcommand {\gdef \inserttotalframenumber {55}}

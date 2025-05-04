@@ -1163,21 +1163,50 @@ V(r) \approx -\frac{k_1}{r} + k_2 r
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Resultados]{6. Resultados}
-\begin{frame}{Perfil de presión radial}
-  \includegraphics[width=0.8\textwidth]{figures/PressureDistributionsTot-Q-G.png}
+\begin{frame}{Comparación con resultados de Lattice QCD}
   \begin{itemize}
-    \item Comparación con resultados de LQCD
-    \item Coincidencia con \( r^2 P(r) \) en DVCS
+    \item Se comparan las distribuciones \( r^2 P(r) \) obtenidas con el modelo Tsallis-MIT para diferentes \( \mu \).
+    \item Se observa buen acuerdo cualitativo con los datos de Lattice QCD (Shanahan y Detmold), especialmente para \( r \lesssim 1.2 \, \text{fm} \).
+    \item El pico en \( P(r) \) ocurre en \( r \sim 0.5 \, \text{fm} \), y es reproducido al ajustar \( q \).
   \end{itemize}
+  \begin{figure}
+    \includegraphics[width=0.6\textwidth]{figures/LQCD_vs_TsallisMIT.png} % Asume nombre de figura
+    \caption{Comparación entre LQCD y modelo Tsallis-MIT}
+  \end{figure}
 \end{frame}
 
-\begin{frame}{Descomposición de presión}
-  \includegraphics[width=0.7\textwidth]{TotalPressureTsallis.png}
+\begin{frame}{Influencia del potencial químico}
   \begin{itemize}
-    \item Presión total \( P_q \)
-    \item Presión gluónica \( P_G \)
+    \item Al incrementar \( \mu \), la presión repulsiva central aumenta y la región de presión negativa se intensifica.
+    \item Esto indica un confinamiento más fuerte con mayor densidad bariónica.
+    \item El modelo Tsallis-MIT responde correctamente a variaciones termodinámicas internas.
   \end{itemize}
+  \begin{figure}
+    \includegraphics[width=0.6\textwidth]{figures/Pressure_mu_variation.png}
+    \caption{Distribución \( P_q(r) \) para distintos \( \mu \)}
+  \end{figure}
 \end{frame}
+
+\begin{frame}{Reconstrucción de la presión de gluones}
+  \begin{itemize}
+    \item A partir de:
+    \[
+      P_{\text{gluones}}(r) = P_{\text{total}}(r) - P_{\text{quarks}}(r)
+    \]
+    \item Se interpreta \( P_{\text{gluones}}(r) \) como un mar de fondo que genera la presión de bolsa efectiva.
+    \item La distribución resultante muestra:
+    \begin{itemize}
+      \item Comportamiento decreciente con \( r \)
+      \item Contribución dominante en regiones periféricas
+    \end{itemize}
+  \end{itemize}
+  \centering
+  \begin{figure}
+    \includegraphics[width=0.6\textwidth]{figures/Pressure_gluons_reconstructed.png} % Asume nombre
+    \caption{Reconstrucción de la presión de gluones}
+  \end{figure}
+\end{frame}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section[Exploraciones adicionales]{7. Exploraciones adicionales}
 
