@@ -2374,6 +2374,17 @@
   </bcf:bibdata>
   <bcf:section number="0">
     <bcf:citekey order="1" intorder="1">huangStrongForcePotential2018</bcf:citekey>
+    <bcf:citekey order="2" intorder="1">mihaylovFirstExperimentalTest2021</bcf:citekey>
+    <bcf:citekey order="3" intorder="1">shanahanPressureDistributionShear2019</bcf:citekey>
+    <bcf:citekey order="4" intorder="1">Tsallis1988</bcf:citekey>
+    <bcf:citekey order="5" intorder="1">Tsallis1988</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">Tsallis1988</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">danielsDefectTurbulenceGeneralized2004</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">Tsallis1988</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">Burkert_2018</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">Burkert_2018</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">tan2019</bcf:citekey>
+    <bcf:citekey order="12" intorder="1">Joseph1981</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="nyt">
